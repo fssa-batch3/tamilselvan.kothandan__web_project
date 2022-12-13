@@ -697,8 +697,9 @@ input[type="submit"]:hover{
 .aside-2 {
     max-width: 500px;
     width: 500px;
-    margin: 0 20px 0 80px;
-    
+    margin: 0 20px 0 40px;
+    padding-top: 13rem;
+    padding-right: 2rem;
 }
 .aside-content-2 {
     height: 300px;
