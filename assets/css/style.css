@@ -113,6 +113,7 @@ section:nth-child(even){
     font-size: 1.7rem;
     color: var(--light-color);
     margin-left: 2rem;
+    padding: .5rem;
 }
 
 .header .navbar a:hover{
@@ -533,7 +534,7 @@ section:nth-child(even){
     border: 2px solid var(--green);
     background-color:white;
     border-radius: 0.625rem ;
-    padding: 0.625rem 1.25rem 0.625rem 0.625rem;
+    padding: 1.625rem 3.25rem 1.625rem 3.625rem;
     box-shadow: var(--box-shadow);
 }
 .center h1{
