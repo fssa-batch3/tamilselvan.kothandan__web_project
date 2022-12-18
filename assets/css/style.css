@@ -996,6 +996,7 @@ img {
     border: 1px solid var(--light-color);
     text-align: left;
     padding: 12px;
+    font-size: 2rem;
   }
   
   tr:nth-child(even) {
@@ -1045,3 +1046,25 @@ img {
 }
 
 /* past appointment section ends */
+
+
+.table-2{
+    font-family:'poppins', sans-serif;
+    border-collapse: collapse;
+    width: 50%;
+    font-size: 14px;
+    margin-top: 2rem;
+    height: 100%;
+
+}
+.th{
+    border:none;
+    text-align: left;
+    padding:0;
+}
+.table{
+    margin-top: 2rem;
+    margin-left: 39rem;
+    padding-bottom: 13rem;
+    padding-top: 3rem;
+}
