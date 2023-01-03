@@ -201,6 +201,7 @@ section:nth-child(even){
     display: grid;
      grid-template-columns:repeat(auto-fit, minmax(27rem, 1fr)); 
     gap:5rem;
+    align-content: center;
 }
 
 .services .box-container .box{
@@ -331,15 +332,17 @@ section:nth-child(even){
 .content-1 {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
-    gap: 1rem;
-     padding: .060rem 3.75rem; 
+    gap: 3rem;
+     /* padding: .060rem 3.75rem;  */
+     
    
 }
 
 .checked {
     color: var(--green);}
 .main {
-    padding: 0 30px;
+    margin-left: -13rem;
+    padding: 0 2rem;
 }
 .main-img {
     width: 400px;
@@ -368,9 +371,11 @@ section:nth-child(even){
     border-radius: 10px;
 }
 .aside {
-    max-width: 900px;
+    max-width: 500px;
     width: 500px;
-    margin: 70px 20px 0 20px;
+ /* margin: 70px 20px 0 20px; */
+ padding-left: 2rem; 
+ 
 }
 .aside-content {
     height: 300px;
@@ -1067,7 +1072,7 @@ img {
 }
 .table{
     margin-top: 2rem;
-    margin-left: 39rem;
+    /* margin-left: 39rem; */
     padding-bottom: 13rem;
     padding-top: 3rem;
 }
@@ -1132,7 +1137,7 @@ margin-left: 5rem;
     color: white;
 }
 
-/* #menu-btn{
+ #menu-btn{
     font-size: 2.5rem;
     border-radius: .5rem;
     background: #eee;
@@ -1140,4 +1145,68 @@ margin-left: 5rem;
     padding: 1rem 1.5rem;
     cursor: pointer;
     display: none;
+}
+
+/* media queries  */
+@media (max-width:991px){
+
+    html{
+        font-size: 55%;
+    }
+
+    .header{
+        padding: 2rem;
+    }
+
+    section{
+        padding:2rem;
+    }
+
+}
+
+@media (max-width:768px){
+
+    #menu-btn{
+        display: initial;
+    }
+
+    .header .navbar{
+        position: absolute;
+        top:115%; right: 2rem;
+        border-radius: .5rem;
+        box-shadow: var(--box-shadow);
+        width: 30rem;
+        border: var(--border);
+        background: #fff;
+        transform: scale(0);
+        opacity: 0;
+        transform-origin: top right;
+        transition: none;
+    }
+
+    .header .navbar.active{
+        transform: scale(1);
+        opacity: 1;
+        transition: .2s ease-out;
+    }
+
+    .header .navbar a{
+        font-size: 2rem;
+        display: block;
+        margin:2.5rem;
+    }
+
+}
+
+@media (max-width:450px){
+
+    html{
+        font-size: 50%;
+    }
+
+}
+
+.main{
+    display: grid;
+    grid-template-columns: re;
 }
