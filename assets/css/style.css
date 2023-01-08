@@ -1150,6 +1150,10 @@ margin-left: 5rem;
     margin-left: 13rem;
 }
 
+#btn{
+    margin-right: -7rem;
+}
+
 
 
 /* media queries  */
@@ -1360,7 +1364,7 @@ margin-left: 5rem;
   
 
      .profile__content{
-        margin-left: -15rem;
+        margin-left: -18rem;
         
      }
      .btn-1{
