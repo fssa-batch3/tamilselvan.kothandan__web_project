@@ -424,8 +424,8 @@ section:nth-child(even){
 .value h3 {
     padding: 5px 10px;
     background-color:hsl(25, 100%, 94%);
-    color:var(--green)
-    font-size: 15px;
+    color:var(--green);
+    font-size : 15px;
     border-radius: 5px;
     font-weight: bolder;
 }
@@ -1299,7 +1299,7 @@ margin-left: 5rem;
         text-align:center ;
         margin-top: -13rem;
     }
-    .
+    
     .aside-content p:last-child {
         font-size: 16px;
         padding: 10px 84px 62px 54px;
