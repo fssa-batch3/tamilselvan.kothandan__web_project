@@ -41,6 +41,7 @@
     
       </nav>
 
+      <div id="menu-btn" class="fas fa-bars"></div>
   
 
 </header>
@@ -64,7 +65,7 @@
               </div>
               <div class="o-profile-photo__desc__actions">
                 
-                <input type="button" name="add-photo" value="Add Photo" >
+                <input type="button" name="add-photo" value="add_Photo" id="add_photo">
                 
               </div>
             </div>
@@ -72,7 +73,7 @@
         </div>
         <div class="section__row__column">
                <div class="c-input c-input--text has-value">
-        <input id="name" name="name"  type="text" value="Tamilselvan">
+        <input id="name" name="name"  type="text"  id="name">
         <label for="name">
             Name<span>*</span>
         </label>
@@ -85,7 +86,7 @@
       <div class="section__row">
         <div class="section__row__column">
           <div class="c-input c-input--text disabled">
-            <input  id="mobile" name="mobile" type="text" value="+919445535374">
+            <input  id="mobile" name="mobile" type="text" >
             <label>Phone number<span>*</span></label>
             
           
@@ -94,7 +95,7 @@
         </div>
         <div class="section__row__column">
           <div class="c-input c-input--text disabled">
-            <input type="text" value="example@abc.com" >
+            <input type="text"  id="e_mail">
             <label>Email Address<span>*</span></label>
             
           
@@ -108,7 +109,7 @@
     
     
           <div class="c-input c-input--text disabled">
-      <input type="text"  placeholder="gender" value="" >
+      <input type="text"  placeholder="gender" id="gender" >
         <label >
             Gender<span>*</span>
         </label>
@@ -125,7 +126,7 @@
     
     
     <div class="c-input c-input--text">
-        <input  name="dob"  type="text" value="" >
+        <input  name="dob"  type="text"  id="dob" >
         <label >
             Date of birth<span>*</span>
         </label>
@@ -135,7 +136,7 @@
         </div>
         <div class="section__row__column">
           <div class="c-input c-input--text disabled">
-            <input type="text"  placeholder="blood group" value="" >
+            <input type="text"  placeholder="blood group"  id="blood_group" >
               <label>
                   Blood Group<span>*</span>
               </label>
@@ -158,7 +159,7 @@
     
     
     <div class="c-input c-input--text">
-        <input  name="street_address"  type="text" value="">
+        <input  name="street_address"  type="text"  id="house_no">
         <label for="street_address">
             House No./ Street Name/ Area<span>*</span>
         </label>
@@ -173,7 +174,7 @@
     
     
     <div class="c-input c-input--text">
-        <input  name="locality"  type="text" value="">
+        <input  name="locality"  type="text"  id="street">
         <label for="locality">
             Colony / Street / Locality<span>*</span>
         </label>
@@ -188,7 +189,7 @@
     
     
     <div class="c-input c-input--text">
-        <input  name="city"  type="text" value=""  >
+        <input  name="city"  type="text"  id="city"  >
         <label >
             City<span>*</span>
         </label>
@@ -204,7 +205,7 @@
     
     
     <div class="c-input c-input--text">
-        <input  name="state" tabindex="9" type="text" value="">
+        <input  name="state" tabindex="9" type="text"  id="state">
         <label >
             State<span>*</span>
         </label>
@@ -223,7 +224,7 @@
     <div class="c-input c-input--text">
         
 
-        <input  name="country"  type="text" value="">
+        <input  name="country"  type="text"  id="country">
         <label >
             Country<span>*</span>
         </label>
@@ -237,7 +238,7 @@
     
     
     <div class="c-input c-input--text">
-        <input  name="pincode"  type="text" value="">
+        <input  name="pincode"  type="text"  id="pincode">
         <label >
             Pincode<span>*</span>
         </label>
@@ -262,7 +263,7 @@
     
     
     <div class="c-input c-input--text">
-        <input    type="text" value="">
+        <input    type="text"  id="drugs">
         <label >
           list any drug allergies<span>*</span>:
         </label>
@@ -277,7 +278,7 @@
     
     
     <div class="c-input c-input--text">
-        <input  name="locality"  type="text" value="">
+        <input  name="locality"  type="text"  id="disease">
         <label for="locality">
             Have you ever had disease<span>*</span>:
         </label>
@@ -292,7 +293,7 @@
     
     
     <div class="c-input c-input--text">
-        <input    type="text" value=""  >
+        <input    type="text" value="10/02/2022_heart_surgies" id="operation_dates"  >
         <label >
           list of operation dates of each<span>*</span>:
         </label>
@@ -308,7 +309,7 @@
     
     
     <div class="c-input c-input--text">
-        <input    type="text" value="">
+        <input    type="text"  id="medicine">
         <label >
             list any current Medications<span>*</span>:
         </label>
@@ -332,7 +333,7 @@
     </div>
   </div>
   <div>
-    <a href="./profile.html"><button class="btn-1">Save changes</button></a>
+  <button class="btn-1" type="button" onclick="btn">Save changes</button>
   </div>
 
 
@@ -380,7 +381,52 @@
 
 </section>
 <!-- footer section ends -->
+<script >
 
+function btn(){
+  window.location.href="./profile.html"
+
+  const name = document.getElementById("name").value 
+const mobile = document.getElementById("mobile").value
+const e_mail = document.getElementById("e_mail").value 
+const dob = document.getElementById("dob").value 
+const gender = document.getElementById("gender").value 
+const blood_group = document.getElementById("blood_group").value 
+const house_no = document.getElementById("house_no").value 
+const street = document.getElementById("street").value 
+const city = document.getElementById("city").value 
+const state = document.getElementById("state").value 
+const pincode = document.getElementById("pincode").value 
+const country = document.getElementById("country").value 
+const drugs = document.getElementById("drugs").value 
+const disease = document.getElementById("disease").value 
+const operation_dates = document.getElementById("operation_dates").value
+const medicine = document.getElementById("medicine").value  
+
+
+console.log(name)
+console.log(mobile)
+console.log(e_mail)
+console.log(dob)
+console.log(gender)
+console.log(blood_group)
+console.log(house_no)
+console.log(street)
+console.log(city)
+console.log(state)
+console.log(pincode)
+console.log(country)
+console.log(drugs)
+console.log(disease)
+console.log(operation_dates)
+console.log(medicine)
+
+
+
+}
+
+
+</script>
 
 </body>
 </html>  

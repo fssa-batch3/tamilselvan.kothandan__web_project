@@ -28,7 +28,7 @@
         <a href="./login.html">Login</a>
     </nav>
 
-    
+    <div id="menu-btn" class="fas fa-bars"></div>    
 
 </header>
 
@@ -39,17 +39,17 @@
         <h1>Sign up</h1>
       <form method="post"></form>
             <div class="text_field">
-                <input type="text" required>
+                <input type="text" required value="Tamilselvan" id="user_name">
                 <span></span>
                 <label>username</label>
                 </div>
                 <div class="text_field">
-                    <input type="email" required>
+                    <input type="email" required value="tamilselvan.kothandan@fssa.freshworks.com" id="e_mail">
                     <span></span>
                     <label>E-mail</label>
                     </div>
                 <div class="text_field">
-                    <input type="pass" required>
+                    <input type="password" required value="password" id="password">
                     <span></span>
                     <label>password</label>
                     </div>
@@ -57,7 +57,8 @@
 
                 
                     
-   <a href="../../index.html"><input type="submit" value="Sign up"></a> 
+   <!-- <a href="./profile.html"><input type="submit" value="Sign up"></a>  -->
+   <button class="btn" onclick="btn()" type="button">Sign-up</button>
 
     <div class="signup_link">
         Already a member?<a href="./login.html">login</a>
@@ -73,7 +74,31 @@
 
 
 
+<script>
+    function btn(){
 
+        
+const user_name = document.getElementById("user_name").value 
+const password=document.getElementById("password").value 
+
+const e_mail = document.getElementById("e_mail").value 
+
+console.log(user_name)
+console.log(password)
+console.log(e_mail)
+
+localStorage.setItem("name", user_name)
+localStorage.setItem("email", e_mail)
+ 
+
+
+
+window.location.href="./profile.html"
+
+
+    }
+
+</script>
 
 </body>
 </html>

@@ -28,7 +28,7 @@
         <a href="#">Login</a>
     </nav>
 
-    
+    <div id="menu-btn" class="fas fa-bars"></div>    
 
 </header>
 
@@ -39,12 +39,12 @@
         <h1>Login</h1>
       <form method="post"></form>
             <div class="text_field">
-                                <input type="text" required>
+                                <input type="text" required value="Tamilselvan" id="user_name">
                                          <span></span>
                                              <label>username</label>
                 </div>
                              <div class="text_field">
-                                      <input type="pass" required>
+                                      <input type="password" required value="password" id="password">
                                                <span></span>
                                                 <label>password</label>
                              </div>
@@ -52,8 +52,8 @@
 
                 
                     <div class="pass">forget password?</div>
-   <a href="../../index.html"><input type="submit" value="login"></a> 
-
+   <!-- <a href="../../index.html"><input type="submit" value="login"></a>  -->
+   <button class="btn" onclick="btn()" type="button">login</button>
     <div class="signup_link">
         Not a member?<a href="./sign in.html">signup</a>
     </div>
@@ -68,7 +68,20 @@
 
 
 
+<script>
 
+function btn(){
+    const user_name=document.getElementById("user_name").value 
+    const password=document.getElementById("password").value 
+
+console.log(user_name)
+
+console.log(password)
+
+}
+
+
+</script>
 
 </body>
 </html>

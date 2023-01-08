@@ -28,7 +28,7 @@
         <a href="./login.html">Login</a>
     </nav>
 
-   
+    <div id="menu-btn" class="fas fa-bars"></div>
 
 </header>
 
@@ -45,11 +45,13 @@
 
         <form action="">
             <h3>Book Appointment</h3>
-            <input type="text" placeholder="Patient name" class="box">
-            <input type="number" placeholder="Patient number" class="box">
-            <input type="email" placeholder="Patient email" class="box">
-            <input type="datetime-local"  class="box">
-            <button class="btn"><a href="./appointment booked page.html">Book Now</a></button>
+            <input type="text" placeholder="Patient name" class="box"  id="patient_name">
+            <input type="number" placeholder="Patient number" class="box" id="number">
+            <input type="email" placeholder="Patient email" class="box" id="e_mail">
+            <input type="datetime-local"  class="box"  id="date_time">
+            <button class="btn" onclick="btn()" type="button"></button>
+
+            <!-- <a href="./appointment booked page.html">Book Now</a> -->
            
         </form>
 
@@ -93,5 +95,26 @@
         </div>
 
     </div>
+
+<script>
+    function btn(){
+        const patient_name = document.getElementById("patient_name").value 
+const number = document.getElementById("number").value
+const e_mail = document.getElementById("e_mail").value
+const detetime = document.getElementById("date_time").value
+console.log(patient_name)
+console.log(number)
+console.log(e_mail)
+console.log(date_time)
+
+window.location.href="./appointment booked page.html"
+
+
+
+
+    }
+
+</script>
+
 </body>
 </html>

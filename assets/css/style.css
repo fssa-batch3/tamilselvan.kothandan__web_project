@@ -333,7 +333,7 @@ section:nth-child(even){
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
     gap: 3rem;
-     /* padding: .060rem 3.75rem;  */
+     padding: .060rem 3.75rem; 
      
    
 }
@@ -341,7 +341,7 @@ section:nth-child(even){
 .checked {
     color: var(--green);}
 .main {
-    margin-left: -13rem;
+    margin-left: 3rem;
     padding: 0 2rem;
 }
 .main-img {
@@ -373,7 +373,7 @@ section:nth-child(even){
 .aside {
     max-width: 500px;
     width: 500px;
- /* margin: 70px 20px 0 20px; */
+ margin: 70px 20px 0 20px;
  padding-left: 2rem; 
  
 }
@@ -706,7 +706,7 @@ input[type="submit"]:hover{
 .aside-2 {
     max-width: 500px;
     width: 500px;
-    margin: 0 20px 0 40px;
+    margin: 68px 22px 0 20px;
     padding-top: 13rem;
     padding-right: 2rem;
 }
@@ -761,7 +761,6 @@ input[type="submit"]:hover{
 
 .profile__content {
     width: 100%;
-    /* min-height: 780px; */
     padding: 0 200px;
     box-sizing: border-box;
     margin-top: 150px;
@@ -833,7 +832,7 @@ input[type="submit"]:hover{
     box-sizing: border-box;
     box-shadow: none;
     border-radius: 2px;
-    margin: 0;
+    margin:  0;
 }
 
 .c-input label {
@@ -859,7 +858,7 @@ input[type="submit"]:hover{
     box-sizing: border-box;
     box-shadow: none;
     border-radius: 2px;
-    margin: 0;
+    margin-top:2rem ;
 }
 
 .o-profile-photo {
@@ -994,7 +993,7 @@ img {
 /* past appointment section starts */
 
   table {
-    font-family: arial, sans-serif;
+    font-family: poppins, sans-serif;
     border-collapse: collapse;
     width: 100%;
     font-size: 0.875rem;
@@ -1088,7 +1087,7 @@ img {
 .filter-1{
     margin-top: -2rem;
     margin-bottom: 5rem;
-    margin-left: 12rem;
+    margin-left: 25rem;
 }
 .wrapper{
     width: 95%;
@@ -1147,22 +1146,13 @@ margin-left: 5rem;
     display: none;
 }
 
-/* media queries  */
-@media (max-width:991px){
-
-    html{
-        font-size: 55%;
-    }
-
-    .header{
-        padding: 2rem;
-    }
-
-    section{
-        padding:2rem;
-    }
-
+#apollo-hospital-1{
+    margin-left: 13rem;
 }
+
+
+
+/* media queries  */
 
 @media (max-width:768px){
 
@@ -1203,10 +1193,196 @@ margin-left: 5rem;
     html{
         font-size: 50%;
     }
+    .filter-1{
+        margin-left: 2rem;
+        width: 100%;
+    }
+    
+    
+      table {
+        border-collapse: collapse;
+        border-spacing: 0;
+        width: 100%;
+        border: 1px solid #ddd;
+      }
+      
+      th, td {
+        text-align: left;
+        padding: 8px;
+      }
+      #past{
+        margin: auto;
+      }
+      
+    #search-container{
+        width: 90%;
+        margin: 0;
+        margin-left: -8rem;
+        
+    }
+    .wrapper-1{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+        margin-left:-10rem;
+        margin-right: 3rem;
+        
+    }
 
-}
+    .content-1{
+        
+        width: 100%;
+        margin-left: -3rem;
+    }
+    .aside{
+        width: 100%;
+        margin-left:3rem;
+        text-align:center ;
+        margin-top: auto;
+    }
+    .main-img{
+        width: 90%;
+        margin-left: 12rem;
+    }
 
-.main{
-    display: grid;
-    grid-template-columns: re;
-}
+    #ajun_details{
+        margin-top: 5rem;
+        margin-right: 7rem;
+    }
+
+    #sesslyn_details{
+        margin-top: 10rem;
+        margin-right: 7rem;
+    }
+    #kishore_details{
+        margin-top:12rem ;
+        margin-right: 7rem;
+    }
+
+    #raj_details{
+        margin-top: 12rem;
+        margin-right: 7rem;
+    }
+    #meena_details{
+        margin-top: 17rem;
+        margin-right: 7rem;
+    }
+    #uthra_details{
+        margin-top: 12rem;
+        margin-right: 7rem;
+    }
+    #pks_details{
+        margin-top: 12rem;
+        margin-right: 7rem;
+    }
+    #search-container input{
+        width:20rem;
+        margin-left:-3rem;
+        
+    }
+    #search-container button{
+        margin-left: 3rem;
+        margin-top: 1rem;
+    }
+    #apollo-hospital-1{
+        width: 70%;
+        margin-left: 10rem;
+    }
+    #main{
+        margin: 0;
+        padding: 0;
+    }
+    .bottom-images{
+        display: none;
+    }
+    .aside-2{
+        margin-left:-10rem;
+        text-align:center ;
+        margin-top: -13rem;
+    }
+    .
+    .aside-content p:last-child {
+        font-size: 16px;
+        padding: 10px 84px 62px 54px;
+        text-align: justify;
+        text-justify: inter-word;
+        margin-left: 8rem;
+    }
+    #details{
+        text-align: justify;
+        text-justify: inter-word;
+        padding: 2rem 4rem 2rem 10rem;        
+    }
+    #apollo-heading{
+        text-align: center;
+        margin-left: 6rem;
+    }
+    #parah {
+        text-align: center;
+        margin-left: 6rem;
+    }
+    .main-img-2{
+        width: 100%;
+        margin-top: 18rem;
+    }
+
+    .aside-content-parah-2{
+        text-align: center;
+    }
+    #gem-heading{
+        text-align: justify;
+        text-justify: inter-word;
+        
+        padding: 2rem 7rem 2rem 15rem;
+    }
+    #gem-hospital{
+        margin-top: 12rem;
+    }
+    #h1{
+        text-align: center;
+        margin-left: 8rem;
+    }
+    #billroth{
+        width: 90%;
+        margin-left: 1rem;
+    }
+    .main-img-2{
+        width: 90%;
+        margin-top: 40rem;
+    }
+    .about .row .content h3 {
+        text-align: center;
+    }
+    .about .row .content p{
+        text-align: justify;
+        text-justify: inter-word;
+        margin-left: 3rem;
+    }
+  
+
+     .profile__content{
+        margin-left: -15rem;
+        
+     }
+     .btn-1{
+        margin-left: 19rem;
+        margin-top: -30rem;
+     }
+     .o-profile-photo{
+        width: 100%;
+        margin-left: 12rem;
+        margin-bottom: 5rem;
+     }
+     .o-profile-photo__desc__actions input[type=button]{
+        font-size: 1rem;
+     }
+     #home{
+        width: fit-content;
+     }
+
+
+
+    }
+
+
+
+

@@ -40,6 +40,8 @@
     
       </nav>
 
+      <div id="menu-btn" class="fas fa-bars"></div>
+
   
 
 </header>
@@ -71,7 +73,7 @@
         </div>
         <div class="section__row__column">
                <div class="c-input c-input--text has-value">
-        <input id="name" name="name"  type="text" value="Tamilselvan" disabled>
+        <input id="name" name="name"  type="text"  disabled>
         <label for="name">
             Name<span>*</span>
         </label>
@@ -93,7 +95,7 @@
         </div>
         <div class="section__row__column">
           <div class="c-input c-input--text disabled">
-            <input type="text" value="tamilselvan98849@gmail.com"  disabled>
+            <input type="text"  id="email" disabled>
             <label>Email Address</label>
             
           
@@ -343,6 +345,17 @@
 
 </section>
 <!-- footer section ends -->
+
+
+<script>
+
+const user_name =localStorage.getItem(name)
+const e_mail = localStorage.getItem(email)
+
+
+document.getElementById("name").value = user_name
+document.getElementById("email").value = e_mail
+</script>
 </body>
 </html>
   
