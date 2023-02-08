@@ -28,7 +28,7 @@ function signIn (e) {
     let name = document.getElementById('name').value, 
         password = document.getElementById('password').value;
 
-    let formData = JSON.parse(localStorage.getItem('formData'));
+    let formData = JSON.parse(localStorage.getItem('formData')) || [];
 
     let exist = formData.length && 
     JSON.parse(localStorage.getItem('formData')).some(data => 
