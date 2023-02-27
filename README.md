@@ -13,7 +13,7 @@ problem statement: https://docs.google.com/document/d/1Omq55hXgBxjmr9NQkc-E8Ix6Q
  1. User CRUD
     - Create user CRUD
     - Read user CRUD
-    - Update Userr CRUD
+    - Update user CRUD
     - Delete user CRUD
 
  2. Doctor CRUD
