@@ -9,21 +9,21 @@ userflow: https://drive.google.com/file/d/1LrUHKzJGs1hypSu6LBHe0AGg1a7DHj-b/view
 wireframe: https://drive.google.com/file/d/13_xYXJgRDVW6E-hP9baRw56WZg6Sfyah/view  
 problem statement: https://docs.google.com/document/d/1Omq55hXgBxjmr9NQkc-E8Ix6Q3f5-mvr/edit  
 
-1. User CRUD
-     -create user crud
+
+ 1. User CRUD
+    - Create user CRUD
     - Read user CRUD
-    - Update user CRUD
+    - Update Userr CRUD
     - Delete user CRUD
 
-
  2. Doctor CRUD
-    - create Doctor CRUD
+    - Create Doctor CRUD
     - Read Doctor CRUD
     - Update Doctor CRUD
     - Delete Doctor CRUD
 
  3. Hospital CRUD  
-     - create hospital CRUD
+     - Create hospital CRUD
      - Read hospital CRUD
      - Update hospital CRUD
      - Delete hospital CRUD
