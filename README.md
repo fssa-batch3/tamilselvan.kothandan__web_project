@@ -21,9 +21,11 @@ problem statement: https://docs.google.com/document/d/1Omq55hXgBxjmr9NQkc-E8Ix6Q
     - Read Doctor CRUD
     - Update Doctor CRUD
     - Delete Doctor CRUD
+    - CRUD doctor details 
 
  3. Hospital CRUD  
      - Create hospital CRUD
      - Read hospital CRUD
      - Update hospital CRUD
      - Delete hospital CRUD
+
