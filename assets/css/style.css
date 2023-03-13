@@ -1433,3 +1433,152 @@ margin-left: 5rem;
 
 
 
+    
+    
+
+
+    /* Default styles */
+
+div.signin{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: aliceblue;
+}
+
+.container{
+    width: 100%;
+    display: flex;
+    max-width: 850px;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+    margin-top: 18rem;
+    margin-left: 30rem;
+}
+
+.login{
+    width: 400px;
+}
+
+form{
+    width: 250px;
+    margin: 60px auto;
+}
+
+h1{
+    margin: 20px;
+    text-align: center;
+    font-weight: bolder;
+    text-transform: uppercase;
+}
+
+p{
+    text-align: center;
+    margin: 10px;
+}
+
+hr{
+    border-top: 2px solid #0e6453;
+}
+
+.pic img{
+    width: 450px;
+    height: 100%;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+form label{
+    display: block;
+    font-size: 1.5rem;
+    font-weight: 600;
+    padding: 5px;
+}
+
+input{
+    width: 100%;
+    margin: 2px;
+    border: none;
+    outline: none;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid gray;
+    font-size: 1rem;
+}
+
+button{
+    border: none;
+    outline: none;
+    padding: 8px;
+    width: 252px;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+    border-radius: 5px;
+    background: #0e6453;
+}
+
+button:hover{
+    background: rgba(214, 86, 64, 1);
+}
+
+p{
+    margin: 20px;
+}
+
+a{
+    color: black;
+    text-decoration: none;
+}
+
+
+/* Media queries for responsiveness */
+
+@media only screen and (max-width: 768px) {
+  /* Adjust layout for smaller screens */
+  .container {
+    flex-direction: column;
+    max-width: 500px;
+  }
+  .login {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  .pic img {
+    width: 100%;
+    height: auto;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+  }
+  form {
+    width: 80%;
+    margin: 30px auto;
+  }
+    }
+
+@media only screen and (max-width: 480px) {
+  /* Adjust layout for even smaller screens */
+  .container {
+    max-width: 450px;
+    margin-top: 10rem;
+    margin-left: 0rem;
+  }
+  .pic img {
+    width: 100%;
+    height: auto;
+    border-radius: 0;
+  }
+  input {
+    font-size: 0.9rem;
+  }
+  button {
+    font-size: 1rem;
+  }
+}
+
+

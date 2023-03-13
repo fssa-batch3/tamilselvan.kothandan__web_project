@@ -35,51 +35,47 @@
 <!-- header section ends -->
 
 
-<div class="center">
-        <h1>Login</h1>
-      <form method="post"></form>
-            <div class="text_field">
-                                <input type="text" required value="Tamilselvan" id="user_name">
-                                         <span></span>
-                                             <label>username</label>
-                </div>
-                             <div class="text_field">
-                                      <input type="password" required value="password" id="password">
-                                               <span></span>
-                                                <label>password</label>
-                             </div>
+ 
+            
 
 
-                
-                    <div class="pass">forget password?</div>
-   <!-- <a href="../../index.html"><input type="submit" value="login"></a>  -->
-   <button class="btn" onclick="btn()" type="button" id="btn">login</button>
-    <div class="signup_link">
-        Not a member?<a href="./sign in.html">signup</a>
-    </div>
+
+                <div class="signin">
+                    <div class="container">
+                        <div class="pic">
+                            <!-- <img src="../../assets/img/Mobile login-rafiki.png"> -->
+                    </div>  
+                        <div class="login">
+                            <form  role="form" onsubmit="signIn(event);">
+                                <h1>Login</h1>
+                                <hr>
+                                <p>Explore the World!</p>
+                                <label>Name</label>
+                                <input type="text"  id="name" pattern="[a-zA-Z0-9]+" placeholder="abc@exampl.com">
         
+                                <label>Password</label>
+                                <input type="password" placeholder="enter your password!" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                                title="Must contain at least one  number and one uppercase and lowercase letter,
+                                 and at least 8 or more characters"  id="password">
+        
+                                <button type="submit">Submit</button>
+                                <p>
+                                    <a href="./sign in.html">Not a Member</a>
+                                </p>
+                            <closeform></closeform></form>
+                        </div>
+        
+                    </div>
+        
+        
+                </div>
 
 
-            </div>  
 
 
 
 
 
-
-
-<script >
-
-function btn(){
-    const user_name=document.getElementById("user_name").value 
-    const password=document.getElementById("password").value 
-
-console.log(user_name)
-
-console.log(password)
-
-window.location.href="../../index.html"
-}
 
 
 
@@ -87,7 +83,7 @@ window.location.href="../../index.html"
 
 
 </script>
-<script src="../../assets/js/script.js"></script>
+<script src="../../assets/js/login and signin .js"></script>
 
 </body>
 </html>
