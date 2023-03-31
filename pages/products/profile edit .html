@@ -46,7 +46,7 @@
 
 </header>
 
-
+<form ></form>
 <div class="profile__content">
     <div class="content__section">
       <div class="section__row">
@@ -423,3 +423,46 @@ console.log(medicine)
 </body>
 </html>  
 
+<!-- let unique_id = JSON.parse(localStorage.getItem("unique_id"));
+let user_detail = JSON.parse(localStorage.getItem("user_detail"));
+console.log(user_detail);
+console.log(unique_id);
+
+
+function profile_data(e){
+    return e.email_id == unique_id;
+}
+person_data = user_detail.find(profile_data);
+console.log(person_data)
+
+document.getElementById("first_name").value = person_data["f_name"]+" "+person_data["l_name"];
+document.getElementById("age").value = person_data["age"]
+document.getElementById("female").value = person_data["gender"]
+document.getElementById("user_email").value = person_data["email_id"];
+document.getElementById("mobile_number").value = person_data["mobile"];
+
+// delete account function
+function deleteAcc(){
+    if(confirm("Are you sure to delete this account ?")){
+        let unique_id = JSON.parse(localStorage.getItem("unique_id"));
+        let user_detail = JSON.parse(localStorage.getItem("user_detail"));
+        console.log(user_detail);
+        console.log(unique_id);
+
+
+        function profile_data(e){
+            return e.email_id == unique_id;
+        }
+        person_data = user_detail.find(profile_data);
+        
+        // find the index of person_data from userData
+        let result =user_detail.indexOf(person_data);
+        // deleting the indexof person data
+        user_detail.splice(result, 1);
+        localStorage.setItem("user_detail", JSON.stringify(user_detail));
+        window.location.href="../../index.html";
+    } -->
+<!-- }
+</script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/js/all.min.js" integrity="sha512-rpLlll167T5LJHwp0waJCh3ZRf7pO6IT1+LZOhAyP6phAirwchClbTZV3iqL3BMrVxIYRbzGTpli4rfxsCK6Vw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->

@@ -29,3 +29,44 @@ problem statement: https://docs.google.com/document/d/1Omq55hXgBxjmr9NQkc-E8Ix6Q
      - Update hospital CRUD
      - Delete hospital CRUD
 
+Medical-service
+
+PATIENT:
+
+CREATE AN ACCOUNT : (COMPLETED)
+
+* Scenario 1: You successfully created an account.
+
+* steps:
+
+      1. Navigated to the sign-up page
+      2. Fill in the required details, 
+         such as name, phone number, 
+         and password.
+      3. click the "submit" button.
+* Expected result:
+         The user is redirected to the 
+         login page.
+
+CREATE AN ACCOUNT : (COMPLETED)
+
+* Scenario 1: Successfully logged in to your account
+     * Steps:
+          1. Navigated to the login 
+            page.
+         2. Fill in the required 
+            information, such as phone 
+            number and password.
+         3. click the "submit" button.
+
+    * Expected result: 
+          * The user is redirected 
+                to the profile.
+
+
+EDIT PROFILE: (COMPLETED)
+
+Scenario 1: Edit the profile
+  * steps:  
+
+
