@@ -196,5 +196,59 @@
         </div>
 
     </div>
+<script>
+
+// Get the search input and filter buttons
+const searchInput = document.getElementById('search-input');
+const filterButtons = document.querySelectorAll('.button-value');
+
+// Add event listener for the search button
+document.getElementById('search').addEventListener('click', () => {
+  // Get the search term
+  const searchTerm = searchInput.value.toLowerCase();
+
+  // Get the selected filter
+  let selectedFilter = '';
+  filterButtons.forEach((button) => {
+    if (button.classList.contains('selected')) {
+      selectedFilter = button.textContent.toLowerCase();
+    }
+  });
+
+  // Get all the doctor boxes
+  const doctorBoxes = document.querySelectorAll('.box');
+
+  // Loop through each doctor box and check if it matches the search term and filter
+  doctorBoxes.forEach((box) => {
+    const doctorName = box.querySelector('h3').textContent.toLowerCase();
+    const doctorSpeciality = box.querySelector('span').textContent.toLowerCase();
+
+    if (
+      doctorName.includes(searchTerm) &&
+      (selectedFilter === 'all' || doctorSpeciality.includes(selectedFilter))
+    ) {
+      box.style.display = 'block';
+    } else {
+      box.style.display = 'none';
+    }
+  });
+});
+
+// Add event listener for the filter buttons
+filterButtons.forEach((button) => {
+  button.addEventListener('click', () => {
+    // Remove the selected class from all buttons
+    filterButtons.forEach((button) => {
+      button.classList.remove('selected');
+    });
+
+    // Add the selected class to the clicked button
+    button.classList.add('selected');
+  });
+});
+
+
+</script>
+
 </body>
 </html>
