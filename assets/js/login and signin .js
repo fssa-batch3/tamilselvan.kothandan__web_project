@@ -8,6 +8,7 @@
         password = document.getElementById('password').value;
         confirm_password = document.getElementById('confirm_password').value;
         // unqiue_id =  unqiue_id;
+        let unqiue_id = uuidv4();
         phone_number= "";
         date_of_birth = "";
         gender= "";
@@ -22,7 +23,7 @@
         disease="";
         operation_dates="";
         medications="";
-        let unqiue_id = uuidv4();
+         
 
     //    errorMessage = document.getElementById("errorMessage");
 

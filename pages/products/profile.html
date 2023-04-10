@@ -86,7 +86,7 @@
       <div class="section__row">
         <div class="section__row__column">
           <div class="c-input c-input--text disabled">
-            <input  id="mobile" name="mobile" type="text" value="+919445535374" disabled>
+            <input  id="phone_number" name="mobile" type="number"  disabled>
             <label>Phone number</label>
             
           
@@ -95,7 +95,7 @@
         </div>
         <div class="section__row__column">
           <div class="c-input c-input--text disabled">
-            <input type="text"  id="email" disabled>
+            <input type="email"  id="email" disabled>
             <label>Email Address</label>
             
           
@@ -109,7 +109,7 @@
     
     
           <div class="c-input c-input--text disabled">
-      <input type="text"  placeholder="gender" value="Male" disabled>
+      <input type="text"  placeholder="gender"  id="gender" disabled>
         <label >
             Gender
         </label>
@@ -126,7 +126,7 @@
     
     
     <div class="c-input c-input--text">
-        <input  name="dob"  type="text" value="None" disabled>
+        <input  name="dob"  type="date"  id="date_of_birth" disabled>
         <label >
             Date of birth
         </label>
@@ -136,7 +136,7 @@
         </div>
         <div class="section__row__column">
           <div class="c-input c-input--text disabled">
-            <input type="text"  placeholder="blood group" value="None" disabled >
+            <input type="text"  placeholder="blood group"  id="blood_group" disabled >
               <label>
                   Blood Group
               </label>
@@ -159,7 +159,7 @@
     
     
     <div class="c-input c-input--text">
-        <input  name="street_address"  type="text" value="None" disabled>
+        <input  name="street_address"  type="text"  id="street_name" disabled>
         <label for="street_address">
             House No./ Street Name/ Area
         </label>
@@ -174,7 +174,7 @@
     
     
     <div class="c-input c-input--text">
-        <input  name="locality"  type="text" value="None" disabled>
+        <input  name="locality"  type="text" id="colony" disabled>
         <label for="locality">
             Colony / Street / Locality
         </label>
@@ -189,7 +189,7 @@
     
     
     <div class="c-input c-input--text">
-        <input  name="city"  type="text" value="Chennai" disabled >
+        <input  name="city"  type="text" id="city" disabled >
         <label >
             City
         </label>
@@ -205,7 +205,7 @@
     
     
     <div class="c-input c-input--text">
-        <input type="text" value="Tamil Nadu" disabled>
+        <input type="text" id="state"  disabled>
         <label >
             State
         </label>
@@ -216,7 +216,7 @@
           <div class="section__row__column">
             
                 <div class="c-input c-input--text">
-                    <input  name="country"  type="text" value="India" disabled>
+                    <input  name="country"  type="text"  id="country" disabled>
                               <label >
                                       Country
                               </label>
@@ -227,7 +227,7 @@
           <div class="section__row__column">
               
                   <div class="c-input c-input--text">
-                            <input  name="pincode"  type="text" value="600081" disabled>
+                            <input  name="pincode"  type="number"  id="pincode" disabled>
                                       <label >
                                               Pincode
                                       </label>
@@ -247,7 +247,7 @@
                         <div class="section__row">
                                   <div class="section__row__column">
                                            <div class="c-input c-input--text">
-                                                    <input type="text" value="None" disabled>
+                                                    <input type="text"  id="drug" disabled>
                                                               <label >
                                                                           list any drug allergies:
                                                               </label>
@@ -258,7 +258,7 @@
        
             <div class="section__row__column">
                   <div class="c-input c-input--text">
-                            <input  type="text" value="None" disabled>
+                            <input  type="text" id="disease"  disabled>
                                   <label >
                                                     Have you ever had disease:
                                   </label>
@@ -270,7 +270,7 @@
         
              <div class="section__row__column">
                         <div class="c-input c-input--text">
-                                    <input    type="text" value="None" disabled >
+                                    <input    type="text" id="operation_dates" disabled >
                                               <label >
                                                         list of operation dates of each:
                                               </label>
@@ -283,7 +283,7 @@
                                             <div class="section__row__column">
             
                                                             <div class="c-input c-input--text">
-                                                                        <input type="text" value="None" disabled>
+                                                                        <input type="text" id="medications"  disabled>
                                                                                     <label>
                                                                                             list any current Medications:
                                                                                     </label>
@@ -297,7 +297,8 @@
       </div>
       </div>
       <div>
-    <a href="./profile edit .html"><button class="btn-1">Edit Profile</button></a>
+    <a href="./edit_profile.html"><button class="btn-1">Edit Profile</button></a>
+    <button class="btn-1" onclick="btn_delete()">Delete profile</button>
   </div>
 
 
@@ -362,52 +363,44 @@ user_data = formData.find(check);
 
 document.getElementById("name").value = user_data['name'];
 document.getElementById("email").value = user_data['email'];
+document.getElementById("phone_number").value = user_data['phone_number'];
+document.getElementById("date_of_birth").value = user_data['date_of_birth'];
+document.getElementById("gender").value = user_data['gender'];
+document.getElementById("blood_group").value = user_data['blood_group'];
+document.getElementById("street_name").value = user_data['street_name'];
+document.getElementById("colony").value = user_data['colony'];
+document.getElementById("city").value = user_data['city'];
+document.getElementById("state").value = user_data['state'];
+document.getElementById("country").value = user_data['country'];
+document.getElementById("pincode").value = user_data['pincode'];
+document.getElementById("drug").value = user_data['drug'];
+document.getElementById("disease").value = user_data['disease'];
+document.getElementById("operation_dates").value = user_data['operation_dates'];
+document.getElementById("medications").value = user_data['medications'];
 
-//  //get value from local storage
-//  let unique_id = JSON.parse(localStorage.getItem("unique_id"));
-//             let user_detail = JSON.parse(localStorage.getItem("user_detail"));
-//             console.log(user_detail);
-//             console.log(unique_id);
-
-
-            // function profile_data(e){
-            //     return e.email_id == unique_id;
-            // }
-            // person_data = user_detail.find(profile_data);
-            // console.log(person_data)
-
-            document.getElementById("name").value = person_data["f_name"]+" "+person_data["l_name"];
-            document.getElementById("age").value = person_data["age"]
-            
-            document.getElementById("user_email").value = person_data["email_id"];
-            document.getElementById("mobile_number").value = person_data["mobile"];
-
-            // delete account function
-            function deleteAcc(){
-                if(confirm("Are you sure to delete this account ?")){
-                    let unique_id = JSON.parse(localStorage.getItem("unique_id"));
-                    let user_detail = JSON.parse(localStorage.getItem("user_detail"));
-                    console.log(user_detail);
-                    console.log(unique_id);
+function btn_delete(){
 
 
-                    function profile_data(e){
-                        return e.email_id == unique_id;
-                    }
-                    person_data = user_detail.find(profile_data);
-                    
-                    // find the index of person_data from userData
-                    let result =user_detail.indexOf(person_data);
-                    // deleting the indexof person data
-                    user_detail.splice(result, 1);
-                    localStorage.setItem("user_detail", JSON.stringify(user_detail));
-                    window.location.href="../../index.html";
-                }
-            }
-        </script>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/js/all.min.js" integrity="sha512-rpLlll167T5LJHwp0waJCh3ZRf7pO6IT1+LZOhAyP6phAirwchClbTZV3iqL3BMrVxIYRbzGTpli4rfxsCK6Vw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  let name_id = JSON.parse(localStorage.getItem('name_id'));
+let formData = JSON.parse(localStorage.getItem('formData'));
 
+function check(e){
+  return e.name == name_id;
+
+}
+
+user_data = formData.find(check);
+
+
+  const indexOfUser = formData.indexOf(user_data);
+  formData.splice(indexOfUser, 1);
+
+  localStorage.setItem('formData', JSON.stringify(formData));
+  localStorage.removeItem("name_id")
+  alert("account deleted")
+  window.location.href="../../index.html"
+
+}
 
 
 </script>
