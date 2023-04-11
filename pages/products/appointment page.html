@@ -1,120 +1,150 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>medical service </title>
 
-    
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="../../assets/css/style.css">
 
 </head>
+
 <body>
-    
-<!-- header section starts  -->
 
-<header class="header">
+    <!-- header section starts  -->
 
-    <a href="../../index.html" class="logo">  medical service. </a>
+    <header class="header">
 
-    <nav class="navbar">
-        <a href="../../index.html">Home</a>
-        <a href="../../index.html">Services</a>
-        <a href="../products/About page.html">About</a>
-        <a href="../products/Doctors.html">Doctors</a>
-        <a href="./hospital.html">Hospital</a>
-        <a href="./login.html">Login</a>
-    </nav>
+        <a href="../../index.html" class="logo"> medical service. </a>
 
-    <div id="menu-btn" class="fas fa-bars"></div>
+        <nav class="navbar">
+            <a href="../../index.html">Home</a>
+            <a href="../../index.html">Services</a>
+            <a href="../products/About page.html">About</a>
+            <a href="../products/Doctors.html">Doctors</a>
+            <a href="./hospital.html">Hospital</a>
+            <a href="./login.html">Login</a>
+        </nav>
 
-</header>
+        <div id="menu-btn" class="fas fa-bars"></div>
+
+    </header>
 
 
-<section class="book" id="book">
+    <section class="book" id="book">
 
-    <h1 class="heading"> <span>book</span> now </h1>    
+        <h1 class="heading"> <span>book</span> now </h1>
 
-    <div class="row">
+        <div class="row">
 
-        <div class="image">
-            <img src="../../assets/img/Medical prescription.gif" alt="">
+            <div class="image">
+                <img src="../../assets/img/Medical prescription.gif" alt="">
+            </div>
+
+            <form role="form" onsubmit="appoinment(event)">
+                <h3>Book Appointment</h3>
+                <input type="text" placeholder="Patient name" class="box" id="name">
+                <input type="number" placeholder="Patient number" class="box" id="number">
+                <input type="email" placeholder="Patient email" class="box" id="email">
+                <input type="datetime-local" class="box" id="date_time">
+                <button class="btn" type="submit">Book Now</button>
+
+                <!-- <a href="./appointment booked page.html">Book Now</a> -->
+
+            </form>
+
         </div>
 
-        <form action="">
-            <h3>Book Appointment</h3>
-            <input type="text" placeholder="Patient name" class="box"  id="patient_name">
-            <input type="number" placeholder="Patient number" class="box" id="number">
-            <input type="email" placeholder="Patient email" class="box" id="e_mail">
-            <input type="datetime-local"  class="box"  id="date_time">
-            <button class="btn" onclick="btn()" type="button"></button>
+    </section>
 
-            <!-- <a href="./appointment booked page.html">Book Now</a> -->
-           
-        </form>
+    <section class="footer">
 
-    </div>
+        <div class="box-container">
 
-</section>
+            <div class="box">
+                <h3>quick links</h3>
+                <a href="../../index.html"> <i class="fas fa-chevron-right"></i> Home </a>
+                <a href="../../index.html"> <i class="fas fa-chevron-right"></i> Services </a>
+                <a href="./About page.html"> <i class="fas fa-chevron-right"></i> About </a>
+                <a href="./Doctors.html"> <i class="fas fa-chevron-right"></i> Doctors </a>
+                <a href="./hospital.html"> <i class="fas fa-chevron-right"></i> hospital </a>
 
-<section class="footer">
 
-    <div class="box-container">
+            </div>
 
-        <div class="box">
-            <h3>quick links</h3>
-            <a href="../../index.html"> <i class="fas fa-chevron-right"></i> Home </a>
-            <a href="../../index.html"> <i class="fas fa-chevron-right"></i> Services </a>
-            <a href="./About page.html"> <i class="fas fa-chevron-right"></i> About </a>
-            <a href="./Doctors.html"> <i class="fas fa-chevron-right"></i> Doctors </a>
-            <a href="./hospital.html"> <i class="fas fa-chevron-right"></i> hospital </a>
-            
-            
+
+            <div class="box">
+                <h3>contact info</h3>
+                <a href="#"> <i class="fas fa-phone"></i> +91-9445535374 </a>
+
+
+                <a href="#"> <i class="fas fa-envelope"></i> tamilselvan.kothandan@fssa.freshworks.com </a>
+                <a href="#"> <i class="fas fa-map-marker-alt"></i> Chennai-600081 </a>
+            </div>
+
+            <div class="box">
+                <h3>follow us</h3>
+                <a href="#"> <i class="fab fa-facebook-f"></i> facebook </a>
+                <a href="#"> <i class="fab fa-twitter"></i> twitter </a>
+
+                <a href="#"> <i class="fab fa-instagram"></i> instagram </a>
+                <a href="#"> <i class="fab fa-linkedin"></i> linkedin </a>
+
+            </div>
+
         </div>
 
+        <script>
 
-        <div class="box">
-            <h3>contact info</h3>
-            <a href="#"> <i class="fas fa-phone"></i> +91-9445535374 </a>
-            
-    
-            <a href="#"> <i class="fas fa-envelope"></i> tamilselvan.kothandan@fssa.freshworks.com </a>
-            <a href="#"> <i class="fas fa-map-marker-alt"></i> Chennai-600081 </a>
-        </div>
+            let name_id = JSON.parse(localStorage.getItem('name_id'));
+            let formData = JSON.parse(localStorage.getItem('formData'));
 
-        <div class="box">
-            <h3>follow us</h3>
-            <a href="#"> <i class="fab fa-facebook-f"></i> facebook </a>
-            <a href="#"> <i class="fab fa-twitter"></i> twitter </a>
-        
-            <a href="#"> <i class="fab fa-instagram"></i> instagram </a>
-            <a href="#"> <i class="fab fa-linkedin"></i> linkedin </a>
-    
-        </div>
+            function check(e) {
+                return e.name == name_id;
 
-    </div>
+            }
 
-<script>
-    function btn(){
-        const patient_name = document.getElementById("patient_name").value 
-const number = document.getElementById("number").value
-const e_mail = document.getElementById("e_mail").value
-const detetime = document.getElementById("date_time").value
-console.log(patient_name)
-console.log(number)
-console.log(e_mail)
-console.log(date_time)
+            patient = formData.find(check);
 
-window.location.href="./appointment booked page.html"
+
+            document.getElementById("name").value = patient['name'];
+            document.getElementById("number").value = patient['number'];
+            document.getElementById("email").value = patient['email'];
+
+
+            function appoinment(e) {
+                e.preventDefault();
 
 
 
+                let name = document.getElementById("name").value;
+                email = document.getElementById("email").value;
+                number = document.getElementById("number").value;
+                date_time = document.getElementById("date_time")
 
-    }
+                let appoinment_details = JSON.parse(localStorage.getItem('appoinment_details')) || [];
 
-</script>
+
+                if (appoinment_details) {
+                    appoinment_details.push({ name, email, number, date_time });
+                    localStorage.setItem('appointment_details', JSON.stringify(appoinment_details))
+
+                    window.location.href = "./appointment booked page.html"
+
+                }
+
+
+
+
+
+            }
+
+        </script>
 
 </body>
+
 </html>
