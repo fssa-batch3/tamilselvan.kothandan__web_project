@@ -65,13 +65,13 @@
               </div>
               <div class="o-profile-photo__desc__actions">
                 
-                <input type="button" name="add-photo" value="Add Photo" >
+                <input type="file" name="add-photo" value="Add Photo" >
                 
               </div>
             </div>
           </div>
         </div>
-        <div class="section__row__column">
+        <div class="section__row__column" id="text">
                <div class="c-input c-input--text has-value">
         <input id="name" name="name"  type="text"  disabled>
         <label for="name">
@@ -297,7 +297,7 @@
       </div>
       </div>
       <div>
-    <a href="./edit_profile.html"><button class="btn-1">Edit Profile</button></a>
+    <button class="btn-1" onclick="btn_edit()">Edit Profile</button>
     <button class="btn-1" onclick="btn_delete()">Delete profile</button>
   </div>
 
@@ -401,7 +401,9 @@ user_data = formData.find(check);
   window.location.href="../../index.html"
 
 }
-
+function btn_edit(){
+  window.location.href="./edit_profile.html"
+}
 
 </script>
 </body>

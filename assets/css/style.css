@@ -758,12 +758,15 @@ input[type="submit"]:hover{
 
 /* profile page section starts */
 
+#text {margin-top: 20px;
 
+}
 .profile__content {
     width: 100%;
-    padding: 0 200px;
+    padding: 18px 120px;
     box-sizing: border-box;
-    margin-top: 150px;
+    margin-top: 200px;
+    margin-left: 20rem;
 }
 
 .section__row__column {
@@ -812,8 +815,8 @@ input[type="submit"]:hover{
 
 
 .section__row__column .c-input {
-    margin-top: 22px;
-    margin-bottom: 22px;
+    margin-top: 31px;
+    margin-bottom: 13px;
 }
 .c-input {
     display: inline-block;
@@ -891,14 +894,14 @@ img {
 
 .o-profile-photo__desc__actions input[type=button] {
     border: none;
-    padding: 0;
+    padding: 5px 2px;
     color:var(--green);
     background: none;
     font-weight: bold;
-    font-size: 0.75rem;
+    font-size: 1rem;
     line-height: 1.25rem;
     margin-right: 0.625rem;
-    
+    margin-left:-14px;
 }
 
 .btn-1{
@@ -937,7 +940,7 @@ img {
 }
 
 .profile_name{
-
+margin-right: 22rem;
     font-size: 1rem;
     margin-bottom: 0.625rem;
 }
@@ -1454,8 +1457,8 @@ div.signin{
     background: #fff;
     border-radius: 15px;
     box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
-    margin-top: 18rem;
-    margin-left: 30rem;
+    margin-top: 3rem;
+    margin-left: 0rem;
 }
 
 .login{
