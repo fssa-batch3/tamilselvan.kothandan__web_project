@@ -63,7 +63,7 @@
       </tr>
       <tr>
         <td>Date and Time</td>
-        <td><span style="color: #0e6453;font-weight: bolder;">Dec 19,2022| 12.40pm</span> </td>
+        <td><span style="color: #0e6453;font-weight: bolder;" id="date"></span> </td>
 
       </tr>
       <tr>
@@ -133,8 +133,12 @@
 
   <script>
 
-    let appointment_details = JSON.parse(localStorage.getItem('appointment_details')) || [];
-    document.getElementById('patient_name').innerText = appointment_details[0].name
+    let appointment_details = JSON.parse(localStorage.getItem('appoinment_details')) || [];
+
+    let name = document.getElementById('patient_name')
+    name.innerText = appointment_details[0].name;
+    let date = document.getElementById('date')
+    date.innerText = appointment_details[0].date_time;
 
   </script>
 

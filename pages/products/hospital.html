@@ -63,7 +63,7 @@
         <div class="box-container">
 
 
-            <div class="box">
+            <!-- <div class="box">
                 <a href="./hospital details/Apollo hospital details.html"><img
                         src="../../assets/img/Apollo_Hospitals_Logo.svg.png" alt=""></a>
                 <h3>Apollo Hospital</h3>
@@ -137,7 +137,7 @@
                     <a href="#" class="fab fa-instagram"></a>
                     <a href="#" class="fab fa-linkedin"></a>
                 </div>
-            </div>
+            </div> -->
 
 
 
@@ -180,6 +180,75 @@
             </div>
 
         </div>
-</body>
 
+
+    </section>
+
+    <script>
+
+
+
+let hospitals = JSON.parse(localStorage.getItem("hospitals"));
+      console.log(hospitals);
+
+      for (let i = 0; i < hospitals.length; i++) {
+
+        // create the parent div element
+        const parentDiv = document.createElement('div');
+        parentDiv.classList.add('box');
+
+        // create the child elements
+        const imageLink = document.createElement('a');
+        const image = document.createElement('img');
+        image.setAttribute('src', hospitals[i].img_src);
+        image.setAttribute('alt', hospitals[i].doctor_name);
+
+        const heading = document.createElement('h3');
+        heading.innerText = hospitals[i].hospital_name;
+
+        const span = document.createElement('span');
+        span.innerText = hospitals[i].Address
+
+        const shareDiv = document.createElement('div');
+        shareDiv.classList.add('share');
+
+        const facebookLink = document.createElement('a');
+        facebookLink.setAttribute('href', '');
+        facebookLink.classList.add('fab', 'fa-facebook-f');
+
+        const twitterLink = document.createElement('a');
+        twitterLink.setAttribute('href', '');
+        twitterLink.classList.add('fab', 'fa-twitter');
+
+        const instagramLink = document.createElement('a');
+        instagramLink.setAttribute('href', '');
+        instagramLink.classList.add('fab', 'fa-instagram');
+
+        const linkedinLink = document.createElement('a');
+        linkedinLink.setAttribute('href', '#');
+        linkedinLink.classList.add('fab', 'fa-linkedin');
+
+        // append the child elements to the parent div
+        imageLink.appendChild(image);
+        parentDiv.appendChild(imageLink);
+        parentDiv.appendChild(heading);
+        parentDiv.appendChild(span);
+        parentDiv.appendChild(shareDiv);
+
+        shareDiv.appendChild(facebookLink);
+        shareDiv.appendChild(twitterLink);
+        shareDiv.appendChild(instagramLink);
+        shareDiv.appendChild(linkedinLink);
+
+        // select the HTML element where you want to append the parent div
+        const container = document.querySelector('.box-container');
+        container.appendChild(parentDiv);
+      }
+    </script>
+
+
+
+
+
+</body>
 </html>

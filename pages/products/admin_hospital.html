@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>medical service </title>
+
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="../../assets/css/style.css">
+
+</head>
+
+<body>
+
+  <!-- header section starts  -->
+
+  <header class="header">
+
+    <a href="../../index.html" class="logo"> Medical Service </a>
+
+    <nav class="navbar">
+      <a href="../../index.html">Home</a>
+      <a href="../../index.html">Services</a>
+      <a href="./About page.html">About</a>
+      <a href="./Doctors.html">Doctors</a>
+      <a href="./hospital.html">Hospital</a>
+
+
+      <div class="dropdown">
+        <button class="dropbtn"><i class='fas fa-user-alt' style='font-size:18px;color:#0e6453'></i></button>
+        <div class="dropdown-content">
+          <a href="../products/profile.html">View profile</a>
+          <a href="./past appointment.html">My Appointment</a>
+          <a href="../homepage/index.html">Logout</a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="menu-btn" class="fas fa-bars"></div>
+
+  </header>
+
+<section>
+
+
+    <form id="hospitalForm" style="margin-top:20rem ; ">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br><br>
+      
+        <label for="specialty">Address:</label>
+        <input type="text" id="Address" name="Address" required><br><br>
+      
+        <label for="hospital">image:</label>
+        <input type="text" id="img_src" name="hospital" required><br><br>
+        <label for="hospital">linkedin:</label>
+        <input type="text" id="linkedin" name="linkedin" required><br><br>
+      
+        <label for="hospital">Facebook:</label>
+        <input type="text" id="Facebook" name="Facebook" required><br><br>
+        
+        <label for="hospital">Twitter:</label>
+        <input type="text" id="Twitter" name="Twitter" required><br><br>
+      
+        <label for="hospital">Instagram:</label>
+        <input type="text" id="Instagram" name="Instagram" required><br><br>
+        <button type="submit">Save</button>
+      </form>
+
+
+</section>
+<script>
+
+const hospitalForm = document.getElementById('hospitalForm');
+
+
+hospitalForm.addEventListener('submit', function(e) {
+e.preventDefault(); // Prevent form from submitting
+
+// Get form values
+const name = document.getElementById('name').value;
+const Address = document.getElementById('Address').value;
+const img_src = document.getElementById('img_src').value;
+const linkedin = document.getElementById('linkedin').value;
+const Facebook = document.getElementById('Facebook').value;
+const Twitter = document.getElementById('Twitter').value;
+const Instagram = document.getElementById('Instagram').value;
+
+const id = Date.now();
+
+// Create object to store values
+const hospital = {
+  id: id,
+  hospital_name: name,
+  Address: Address,
+  img_src: img_src,
+  linkedin : linkedin,
+  Facebook : Facebook,
+  Twitter : Twitter,
+  Instagram : Instagram
+};
+
+// Check if doctors array exists in local storage
+let hospitals = [];
+if (localStorage.getItem('hospitals')) {
+    hospitals = JSON.parse(localStorage.getItem('hospitals'));
+}
+
+// Add new doctor to array and save to local storage
+hospitals.push(hospital);
+localStorage.setItem('hospitals', JSON.stringify(hospitals));
+
+// Clear form inputs
+hospitalForm.reset();
+
+window.location.href="./hospital.html"
+});
+
+
+
+</script>
+
+</body>
+</html>

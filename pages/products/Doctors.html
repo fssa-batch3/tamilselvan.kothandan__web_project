@@ -74,7 +74,7 @@
 
     <div class="box-container">
 
-      <div class="box">
+      <!-- <div class="box">
         <a href="./doctor details/doctor details.html"><img src="../../assets/img/ajun.jpeg" alt=""></a>
         <h3>Dr. Ajun</h3>
         <span>Physiotheraphy</span>
@@ -155,8 +155,8 @@
           <a href="#" class="fab fa-twitter"></a>
           <a href="#" class="fab fa-instagram"></a>
           <a href="#" class="fab fa-linkedin"></a>
-        </div>
-      </div>
+        </div> -->
+      <!-- </div> -->
 
     </div>
 
@@ -200,54 +200,125 @@
     </div>
     <script>
 
-      // Get the search input and filter buttons
-      const searchInput = document.getElementById('search-input');
-      const filterButtons = document.querySelectorAll('.button-value');
-
-      // Add event listener for the search button
-      document.getElementById('search').addEventListener('click', () => {
-        // Get the search term
-        const searchTerm = searchInput.value.toLowerCase();
-
-        // Get the selected filter
-        let selectedFilter = '';
-        filterButtons.forEach((button) => {
-          if (button.classList.contains('selected')) {
-            selectedFilter = button.textContent.toLowerCase();
+      [{
+        "img_src": "../../assets/img/meena.jpeg",
+        "doctor_name": "Dr. Meena",
+        "specialization": "Gynecologist",
+        "social_media_links": {
+          "facebook": "#",
+          "twitter": "#",
+          "instagram": "#",
+          "linkedin": "#"
+        }
+      },
+        {
+          "img_src": "../../assets/img/sesslyn 2.jpeg",
+          "doctor_name": "Dr. Sesslyn",
+          "specialization": "Gynecologist",
+          "social_media_links": {
+            "facebook": "#",
+            "twitter": "#",
+            "instagram": "#",
+            "linkedin": "#"
           }
-        });
+        },
 
-        // Get all the doctor boxes
-        const doctorBoxes = document.querySelectorAll('.box');
-
-        // Loop through each doctor box and check if it matches the search term and filter
-        doctorBoxes.forEach((box) => {
-          const doctorName = box.querySelector('h3').textContent.toLowerCase();
-          const doctorSpeciality = box.querySelector('span').textContent.toLowerCase();
-
-          if (
-            doctorName.includes(searchTerm) &&
-            (selectedFilter === 'all' || doctorSpeciality.includes(selectedFilter))
-          ) {
-            box.style.display = 'block';
-          } else {
-            box.style.display = 'none';
+        {
+          "img_src": "../../assets/img/sesslyn 2.jpeg",
+          "doctor_name": "Dr. Sesslyn",
+          "specialization": "Gynecologist",
+          "social_media_links": {
+            "facebook": "#",
+            "twitter": "#",
+            "instagram": "#",
+            "linkedin": "#"
           }
-        });
-      });
+        },
 
-      // Add event listener for the filter buttons
-      filterButtons.forEach((button) => {
-        button.addEventListener('click', () => {
-          // Remove the selected class from all buttons
-          filterButtons.forEach((button) => {
-            button.classList.remove('selected');
-          });
+        {
+          "img_src": "../../assets/img/sesslyn 2.jpeg",
+          "doctor_name": "Dr. Sesslyn",
+          "specialization": "Gynecologist",
+          "social_media_links": {
+            "facebook": "#",
+            "twitter": "#",
+            "instagram": "#",
+            "linkedin": "#"
+          }
+        },
+      ]
 
-          // Add the selected class to the clicked button
-          button.classList.add('selected');
-        });
-      });
+
+
+      let doctors = JSON.parse(localStorage.getItem("doctors"));
+      console.log(doctors);
+
+      for (let i = 0; i < doctors.length; i++) {
+
+        // create the parent div element
+        const parentDiv = document.createElement('div');
+        parentDiv.classList.add('box');
+
+        // create the child elements
+        const imageLink = document.createElement('a');
+        const image = document.createElement('img');
+        image.setAttribute('src', doctors[i].img_src);
+        image.setAttribute('alt', doctors[i].doctor_name);
+
+        const heading = document.createElement('h3');
+        heading.innerText = doctors[i].doctor_name;
+
+        const span = document.createElement('span');
+        span.innerText = doctors[i].specialization
+
+        const shareDiv = document.createElement('div');
+        shareDiv.classList.add('share');
+
+        const facebookLink = document.createElement('a');
+        facebookLink.setAttribute('href', '');
+        facebookLink.classList.add('fab', 'fa-facebook-f');
+
+        const twitterLink = document.createElement('a');
+        twitterLink.setAttribute('href', '');
+        twitterLink.classList.add('fab', 'fa-twitter');
+
+        const instagramLink = document.createElement('a');
+        instagramLink.setAttribute('href', '');
+        instagramLink.classList.add('fab', 'fa-instagram');
+
+        const linkedinLink = document.createElement('a');
+        linkedinLink.setAttribute('href', '#');
+        linkedinLink.classList.add('fab', 'fa-linkedin');
+
+        // append the child elements to the parent div
+        imageLink.appendChild(image);
+        parentDiv.appendChild(imageLink);
+        parentDiv.appendChild(heading);
+        parentDiv.appendChild(span);
+        parentDiv.appendChild(shareDiv);
+
+        shareDiv.appendChild(facebookLink);
+        shareDiv.appendChild(twitterLink);
+        shareDiv.appendChild(instagramLink);
+        shareDiv.appendChild(linkedinLink);
+
+        // select the HTML element where you want to append the parent div
+        const container = document.querySelector('.box-container');
+        container.appendChild(parentDiv);
+
+
+
+      }
+
+
+
+
+
+
+
+
+
+
 
 
     </script>

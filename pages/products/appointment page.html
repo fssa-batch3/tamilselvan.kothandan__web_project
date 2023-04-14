@@ -119,24 +119,29 @@
             function appoinment(e) {
                 e.preventDefault();
 
+                const now = new Date();
+                // const year = now.getFullYear();
+                // const month = now.getMonth() + 1;
+                // const day = now.getDate();
+                // const date = year + "-" + month + "-" + day;
 
 
-                let name = document.getElementById("name").value;
-                email = document.getElementById("email").value;
-                number = document.getElementById("number").value;
-                date_time = document.getElementById("date_time")
+                let str = {
+                    "name": document.getElementById("name").value,
+                    "email": document.getElementById("email").value,
+                    "number": document.getElementById("number").value,
+                    "date_time": document.getElementById("date_time").value,
+                    "date": now
+                };
 
                 let appoinment_details = JSON.parse(localStorage.getItem('appoinment_details')) || [];
 
-
                 if (appoinment_details) {
-                    appoinment_details.push({ name, email, number, date_time });
-                    localStorage.setItem('appointment_details', JSON.stringify(appoinment_details))
+                    appoinment_details.push(str);
+                    localStorage.setItem('appoinment_details', JSON.stringify(appoinment_details));
 
-                    window.location.href = "./appointment booked page.html"
-
+                    window.location.href = "./appointment booked page.html";
                 }
-
 
 
 

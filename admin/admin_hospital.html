@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>medical service</title>
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+
+<body>
+
+    <!-- header section starts  -->
+
+    <header class="header">
+
+        <a href="../index.html" class="logo"> Medical Service </a>
+
+        <nav class="navbar">
+            
+            <a href="../index.html">Logout</a>
+
+
+           
+        </nav>
+
+        <div id="menu-btn" class="fas fa-bars"></div>
+
+    </header>
+
+
+
+    <section class="doctors">
+
+        <h1 class="heading"> Add <span>hospitals</span> </h1>
+
+
+        
+
+
+        <div class="box-container">
+
+
+           
+
+        </div>
+        <button  class="btn" onclick="add_hospital()">Add Hospital</button>
+
+    </section>
+    <section class="footer">
+
+        <div class="box-container">
+
+            <div class="box">
+                <h3>quick links</h3>
+                <a href="../../index.html"> <i class="fas fa-chevron-right"></i> Home </a>
+                <a href="../../index.html"> <i class="fas fa-chevron-right"></i> Services </a>
+                <a href="./About page.html"> <i class="fas fa-chevron-right"></i> About </a>
+                <a href="./Doctors.html"> <i class="fas fa-chevron-right"></i> Doctors </a>
+                <a href="./hospital.html"> <i class="fas fa-chevron-right"></i> hospital </a>
+
+
+            </div>
+
+
+            <div class="box">
+                <h3>contact info</h3>
+                <a href="#"> <i class="fas fa-phone"></i> +91-9445535374 </a>
+
+
+                <a href="#"> <i class="fas fa-envelope"></i> tamilselvan.kothandan@fssa.freshworks.com </a>
+                <a href="#"> <i class="fas fa-map-marker-alt"></i> Chennai-600081 </a>
+            </div>
+
+            <div class="box">
+                <h3>follow us</h3>
+                <a href="#"> <i class="fab fa-facebook-f"></i> facebook </a>
+                <a href="#"> <i class="fab fa-twitter"></i> twitter </a>
+
+                <a href="#"> <i class="fab fa-instagram"></i> instagram </a>
+                <a href="#"> <i class="fab fa-linkedin"></i> linkedin </a>
+
+            </div>
+
+        </div>
+
+
+    </section>
+
+    <script>
+
+
+
+let hospitals = JSON.parse(localStorage.getItem("hospitals"));
+      console.log(hospitals);
+
+      for (let i = 0; i < hospitals.length; i++) {
+
+        // create the parent div element
+        const parentDiv = document.createElement('div');
+        parentDiv.classList.add('box');
+
+        // create the child elements
+        const imageLink = document.createElement('a');
+        const image = document.createElement('img');
+        image.setAttribute('src', hospitals[i].img_src);
+        image.setAttribute('alt', hospitals[i].doctor_name);
+
+        const heading = document.createElement('h3');
+        heading.innerText = hospitals[i].hospital_name;
+
+        const span = document.createElement('span');
+        span.innerText = hospitals[i].Address
+
+        const shareDiv = document.createElement('div');
+        shareDiv.classList.add('share');
+
+        const facebookLink = document.createElement('a');
+        facebookLink.setAttribute('href', '');
+        facebookLink.classList.add('fab', 'fa-facebook-f');
+
+        const twitterLink = document.createElement('a');
+        twitterLink.setAttribute('href', '');
+        twitterLink.classList.add('fab', 'fa-twitter');
+
+        const instagramLink = document.createElement('a');
+        instagramLink.setAttribute('href', '');
+        instagramLink.classList.add('fab', 'fa-instagram');
+
+        const linkedinLink = document.createElement('a');
+        linkedinLink.setAttribute('href', '#');
+        linkedinLink.classList.add('fab', 'fa-linkedin');
+
+        // append the child elements to the parent div
+        imageLink.appendChild(image);
+        parentDiv.appendChild(imageLink);
+        parentDiv.appendChild(heading);
+        parentDiv.appendChild(span);
+        parentDiv.appendChild(shareDiv);
+
+        shareDiv.appendChild(facebookLink);
+        shareDiv.appendChild(twitterLink);
+        shareDiv.appendChild(instagramLink);
+        shareDiv.appendChild(linkedinLink);
+
+        // select the HTML element where you want to append the parent div
+        const container = document.querySelector('.box-container');
+        container.appendChild(parentDiv);
+      }
+
+
+      function add_hospital(){
+
+        window.location.href="./admin_hospital_form.html"
+      }
+
+    </script>
+
+
+
+
+</body>
+</html>
