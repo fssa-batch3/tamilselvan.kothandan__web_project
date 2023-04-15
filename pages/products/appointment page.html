@@ -108,7 +108,7 @@
 
             }
 
-            patient = formData.find(check);
+            let patient = formData.find(check);
 
 
             document.getElementById("name").value = patient['name'];
@@ -120,10 +120,7 @@
                 e.preventDefault();
 
                 const now = new Date();
-                // const year = now.getFullYear();
-                // const month = now.getMonth() + 1;
-                // const day = now.getDate();
-                // const date = year + "-" + month + "-" + day;
+                
 
 
                 let str = {

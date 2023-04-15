@@ -19,11 +19,11 @@
 
   <header class="header">
 
-    <a href="../index.html" class="logo"> Medical Service </a>
+    <a href="./admin.html" class="logo"> Medical Service </a>
 
     <nav class="navbar">
       
-      <a href="../index.html">Logout</a>
+      <a href="#" id="logout_link">Logout</a>
 
 
       
@@ -132,6 +132,27 @@
         linkedinLink.setAttribute('href', '#');
         linkedinLink.classList.add('fab', 'fa-linkedin');
 
+
+        const signOut = document.createElement('a');
+            signOut.setAttribute('href', '#');
+            signOut.setAttribute("id", doctors[i].id)
+            signOut.classList.add('fas', 'fa-sign-out-alt');
+
+            signOut.addEventListener("click", function () {
+          if (confirm("Are you sure to Delete ?")) {
+            let id = this.id;
+            let doctors = JSON.parse(localStorage.getItem("doctors"));
+            // Find the index of the post to delete
+            const indexOfUser = doctors.find(e => e.id == id);
+            // Remove the post from the array
+            if (indexOfUser !== -1) {
+              doctors.splice(indexOfUser, 1);
+            }
+            localStorage.setItem('doctors', JSON.stringify(doctors));
+            location.reload();
+          }
+        });
+
         // append the child elements to the parent div
         imageLink.appendChild(image);
         parentDiv.appendChild(imageLink);
@@ -143,6 +164,7 @@
         shareDiv.appendChild(twitterLink);
         shareDiv.appendChild(instagramLink);
         shareDiv.appendChild(linkedinLink);
+        shareDiv.appendChild(signOut);
 
         // select the HTML element where you want to append the parent div
         const container = document.querySelector('.box-container');
@@ -168,6 +190,8 @@ function add_doctors(){
 
 
     </script>
+
+    <script src="./logout.js"></script>
 
 </body>
 

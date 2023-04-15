@@ -35,7 +35,7 @@
 
 
 
-    <form  role="form" onsubmit="signUp(event);" style="margin-top: 20rem;">
+    <form role="form" onsubmit="signUp(event);" style="margin-top: 20rem;">
         <h1>Register</h1>
         <p>Please fill in this form to create an account.</p>
         <hr>
@@ -69,18 +69,18 @@
     <script>
 
 
-function signUp(e) {
+        function signUp(e) {
             e.preventDefault();
 
             let full_name = document.getElementById('fullname').value,
                 email = document.getElementById('email').value,
                 password = document.getElementById('password').value;
-            confirm_password = document.getElementById('confirm_password').value;
-            Phone_number = document.getElementById('Phone_number').value;
-            
+            let confirm_password = document.getElementById('confirm_password').value;
+            let Phone_number = document.getElementById('Phone_number').value;
 
 
-            // let unqiue_id = uuidv4();
+
+           
 
 
 
