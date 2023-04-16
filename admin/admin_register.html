@@ -65,56 +65,94 @@
 
     </form>
 
-
+    <script src="https://cdn.jsdelivr.net/npm/uuid@8.3.2/dist/umd/uuidv4.min.js"></script>
     <script>
 
 
+        // function signUp(e) {
+        //     e.preventDefault();
+
+        //     let full_name = document.getElementById('fullname').value,
+        //         email = document.getElementById('email').value,
+        //         password = document.getElementById('password').value;
+        //     let confirm_password = document.getElementById('confirm_password').value;
+        //     let Phone_number = document.getElementById('Phone_number').value;
+
+        //     let unqiue_id = uuidv4();
+
+
+
+
+
+        //     function checkPassword() {
+        //         if (password !== confirm_password) {
+        //             alert("Re-enter the Password");
+        //             confirm_password.value = reset();
+        //         }
+        //         else {
+        //             alert("Password Matched");
+        //         }
+        //     }
+        //     checkPassword();
+
+
+        //     let admin = JSON.parse(localStorage.getItem('admin')) || [];
+
+        //     let exist = admin.length &&
+        //         JSON.parse(localStorage.getItem('admin')).some(data =>
+        //         data.name.toLowerCase() == name.toLowerCase()
+        //         );
+
+        //     if (!exist) {
+        //         admin.push({ full_name, email, password, Phone_number, unqiue_id });
+        //         localStorage.setItem('admin', JSON.stringify(admin));
+        //         document.querySelector('form').reset();
+
+        //         alert("Account Created.\n\nPlease Sign In using the link below.");
+        //     }
+        //     else {
+        //         alert("ALREADY EXISTED!!!\nYou have already signed up");
+        //     }
+
+        // }
+
+
+
+
         function signUp(e) {
-            e.preventDefault();
+  e.preventDefault();
 
-            let full_name = document.getElementById('fullname').value,
-                email = document.getElementById('email').value,
-                password = document.getElementById('password').value;
-            let confirm_password = document.getElementById('confirm_password').value;
-            let Phone_number = document.getElementById('Phone_number').value;
+  const full_name = document.getElementById('fullname').value;
+  const email = document.getElementById('email').value;
+  const password = document.getElementById('password').value;
+  const confirm_password = document.getElementById('confirm_password').value;
+  const phone_number = document.getElementById('Phone_number').value;
+  const unique_id = uuidv4();
 
+  function checkPassword() {
+    if (password !== confirm_password) {
+      alert("Passwords don't match. Please try again.");
+      confirm_password.value = '';
+    } else {
+      alert("Password matched.");
+    }
+  }
+  checkPassword();
 
+  const admin = JSON.parse(localStorage.getItem('admin')) || [];
 
-           
+  const exist = admin.some(data => data.full_name.toLowerCase() === full_name.toLowerCase());
 
+  if (!exist) {
+    admin.push({ full_name, email, password, phone_number, unique_id });
+    localStorage.setItem('admin', JSON.stringify(admin));
+    document.querySelector('form').reset();
+    alert("Account created successfully. Please sign in using the link below.");
+  } else {
+    alert("This account already exists. Please sign in using the link below.");
+  }
+}
 
-
-            function checkPassword() {
-                if (password !== confirm_password) {
-                    alert("Re-enter the Password");
-                    confirm_password.value = reset();
-                }
-                else {
-                    alert("Password Matched");
-                }
-            }
-            checkPassword();
-
-
-            let admin = JSON.parse(localStorage.getItem('admin')) || [];
-
-            let exist = admin.length &&
-                JSON.parse(localStorage.getItem('admin')).some(data =>
-                    data.name.toLowerCase() == name.toLowerCase()
-                );
-
-            if (!exist) {
-                admin.push({ full_name, email, password, Phone_number });
-                localStorage.setItem('admin', JSON.stringify(admin));
-                document.querySelector('form').reset();
-
-                alert("Account Created.\n\nPlease Sign In using the link below.");
-            }
-            else {
-                alert("ALREADY EXISTED!!!\nYou have already signed up");
-            }
-
-        }
 
 
     </script>

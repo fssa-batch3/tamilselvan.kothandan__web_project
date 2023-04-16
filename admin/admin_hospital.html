@@ -91,7 +91,7 @@
 
 
     </section>
-<script src="./logout.js"></script>
+    <script src="./logout.js"></script>
     <script>
 
 
@@ -103,7 +103,7 @@
 
             // create the parent div element
             const parentDiv = document.createElement('div');
-            
+
             parentDiv.classList.add('box');
 
             // create the child elements
@@ -122,19 +122,19 @@
             shareDiv.classList.add('share');
 
             const facebookLink = document.createElement('a');
-            facebookLink.setAttribute('href', '');
+            facebookLink.setAttribute('href', hospitals[i].Facebook);
             facebookLink.classList.add('fab', 'fa-facebook-f');
 
             const twitterLink = document.createElement('a');
-            twitterLink.setAttribute('href', '');
+            twitterLink.setAttribute('href', hospitals[i].Twitter);
             twitterLink.classList.add('fab', 'fa-twitter');
 
             const instagramLink = document.createElement('a');
-            instagramLink.setAttribute('href', '');
+            instagramLink.setAttribute('href', hospitals[i].Instagram);
             instagramLink.classList.add('fab', 'fa-instagram');
 
             const linkedinLink = document.createElement('a');
-            linkedinLink.setAttribute('href', '#');
+            linkedinLink.setAttribute('href', hospitals[i].linkedin);
             linkedinLink.classList.add('fab', 'fa-linkedin');
 
             const signOut = document.createElement('a');
@@ -143,19 +143,19 @@
             signOut.classList.add('fas', 'fa-sign-out-alt');
 
             signOut.addEventListener("click", function () {
-          if (confirm("Are you sure to Delete ?")) {
-            let id = this.id;
-            let hospitals = JSON.parse(localStorage.getItem("hospitals"));
-            // Find the index of the post to delete
-            const indexOfUser = hospitals.find(e => e.id == id);
-            // Remove the post from the array
-            if (indexOfUser !== -1) {
-                hospitals.splice(indexOfUser, 1);
-            }
-            localStorage.setItem('hospitals', JSON.stringify(hospitals));
-            location.reload();
-          }
-        });
+                if (confirm("Are you sure to Delete ?")) {
+                    let id = this.id;
+                    let hospitals = JSON.parse(localStorage.getItem("hospitals"));
+                    // Find the index of the post to delete
+                    const indexOfUser = hospitals.find(e => e.id == id);
+                    // Remove the post from the array
+                    if (indexOfUser !== -1) {
+                        hospitals.splice(indexOfUser, 1);
+                    }
+                    localStorage.setItem('hospitals', JSON.stringify(hospitals));
+                    location.reload();
+                }
+            });
 
 
 
