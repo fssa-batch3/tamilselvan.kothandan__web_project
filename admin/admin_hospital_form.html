@@ -24,96 +24,108 @@
     <nav class="navbar">
 
       <a href="../index.html" id="logout_link">Logout</a>
-      
 
 
-      
+
+
     </nav>
 
     <div id="menu-btn" class="fas fa-bars"></div>
 
   </header>
 
-<section>
+  <section>
 
 
     <form id="hospitalForm" style="margin-top:20rem ; ">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required><br><br>
-      
-        <label for="specialty">Address:</label>
-        <input type="text" id="Address" name="Address" required><br><br>
-      
-        <label for="hospital">image:</label>
-        <input type="text" id="img_src" name="hospital" required><br><br>
-        <label for="hospital">linkedin:</label>
-        <input type="text" id="linkedin" name="linkedin" required><br><br>
-      
-        <label for="hospital">Facebook:</label>
-        <input type="text" id="Facebook" name="Facebook" required><br><br>
-        
-        <label for="hospital">Twitter:</label>
-        <input type="text" id="Twitter" name="Twitter" required><br><br>
-      
-        <label for="hospital">Instagram:</label>
-        <input type="text" id="Instagram" name="Instagram" required><br><br>
-        <button type="submit">Save</button>
-      </form>
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required><br><br>
 
+      <label for="specialty">Address:</label>
+      <input type="text" id="Address" name="Address" required><br><br>
 
-</section>
-<script src="./logout.js"></script>
+      <label for="hospital">image:</label>
+      <input type="text" id="img_src" name="hospital" required><br><br>
 
-<script>
+      <label for="hospital">Details:</label>
+      <textarea type="text" id="details" name="Instagram" required> </textarea><br><br>
 
-const hospitalForm = document.getElementById('hospitalForm');
+      <label for="hospital">linkedin:</label>
+      <input type="text" id="linkedin" name="linkedin" required><br><br>
 
+      <label for="hospital">Facebook:</label>
+      <input type="text" id="Facebook" name="Facebook" required><br><br>
 
-hospitalForm.addEventListener('submit', function(e) {
-e.preventDefault(); // Prevent form from submitting
-
-// Get form values
-const name = document.getElementById('name').value;
-const Address = document.getElementById('Address').value;
-const img_src = document.getElementById('img_src').value;
-const linkedin = document.getElementById('linkedin').value;
-const Facebook = document.getElementById('Facebook').value;
-const Twitter = document.getElementById('Twitter').value;
-const Instagram = document.getElementById('Instagram').value;
-
-const id = Date.now();
-
-// Create object to store values
-const hospital = {
-  id: id,
-  hospital_name: name,
-  Address: Address,
-  img_src: img_src,
-  linkedin : linkedin,
-  Facebook : Facebook,
-  Twitter : Twitter,
-  Instagram : Instagram
-};
-
-// Check if doctors array exists in local storage
-let hospitals = [];
-if (localStorage.getItem('hospitals')) {
-    hospitals = JSON.parse(localStorage.getItem('hospitals'));
-}
-
-// Add new doctor to array and save to local storage
-hospitals.push(hospital);
-localStorage.setItem('hospitals', JSON.stringify(hospitals));
-
-// Clear form inputs
-hospitalForm.reset();
-
-window.location.href="./admin_hospital.html"
-});
+      <label for="hospital">Twitter:</label>
+      <input type="text" id="Twitter" name="Twitter" required><br><br>
 
 
 
-</script>
+      <label for="hospital">Instagram:</label>
+      <input type="text" id="Instagram" name="Instagram" required><br><br>
+
+
+
+      <button type="submit">Save</button>
+    </form>
+
+
+  </section>
+  <script src="./logout.js"></script>
+
+  <script>
+
+    const hospitalForm = document.getElementById('hospitalForm');
+
+
+    hospitalForm.addEventListener('submit', function (e) {
+      e.preventDefault(); // Prevent form from submitting
+
+      // Get form values
+      const name = document.getElementById('name').value;
+      const Address = document.getElementById('Address').value;
+      const img_src = document.getElementById('img_src').value;
+      const linkedin = document.getElementById('linkedin').value;
+      const Facebook = document.getElementById('Facebook').value;
+      const Twitter = document.getElementById('Twitter').value;
+      const Instagram = document.getElementById('Instagram').value;
+      const Details = document.getElementById('details').value;
+
+      const id = Date.now();
+
+      // Create object to store values
+      const hospital = {
+        id: id,
+        hospital_name: name,
+        Address: Address,
+        img_src: img_src,
+        linkedin: linkedin,
+        Facebook: Facebook,
+        Twitter: Twitter,
+        Instagram: Instagram,
+        Details: Details
+      };
+
+      // Check if doctors array exists in local storage
+      let hospitals = [];
+      if (localStorage.getItem('hospitals')) {
+        hospitals = JSON.parse(localStorage.getItem('hospitals'));
+      }
+
+      // Add new doctor to array and save to local storage
+      hospitals.push(hospital);
+      localStorage.setItem('hospitals', JSON.stringify(hospitals));
+
+      // Clear form inputs
+      hospitalForm.reset();
+
+      window.location.href = "./admin_hospital.html"
+    });
+
+
+
+  </script>
 
 </body>
+
 </html>

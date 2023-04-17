@@ -133,6 +133,8 @@
 
         // create the child elements
         const imageLink = document.createElement('a');
+        imageLink.setAttribute('href',"./doctor details/doctor details.html?doctor_id="+doctors[i].id)
+
         const image = document.createElement('img');
         image.setAttribute('src', doctors[i].img_src);
         image.setAttribute('alt', doctors[i].doctor_name);

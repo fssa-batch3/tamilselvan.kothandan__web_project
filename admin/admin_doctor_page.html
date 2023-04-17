@@ -22,11 +22,11 @@
     <a href="./admin.html" class="logo"> Medical Service </a>
 
     <nav class="navbar">
-      
+
       <a href="#" id="logout_link">Logout</a>
 
 
-      
+
     </nav>
 
     <div id="menu-btn" class="fas fa-bars"></div>
@@ -40,15 +40,15 @@
     <h1 class="heading"> Add <span>doctors</span> </h1>
 
 
-    
+
 
 
     <div class="box-container">
 
-      
+
 
     </div>
-<button  class="btn" onclick="add_doctors()">Add Doctors</button>
+    <button class="btn" onclick="add_doctors()">Add Doctors</button>
   </section>
 
   <section class="footer">
@@ -86,10 +86,10 @@
 
       </div>
 
-    </div>
+    </div><a href="../pages/products/doctor details/doctor details.html"></a>
     <script>
 
-     
+
 
 
       let doctors = JSON.parse(localStorage.getItem("doctors"));
@@ -103,6 +103,7 @@
 
         // create the child elements
         const imageLink = document.createElement('a');
+        imageLink.setAttribute('href', "../pages/products/doctor details/doctor details.html?doctor_id=" + doctors[i].id)
         const image = document.createElement('img');
         image.setAttribute('src', doctors[i].img_src);
         image.setAttribute('alt', doctors[i].doctor_name);
@@ -134,11 +135,11 @@
 
 
         const signOut = document.createElement('a');
-            signOut.setAttribute('href', '#');
-            signOut.setAttribute("id", doctors[i].id)
-            signOut.classList.add('fas', 'fa-sign-out-alt');
+        signOut.setAttribute('href', '#');
+        signOut.setAttribute("id", doctors[i].id)
+        signOut.classList.add('fas', 'fa-sign-out-alt');
 
-            signOut.addEventListener("click", function () {
+        signOut.addEventListener("click", function () {
           if (confirm("Are you sure to Delete ?")) {
             let id = this.id;
             let doctors = JSON.parse(localStorage.getItem("doctors"));
@@ -176,11 +177,11 @@
 
 
 
-function add_doctors(){
+      function add_doctors() {
 
 
-    window.location.href="./admin_doctor_form.html"
-}
+        window.location.href = "./admin_doctor_form.html"
+      }
 
 
 

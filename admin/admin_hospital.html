@@ -88,7 +88,7 @@
             </div>
 
         </div>
-
+        <a href="../pages/products/hospital details/Apollo hospital details.html"></a>
 
     </section>
     <script src="./logout.js"></script>
@@ -108,6 +108,7 @@
 
             // create the child elements
             const imageLink = document.createElement('a');
+            imageLink.setAttribute('href', "../pages/products/hospital details/Apollo hospital details.html?hospitals_id=" + hospitals[i].id)
             const image = document.createElement('img');
             image.setAttribute('src', hospitals[i].img_src);
             image.setAttribute('alt', hospitals[i].doctor_name);

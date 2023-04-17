@@ -48,35 +48,20 @@
 
   <div class="content-1">
     <div class="main" id="main">
-      <img class="main-img" src="../../../assets/img/Apollo_Hospitals_Logo.svg.png" alt="image-product-1"
-        id="apollo-hospital-1" />
-      <ul class="bottom-images">
-        <li><img class="small-image" src="../../../assets/img/Best-Multispeciality-Hospitals-1.jpg"
-            alt="image-product-1-thumbnail" /></li>
-        <li><img class="small-image" src="../../../assets/img/Best-Multispeciality-Hospitals-1.jpg"
-            alt="image-product-2-thumbnail" /></li>
-        <li><img class="small-image" src="../../../assets/img/Best-Multispeciality-Hospitals-1.jpg"
-            alt="image-product-3-thumbnail" /></li>
-        <li><img class="small-image" src="../../../assets/img/Best-Multispeciality-Hospitals-1.jpg"
-            alt="image-product-4-thumbnail" /></li>
-      </ul>
+      <img class="main-img" src="" alt="image-product-1" id="img_src" />
+
     </div>
     <div class="aside-2">
       <div class="aside-content">
         <p class="aside-content-parah" id="parah">
           Hospital Details
         </p>
-        <h1 class="heading" id="apollo-heading" style="font-size: 3.2rem; margin-top: 1rem;"> Apollo
-          <span>hospital</span> </h1>
-        <p id="details"> Apollo Hospitals Enterprise Limited is an Indian multinational healthcare group headquartered
-          in Chennai. Along with the eponymous hospital chain, the company also operates pharmacies.<br>
+        <h1 class="heading" id="name" style="font-size: 3.2rem; margin-top: 1rem;"> </h1>
+        <p id="details">
 
         </p>
       </div>
-      <!-- <div class="value">
-        <h2>Goole review</h2>
-        <h3>4.5</h3>
-      </div> -->
+
 
 
       <a href="../Doctors.html" class="btn" id="apollo-hospital"> Book Appointment <span
@@ -127,6 +112,29 @@
 
   </section>
   <script src="../../../assets/js/script.js"></script>
+
+  <script>
+
+    const params = new URLSearchParams(window.location.search);
+    const hospitals_id = params.get('hospitals_id');
+
+    let hospitals = JSON.parse(localStorage.getItem('hospitals'));
+
+    let find_hospitals = hospitals.find(e => e.id == hospitals_id);
+    console.log(find_hospitals);
+
+    document.getElementById('name').innerText = find_hospitals.hospital_name;
+
+    document.getElementById('details').innerText = find_hospitals.Details;
+
+
+    let doctor_img = document.getElementById('img_src');
+    doctor_img.setAttribute('src', find_hospitals.img_src);
+
+
+  </script>
+
+
 </body>
 
 </html>
