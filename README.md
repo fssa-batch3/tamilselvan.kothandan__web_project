@@ -68,5 +68,73 @@ EDIT PROFILE: (COMPLETED)
 
 Scenario 1: Edit the profile
   * steps:  
+1. Fill in the required information as shown in Edit Profile.
+2. Then click on the save button.
+3. Now you can see the information that you gave in your profile.
+
+Book an appointment: (completed)
+
+
+* Scenario 2: successfully booking an appointment
+
+
+* steps:
+
+
+1. Fill in the required information that is shown on the appointment form.
+then click book now.
+3. Then you can see the appointment status.
+
+
+Admin: 
+
+CREATE AN ACCOUNT : (COMPLETED)
+
+
+* Scenario 1: You successfully created an account.
+
+
+* steps:
+
+     1. Navigated to the sign-up page
+     2. Fill in the required details,
+         such as name, phone number,
+         and password.
+     3.  click the "submit" button.
+
+* Expected result:
+          The admin is clicking the already a member button on the register page to the
+         login page.
+
+
+
+
+CREATE AN ACCOUNT : (COMPLETED)
+
+* Scenario 1: Successfully logged in to your account
+     * Steps:
+          1. Navigated to the login 
+            page.
+         2. Fill in the required 
+            information, such as Name and password.
+         3. click the "submit" button.
+
+    * Expected result: 
+          * The admin is redirected 
+                to the admin page.
+
+
+
+Add Doctors and Add Hospital:
+
+
+*Scenario 2: You can add doctors and hospitals.
+         * steps :
+                    1. To begin, click the add doctors or add hospital button.
+                    2. You will then be redirected to the add doctors or hospitals page, where you will see 
+                        an "Add" button.then click on that.
+                    3. complete the form on that page
+                    4. You have successfully added doctors or hospitals to that page. 
+                    5. then you can logout from admin page.
 
 
