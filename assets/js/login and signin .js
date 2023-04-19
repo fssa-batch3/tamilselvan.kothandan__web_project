@@ -46,7 +46,7 @@ function signUp(e) {
         );
 
     if (!exist) {
-        formData.push({ name, email, password, phone_number, date_of_birth, blood_group, street_name, colony, city, state, pincode, country, drug, disease, operation_dates, medications, unqiue_id });
+        formData.push({ name, email, password, phone_number, date_of_birth, gender, blood_group, street_name, colony, city, state, pincode, country, drug, disease, operation_dates, medications, unqiue_id });
         localStorage.setItem('formData', JSON.stringify(formData));
         document.querySelector('form').reset();
 
