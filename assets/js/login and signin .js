@@ -7,7 +7,7 @@ function signUp(e) {
         password = document.getElementById('password').value;
     confirm_password = document.getElementById('confirm_password').value;
     // unqiue_id =  unqiue_id;
-    let unqiue_id = uuidv4();
+    
     phone_number = "";
     date_of_birth = "";
     gender = "";
@@ -46,7 +46,7 @@ function signUp(e) {
         );
 
     if (!exist) {
-        formData.push({ name, email, password, phone_number, date_of_birth, gender, blood_group, street_name, colony, city, state, pincode, country, drug, disease, operation_dates, medications, unqiue_id });
+        formData.push({ name, email, password, phone_number, date_of_birth, gender, blood_group, street_name, colony, city, state, pincode, country, drug, disease, operation_dates, medications});
         localStorage.setItem('formData', JSON.stringify(formData));
         document.querySelector('form').reset();
 

@@ -69,7 +69,7 @@
 
   </form>
 
-  <script src="https://cdn.jsdelivr.net/npm/uuid@8.3.2/dist/umd/uuidv4.min.js"></script>
+ 
   <script>
 
     function signUp(e) {
@@ -80,7 +80,7 @@
       const password = document.getElementById('password').value;
       const confirm_password = document.getElementById('confirm_password').value;
       const phone_number = document.getElementById('Phone_number').value;
-      const unique_id = uuidv4();
+      
 
       function checkPassword() {
         if (password !== confirm_password) {
@@ -97,7 +97,7 @@
       const exist = admin.some(data => data.full_name.toLowerCase() === full_name.toLowerCase());
 
       if (!exist) {
-        admin.push({ full_name, email, password, phone_number, unique_id });
+        admin.push({ full_name, email, password, phone_number });
         localStorage.setItem('admin', JSON.stringify(admin));
         document.querySelector('form').reset();
         alert("Account created successfully. Please sign in using the link below.");
