@@ -1000,15 +1000,16 @@
   .dropbtn {
       background-color: white;
       color: white;
-      padding: 1rem;
       font-size: 1rem;
       border: none;
+      
   }
 
 
   .dropdown {
       position: relative;
       display: inline-block;
+      padding: 0%;
   }
 
 

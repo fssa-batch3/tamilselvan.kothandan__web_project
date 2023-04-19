@@ -1,5 +1,4 @@
 
-
 function signUp(e) {
     e.preventDefault();
 
@@ -52,6 +51,7 @@ function signUp(e) {
         document.querySelector('form').reset();
 
         alert("Account Created.\n\nPlease Sign In using the link below.");
+        window.location.href="../products/login.html"
     }
     else {
         alert("ALREADY EXISTED!!!\nYou have already signed up");
