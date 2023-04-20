@@ -32,7 +32,7 @@
     <section class="filter">
       <div class="wrapper">
         <div id="search-container">
-          <input type="search" id="search-input" placeholder="search for doctors">
+          <input type="search" id="search-item" placeholder="search for doctors" onkeyup="search()">
           <button id="search">Search</button>
         </div>
       </div>
@@ -51,7 +51,7 @@
 
 
 
-    <div class="box-container">
+    <div class="box-container" id="doctor-list">
 
 
 
@@ -108,7 +108,7 @@
 
         // create the parent div element
         const parentDiv = document.createElement('div');
-        parentDiv.classList.add('box');
+        parentDiv.classList.add('Box');
 
         // create the child elements
         const imageLink = document.createElement('a');
@@ -177,6 +177,34 @@
     </script>
     <script src="./../../Components/header.js"></script>
     <script>home_header()</script>
+    <script>
+      const search = () => {
+        const searchbox = document.getElementById("search-item").value.toLowerCase();
+        const storeitems = document.getElementById("doctor-list");
+        const box = document.querySelectorAll(".Box");
+        const doctors = document.getElementsByTagName("h3");
+
+        for (var i = 0; i < doctors.length; i++) {
+          let match = box[i].getElementsByTagName('h3')[0];
+
+          if (match) {
+            let textvalue = match.textContent || match.innerHTML
+
+            if (textvalue.toLowerCase().indexOf(searchbox) > -1) {
+              box[i].style.display = "";
+
+            } else {
+              box[i].style.display = "none";
+
+            }
+          }
+        }
+      }
+
+
+
+    </script>
+
 
 </body>
 

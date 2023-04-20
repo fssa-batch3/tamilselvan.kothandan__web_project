@@ -69,7 +69,7 @@ if(!user_name){
 
 }
 else{
-     logHeader.innerHTML = afterLogin;
+      logHeader.innerHTML = afterLogin;
      let user_date = JSON.parse(localStorage.getItem("formData"));
      let user = user_date.find((userid) => userid.name === user_name );
 }
