@@ -36,8 +36,8 @@
             <form role="form" onsubmit="appoinment(event)">
                 <h3>Book Appointment</h3>
                 <input type="text" placeholder="Patient name" class="box" id="name">
-                <input type="tel" placeholder="Patient number" class="box" id="number">
-                <input type="email" placeholder="Patient email" class="box" id="email">
+                <input type="tel" placeholder="Patient number" pattern="^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$" class="box" id="number">
+                <input type="email" placeholder="Patient email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" class="box" id="email">
                 <input type="datetime-local" class="box" id="date_time">
                 <button class="btn" type="submit">Book Now</button>
 
@@ -100,7 +100,7 @@
 
 
             document.getElementById("name").value = patient['name'];
-            document.getElementById("number").value = patient['number'];
+            document.getElementById("number").innerText = patient['number'];
             document.getElementById("email").value = patient['email'];
 
 
@@ -114,7 +114,7 @@
                 let str = {
                     "name": document.getElementById("name").value,
                     "email": document.getElementById("email").value,
-                    "number": document.getElementById("number").value,
+                    "number": document.getElementById("number").innerText,
                     "date_time": document.getElementById("date_time").value,
                     "date": now
                 };
