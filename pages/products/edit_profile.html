@@ -64,7 +64,8 @@
       <div class="section__row">
         <div class="section__row__column">
           <div class="c-input c-input--text   ">
-            <input id="phone_number" name="mobile" type="tel" pattern="^(?:\+1)?[ -]?\(?([0-9]{3})\)?[ -]?([0-9]{3})[ -]?([0-9]{4})$">
+            <input id="phone_number" name="mobile" type="tel"
+              pattern="^(?:\+1)?[ -]?\(?([0-9]{3})\)?[ -]?([0-9]{3})[ -]?([0-9]{4})$">
             <label>Phone number</label>
 
 
@@ -87,7 +88,12 @@
 
 
           <div class="c-input c-input--text   ">
-            <input type="text" placeholder="gender" id="gender" value="Male">
+            <select id="gender">
+              <option value="">Select an option&hellip;</option>
+              <option value="Male">Male</option>
+              <option value="Female">Female</option>
+              <option value="Others">Others</option>
+            </select>
             <label>
               Gender
             </label>
@@ -114,7 +120,17 @@
         </div>
         <div class="section__row__column">
           <div class="c-input c-input--text   ">
-            <input type="text" id="blood_group" placeholder="blood group" value="None">
+            <select id="blood_group">
+              <option value="">Select an option&hellip;</option>
+              <option value="O+">O+</option>
+              <option value="O-">O-</option>
+              <option value="AB+">AB+</option>
+              <option value="AB-">AB-</option>
+              <option value="B-">B-</option>
+              <option value="B+">B+</option>
+              <option value="A+">A+</option>
+              <option value="A-">A-</option>
+            </select>
             <label>
               Blood Group
             </label>
@@ -336,7 +352,7 @@
 
     }
 
-   let user_data = formData.find(check);
+    let user_data = formData.find(check);
 
     document.getElementById("name").value = user_data['name'];
     document.getElementById("email").value = user_data['email'];

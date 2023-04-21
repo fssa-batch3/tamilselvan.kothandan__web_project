@@ -1645,7 +1645,7 @@
   }
   
   /* Style the options */
-  #blood_group option {
+  #blood_group  option {
     font-size: 16px;
     background-color: #fff;
     color: #333;
@@ -1656,6 +1656,34 @@
     background-color: #007bff;
     color: #fff;
   }
+
+
+
+  
+  
+  /* Style the options */
+  #gender {
+    font-size: 16px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 200px;
+  }
+  
+  /* Style the options */
+  #gender  option {
+    font-size: 16px;
+    background-color: #fff;
+    color: #333;
+  }
+  
+  /* Style the selected option */
+  #gender option:checked {
+    background-color: #007bff;
+    color: #fff;
+  }
+  
+  
 
 
   /* Media queries for responsiveness */
