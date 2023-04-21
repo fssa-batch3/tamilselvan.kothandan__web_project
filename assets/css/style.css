@@ -355,9 +355,9 @@
 
   .main-img {
       width: 400px;
-      margin-top: 15rem;
+      margin-top: 35rem;
       border-radius: 20px;
-      margin-left: 13rem;
+      margin-left: 2rem;
   }
 
   .bottom-images {
@@ -1633,6 +1633,28 @@
   a {
       color: black;
       text-decoration: none;
+  }
+
+      /* Style the select box */
+#blood_group {
+    font-size: 16px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 200px;
+  }
+  
+  /* Style the options */
+  #blood_group option {
+    font-size: 16px;
+    background-color: #fff;
+    color: #333;
+  }
+  
+  /* Style the selected option */
+  #blood_group option:checked {
+    background-color: #007bff;
+    color: #fff;
   }
 
 
