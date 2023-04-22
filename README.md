@@ -39,7 +39,7 @@ Problem Statement
 
 Create an Account
 - Scenario 1: You successfully created an account.
-- Steps:
+  - Steps:
 
           1. Navigate to the sign-up page
           2. Fill in the required details, such as name, phone number, and password.
@@ -48,7 +48,7 @@ Create an Account
                        The user is redirected to the login page.
 
 - Scenario 1: Successfully logged in to your account.
-- Steps:
+  - Steps:
 
            1. Navigate to the login page.
            2. Fill in the required information, such as phone number and password.
@@ -56,10 +56,10 @@ Create an Account
                        - Expected Result:
                                The user is redirected to the profile.
 
-- Edit Profile
+ Edit Profile
 
 - Scenario 1: Edit the profile.
-- Steps:
+  - Steps:
 
              1. Fill in the required information as shown in Edit Profile.
              2. Click on the save button.
@@ -68,7 +68,7 @@ Create an Account
 # Book an Appointment
 
 - Scenario 1:
-- Steps:
+  - Steps:
 
        1. The user can see the hospital and doctors button in the header.
        2. The user can go to the hospital. If the user does not know the name of the doctor, he can search for a doctor
@@ -79,7 +79,7 @@ Create an Account
        5. Then, redirected appointment booked there, you can see the status on that page after booking the appointment.
 
 - Scenario 2:
-      - Steps:
+    - Steps:
       
             1. The user can see the hospital and doctor buttons in the header.
             2. The user can go to the doctor. If the user does not know the name of the hospital, he can search for
@@ -103,7 +103,7 @@ Create an Account
 # Admin Account Creation
 
 - Scenario 1: Successfully created an account
-- Steps:
+  - Steps:
 
       1. Navigate to the sign-up page.
       2. Fill in the required details, such as name, phone number, and password.
@@ -114,7 +114,7 @@ Create an Account
 Admin Account Login
 
 - Scenario 1: Successfully logged in to your account
-- Steps:
+  - Steps:
 
         1. Navigate to the login page.
         2. Fill in the required information, such as name and password.
@@ -125,7 +125,7 @@ Admin Account Login
 Adding Doctors and Hospitals
 
 - Scenario 2: Add doctors and hospitals
-- Steps:
+  - Steps:
 
             1. Click the "Add Doctors" or "Add Hospital" button.
             2. You will then be redirected to the "Add Doctors" or "Add Hospital" page, where you will see an "Add"
