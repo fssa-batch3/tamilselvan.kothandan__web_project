@@ -45,7 +45,7 @@
       </tr>
       <tr>
         <td>Doctor's name</td>
-        <td><span style="color: #0e6453;font-weight: bolder;">Dr. Ajun</span></td>
+        <td><span style="color: #0e6453;font-weight: bolder;" id="doctor_name"></span></td>
 
       </tr>
       <tr>
@@ -55,7 +55,7 @@
       </tr>
       <tr>
         <td>Clinic's Details</td>
-        <td><span style="color: #0e6453;font-weight: bolder;">Apollo Hospital<br>+91-8877665544</span></td>
+        <td><span style="color: #0e6453;font-weight: bolder;" id="clinic"></span></td>
 
       </tr>
       <tr>
@@ -126,6 +126,20 @@
     name.innerText = appointment_details[0].name;
     let date = document.getElementById('date')
     date.innerText = appointment_details[0].date_time;
+    
+
+    const params = new URLSearchParams(window.location.search);
+      const doctor_id = params.get('doctor_id');
+      console.log(doctor_id)
+   
+
+      let doctors = JSON.parse(localStorage.getItem('doctors'));
+
+      let find_doctor = doctors.find(e => e.id == doctor_id);
+      console.log(find_doctor.doctor_name);
+
+    document.getElementById("doctor_name").innerText = find_doctor.doctor_name;
+    document.getElementById("clinic").innerText = find_doctor.clinic
 
   </script>
   <script src="../../Components/header.js"></script>

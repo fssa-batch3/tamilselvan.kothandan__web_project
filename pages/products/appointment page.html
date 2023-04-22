@@ -36,13 +36,16 @@
             <form role="form" onsubmit="appoinment(event)">
                 <h3>Book Appointment</h3>
                 <input type="text" placeholder="Patient name" class="box" id="name">
-                <input type="tel" placeholder="Patient number" pattern="^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$" class="box" id="number">
-                <input type="email" placeholder="Patient email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" class="box" id="email">
+                <input type="tel" placeholder="Patient number"
+                    pattern="^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$" class="box" id="number">
+                <input type="email" placeholder="Patient email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                    class="box" id="email">
                 <input type="datetime-local" class="box" id="date_time">
-                <button class="btn" type="submit">Book Now</button>
+              <!-- <button class="btn" id="book_now"  type="submit">Book Now</button> -->
+            <button type="submit" class="btn">Book</button></a>
 
                 <!-- <a href="./appointment booked page.html">Book Now</a> -->
-
+                <!-- <a id="book_now" style="height: 12rem;"></a>  -->
             </form>
 
         </div>
@@ -102,13 +105,16 @@
             document.getElementById("name").value = patient['name'];
             document.getElementById("number").innerText = patient['number'];
             document.getElementById("email").value = patient['email'];
+            document.getElementById("date_time").value = patient['date_time']
 
+            // const appoinment_link=document.getElementById("book_now");
+            // appoinment_link.setAttribute("href", "../appointment page.html?doctor_id="+ doctor_id)
 
             function appoinment(e) {
                 e.preventDefault();
 
                 const now = new Date();
-                
+
 
 
                 let str = {
@@ -116,8 +122,12 @@
                     "email": document.getElementById("email").value,
                     "number": document.getElementById("number").innerText,
                     "date_time": document.getElementById("date_time").value,
+
                     "date": now
+
+
                 };
+
 
                 let appoinment_details = JSON.parse(localStorage.getItem('appoinment_details')) || [];
 
@@ -125,13 +135,28 @@
                     appoinment_details.push(str);
                     localStorage.setItem('appoinment_details', JSON.stringify(appoinment_details));
 
-                    window.location.href = "./appointment booked page.html";
+                    window.location.href = "./appointment booked page.html?doctor_id="+ doctor_id;
                 }
 
 
 
 
             }
+            const params = new URLSearchParams(window.location.search);
+      const doctor_id = params.get('doctor_id');
+      console.log(doctor_id)
+   
+
+      let doctors = JSON.parse(localStorage.getItem('doctors'));
+
+      let find_doctor = doctors.find(e => e.id == doctor_id);
+      console.log(find_doctor);
+
+    //   function book_now(){
+    //     window.location.href="../appointment page.html?doctor_id="+doctor_id
+    //   }
+
+   
 
         </script>
         <script src="./../../Components/header.js"></script>

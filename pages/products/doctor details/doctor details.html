@@ -47,7 +47,7 @@
         <p class="about" id="Descripition"></p>
       </div>
 
-      <a href="../appointment page.html" class="btn" id="ajun_details"> Book Appointment </a>
+      <a  class="btn" id="ajun_details"> Book Appointment </a>
 
       <section class="footer-1">
 
@@ -151,6 +151,8 @@
       document.getElementById('Timing').innerText = find_doctor.Timing;
 
 
+      const appoinment_link=document.getElementById("ajun_details")
+      appoinment_link.setAttribute("href","../appointment page.html?doctor_id=" +doctor_id)
       
 
     </script>

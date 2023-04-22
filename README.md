@@ -1,14 +1,18 @@
 [![Bugs](https://sonarcloud.io/api/project_badges/measure?project=fssa-batch3_tamilselvan.kothandan__web_project&metric=bugs)](https://sonarcloud.io/summary/new_code?id=fssa-batch3_tamilselvan.kothandan__web_project)
+
 # tamilselvan.kothandan__web_project
 
 100-Day-Project
+This project is about providing medical services for patient appointments.
 
-This project is about providing medical services for patient appointments. 
+User Flow
+<https://drive.google.com/file/d/1LrUHKzJGs1hypSu6LBHe0AGg1a7DHj-b/view>  
 
-userflow: https://drive.google.com/file/d/1LrUHKzJGs1hypSu6LBHe0AGg1a7DHj-b/view  
-wireframe: https://drive.google.com/file/d/13_xYXJgRDVW6E-hP9baRw56WZg6Sfyah/view  
-problem statement: https://docs.google.com/document/d/1Omq55hXgBxjmr9NQkc-E8Ix6Q3f5-mvr/edit  
+Wireframe
+<https://drive.google.com/file/d/13_xYXJgRDVW6E-hP9baRw56WZg6Sfyah/view>  
 
+Problem Statement
+<https://docs.google.com/document/d/1Omq55hXgBxjmr9NQkc-E8Ix6Q3f5-mvr/edit>
 
  1. User CRUD
     - Create user CRUD
@@ -21,7 +25,7 @@ problem statement: https://docs.google.com/document/d/1Omq55hXgBxjmr9NQkc-E8Ix6Q
     - Read Doctor CRUD
     - Update Doctor CRUD
     - Delete Doctor CRUD
-    - CRUD doctor details 
+    - CRUD doctor details
 
  3. Hospital CRUD  
      - Create hospital CRUD
@@ -29,112 +33,105 @@ problem statement: https://docs.google.com/document/d/1Omq55hXgBxjmr9NQkc-E8Ix6Q
      - Update hospital CRUD
      - Delete hospital CRUD
 
-Medical-service
+# Medical-service
 
-PATIENT:
+# Patient
 
-CREATE AN ACCOUNT : (COMPLETED)
+Create an Account
 
-* Scenario 1: You successfully created an account.
+- Scenario 1: You successfully created an account.
 
-* steps:
+- Steps:
 
-      1. Navigated to the sign-up page
-      2. Fill in the required details, 
-         such as name, phone number, 
-         and password.
-      3. click the "submit" button.
-* Expected result:
-         The user is redirected to the 
-         login page.
+1. Navigate to the sign-up page
+2. Fill in the required details, such as name, phone number, and password.
+3. Click the "submit" button.
+    - Expected Result:
+        The user is redirected to the login page.
 
-CREATE AN ACCOUNT : (COMPLETED)
+- Scenario 1: Successfully logged in to your account.
 
-* Scenario 1: Successfully logged in to your account
-     * Steps:
-          1. Navigated to the login 
-            page.
-         2. Fill in the required 
-            information, such as phone 
-            number and password.
-         3. click the "submit" button.
+- Steps:
 
-    * Expected result: 
-          * The user is redirected 
-                to the profile.
+1. Navigate to the login page.
+2. Fill in the required information, such as phone number and password.
+3. Click the "submit" button.
+     - Expected Result:
+          The user is redirected to the profile.
 
+- Edit Profile
 
-EDIT PROFILE: (COMPLETED)
+- Scenario 1: Edit the profile.
 
-Scenario 1: Edit the profile
-  * steps:  
+- Steps:
+
 1. Fill in the required information as shown in Edit Profile.
-2. Then click on the save button.
+2. Click on the save button.
 3. Now you can see the information that you gave in your profile.
 
-Book an appointment: (completed)
+# Book an Appointment
 
+- Scenario 1:
 
-* Scenario 2: successfully booking an appointment
+- Steps:
 
+1. The user can see the hospital and doctors button in the header.
+2. The user can go to the hospital. If the user does not know the name of the doctor, he can search for a doctor
+   from their respective hospital.
+3. The user can then click on the respective doctor.
+   On the doctor details page, the user can see the book appointment button. The user can click that.
+4. The user then fills out the required information that is shown on the appointment page.
+5. Then, redirected appointment booked there, you can see the status on that page after booking the appointment.
 
-* steps:
+- Scenario 2:
+      * Steps:
+           1. The user can see the hospital and doctor buttons in the header.
+           2. The user can go to the doctor. If the user does not know the name of the hospital, he can search for
+               a doctor on the page.
+           3. The user can then click on the respective doctor.
+           4. On the doctor's details page, the user can see the book appointment button. The user can click that.
+           5. The user then fills out the required information that is shown on the appointment page.
+           6. Then, if redirected appointment booked there, you can see the status on that page after booking the
+              appointment.
 
+- Scenario 3:
+      * Steps:
+         1. Users can see the user icon on the header.
+         2. Then, by clicking on that icon, the user can see the dropdowns like view profile and past
+               appointments.
+         3. The user can click on the view profile button on the drop-down menu.
+         4. From the view profile page on down, the user can see the delete button on that page.             5.
+         5. When a user clicks on that button, they will be logged out of that page.
 
-1. Fill in the required information that is shown on the appointment form.
-then click book now.
-3. Then you can see the appointment status.
+# Admin Account Creation
 
+ Scenario 1: Successfully created an account
 
-Admin: 
+- Steps:
+      1. Navigate to the sign-up page.
+      2. Fill in the required details, such as name, phone number, and password.
+      3. Click the "submit" button.
+            * Expected Result:
+                The admin is redirected to the login page.
 
-CREATE AN ACCOUNT : (COMPLETED)
+Admin Account Login
+Scenario 1: Successfully logged in to your account
 
+- Steps:
+       1. Navigate to the login page.
+       2. Fill in the required information, such as name and password.
+       3. Click the "submit" button.
+            * Expected Result:
+                  The admin is redirected to the admin page.
 
-* Scenario 1: You successfully created an account.
+Adding Doctors and Hospitals
 
+Scenario 2: Add doctors and hospitals
 
-* steps:
-
-     1. Navigated to the sign-up page
-     2. Fill in the required details,
-         such as name, phone number,
-         and password.
-     3.  click the "submit" button.
-
-* Expected result:
-          The admin is clicking the already a member button on the register page to the
-         login page.
-
-
-
-
-CREATE AN ACCOUNT : (COMPLETED)
-
-* Scenario 1: Successfully logged in to your account
-     * Steps:
-          1. Navigated to the login 
-            page.
-         2. Fill in the required 
-            information, such as Name and password.
-         3. click the "submit" button.
-
-    * Expected result: 
-          * The admin is redirected 
-                to the admin page.
-
-
-
-Add Doctors and Add Hospital:
-
-
-*Scenario 2: You can add doctors and hospitals.
-         * steps :
-                    1. To begin, click the add doctors or add hospital button.
-                    2. You will then be redirected to the add doctors or hospitals page, where you will see 
-                        an "Add" button.then click on that.
-                    3. complete the form on that page
-                    4. You have successfully added doctors or hospitals to that page. 
-                    5. then you can logout from admin page.
-
-
+- Steps:
+     1. Click the "Add Doctors" or "Add Hospital" button.
+     2. You will then be redirected to the "Add Doctors" or "Add Hospital" page, where you will see an "Add"
+        button. Click on that.
+     3. Complete the form on that page.
+     4. You have successfully added doctors or hospitals to that page.
+     5. Logout from the admin page.
