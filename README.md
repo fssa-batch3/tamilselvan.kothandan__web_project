@@ -84,7 +84,7 @@ Create an Account
 5. Then, redirected appointment booked there, you can see the status on that page after booking the appointment.
 
 - Scenario 2:
-      * Steps:
+      - Steps:
            1. The user can see the hospital and doctor buttons in the header.
            2. The user can go to the doctor. If the user does not know the name of the hospital, he can search for
                a doctor on the page.
@@ -95,7 +95,7 @@ Create an Account
               appointment.
 
 - Scenario 3:
-      * Steps:
+  - Steps:
          1. Users can see the user icon on the header.
          2. Then, by clicking on that icon, the user can see the dropdowns like view profile and past
                appointments.
