@@ -116,10 +116,10 @@ Admin Account Login
 - Scenario 1: Successfully logged in to your account
 - Steps:
 
-       1. Navigate to the login page.
-       2. Fill in the required information, such as name and password.
-       3. Click the "submit" button.
-            * Expected Result:
+        1. Navigate to the login page.
+        2. Fill in the required information, such as name and password.
+        3. Click the "submit" button.
+            - Expected Result:
                   The admin is redirected to the admin page.
 
 Adding Doctors and Hospitals
@@ -127,9 +127,9 @@ Adding Doctors and Hospitals
 - Scenario 2: Add doctors and hospitals
 - Steps:
 
-     1. Click the "Add Doctors" or "Add Hospital" button.
-     2. You will then be redirected to the "Add Doctors" or "Add Hospital" page, where you will see an "Add"
-        button. Click on that.
-     3. Complete the form on that page.
-     4. You have successfully added doctors or hospitals to that page.
-     5. Logout from the admin page.
+            1. Click the "Add Doctors" or "Add Hospital" button.
+            2. You will then be redirected to the "Add Doctors" or "Add Hospital" page, where you will see an "Add"
+                button. Click on that.
+            3. Complete the form on that page.
+            4. You have successfully added doctors or hospitals to that page.
+            5. Logout from the admin page.
