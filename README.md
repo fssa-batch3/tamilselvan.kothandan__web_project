@@ -38,76 +38,73 @@ Problem Statement
 # Patient
 
 Create an Account
-
 - Scenario 1: You successfully created an account.
-
 - Steps:
 
-1. Navigate to the sign-up page
-2. Fill in the required details, such as name, phone number, and password.
-3. Click the "submit" button.
-    - Expected Result:
-        The user is redirected to the login page.
+          1. Navigate to the sign-up page
+          2. Fill in the required details, such as name, phone number, and password.
+          3. Click the "submit" button.
+                - Expected Result:
+                       The user is redirected to the login page.
 
 - Scenario 1: Successfully logged in to your account.
-
 - Steps:
 
-1. Navigate to the login page.
-2. Fill in the required information, such as phone number and password.
-3. Click the "submit" button.
-     - Expected Result:
-          The user is redirected to the profile.
+           1. Navigate to the login page.
+           2. Fill in the required information, such as phone number and password.
+           3. Click the "submit" button.
+                       - Expected Result:
+                               The user is redirected to the profile.
 
 - Edit Profile
 
 - Scenario 1: Edit the profile.
-
 - Steps:
 
-1. Fill in the required information as shown in Edit Profile.
-2. Click on the save button.
-3. Now you can see the information that you gave in your profile.
+             1. Fill in the required information as shown in Edit Profile.
+             2. Click on the save button.
+             3. Now you can see the information that you gave in your profile.
 
 # Book an Appointment
 
 - Scenario 1:
-
 - Steps:
 
-1. The user can see the hospital and doctors button in the header.
-2. The user can go to the hospital. If the user does not know the name of the doctor, he can search for a doctor
-   from their respective hospital.
-3. The user can then click on the respective doctor.
-   On the doctor details page, the user can see the book appointment button. The user can click that.
-4. The user then fills out the required information that is shown on the appointment page.
-5. Then, redirected appointment booked there, you can see the status on that page after booking the appointment.
+       1. The user can see the hospital and doctors button in the header.
+       2. The user can go to the hospital. If the user does not know the name of the doctor, he can search for a doctor
+           from their respective hospital.
+       3. The user can then click on the respective doctor.
+           On the doctor details page, the user can see the book appointment button. The user can click that.
+       4. The user then fills out the required information that is shown on the appointment page.
+       5. Then, redirected appointment booked there, you can see the status on that page after booking the appointment.
 
 - Scenario 2:
       - Steps:
-           1. The user can see the hospital and doctor buttons in the header.
-           2. The user can go to the doctor. If the user does not know the name of the hospital, he can search for
+      
+            1. The user can see the hospital and doctor buttons in the header.
+            2. The user can go to the doctor. If the user does not know the name of the hospital, he can search for
                a doctor on the page.
-           3. The user can then click on the respective doctor.
-           4. On the doctor's details page, the user can see the book appointment button. The user can click that.
-           5. The user then fills out the required information that is shown on the appointment page.
-           6. Then, if redirected appointment booked there, you can see the status on that page after booking the
+            3. The user can then click on the respective doctor.
+            4. On the doctor's details page, the user can see the book appointment button. The user can click that.
+            5. The user then fills out the required information that is shown on the appointment page.
+            6. Then, if redirected appointment booked there, you can see the status on that page after booking the
               appointment.
 
 - Scenario 3:
   - Steps:
-         1. Users can see the user icon on the header.
-         2. Then, by clicking on that icon, the user can see the dropdowns like view profile and past
+  
+          1. Users can see the user icon on the header.
+          2. Then, by clicking on that icon, the user can see the dropdowns like view profile and past
                appointments.
-         3. The user can click on the view profile button on the drop-down menu.
-         4. From the view profile page on down, the user can see the delete button on that page.             5.
-         5. When a user clicks on that button, they will be logged out of that page.
+          3. The user can click on the view profile button on the drop-down menu.
+          4. From the view profile page on down, the user can see the delete button on that page.             5.
+          5. When a user clicks on that button, they will be logged out of that page.
 
 # Admin Account Creation
 
- Scenario 1: Successfully created an account
-
+- Scenario 1: Successfully created an account
 - Steps:
+
       1. Navigate to the sign-up page.
       2. Fill in the required details, such as name, phone number, and password.
       3. Click the "submit" button.
@@ -115,9 +112,10 @@ Create an Account
                 The admin is redirected to the login page.
 
 Admin Account Login
-Scenario 1: Successfully logged in to your account
 
+- Scenario 1: Successfully logged in to your account
 - Steps:
+
        1. Navigate to the login page.
        2. Fill in the required information, such as name and password.
        3. Click the "submit" button.
@@ -126,9 +124,9 @@ Scenario 1: Successfully logged in to your account
 
 Adding Doctors and Hospitals
 
-Scenario 2: Add doctors and hospitals
-
+- Scenario 2: Add doctors and hospitals
 - Steps:
+
      1. Click the "Add Doctors" or "Add Hospital" button.
      2. You will then be redirected to the "Add Doctors" or "Add Hospital" page, where you will see an "Add"
         button. Click on that.
