@@ -104,12 +104,12 @@ Create an Account
 
 - Scenario 1: Successfully created an account
   - Steps:
-
-      1. Navigate to the sign-up page.
-      2. Fill in the required details, such as name, phone number, and password.
-      3. Click the "submit" button.
-            * Expected Result:
-                The admin is redirected to the login page.
+      
+           1. Navigate to the sign-up page.
+           2. Fill in the required details, such as name, phone number, and password.
+           3. Click the "submit" button.
+                  - Expected Result:
+                        The admin is redirected to the login page.
 
 Admin Account Login
 
