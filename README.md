@@ -38,6 +38,7 @@ Problem Statement
 # Patient
 
 Create an Account
+
 - Scenario 1: You successfully created an account.
   - Steps:
 
@@ -79,8 +80,8 @@ Create an Account
        5. Then, redirected appointment booked there, you can see the status on that page after booking the appointment.
 
 - Scenario 2:
-    - Steps:
-      
+  - Steps:
+
             1. The user can see the hospital and doctor buttons in the header.
             2. The user can go to the doctor. If the user does not know the name of the hospital, he can search for
                a doctor on the page.
@@ -104,7 +105,7 @@ Create an Account
 
 - Scenario 1: Successfully created an account
   - Steps:
-      
+
            1. Navigate to the sign-up page.
            2. Fill in the required details, such as name, phone number, and password.
            3. Click the "submit" button.
