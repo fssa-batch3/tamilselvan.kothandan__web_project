@@ -85,7 +85,7 @@
       function checkPassword() {
         if (password !== confirm_password) {
           alert("Passwords don't match. Please try again.");
-          confirm_password.value = '';
+          confirm_password.value = reset();
         } else {
           alert("Password matched.");
         }
