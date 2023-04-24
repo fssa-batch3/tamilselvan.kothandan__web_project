@@ -111,7 +111,7 @@ Create an Account
           2. Then, by clicking on that icon, the user can see the dropdowns like view profile and past
                appointments.
           3. The user can click on the view profile button on the drop-down menu.
-          4. From the view profile page on down, the user can see the delete button on that page.             5.
+          4. From the view profile page on down, the user can see the delete button on that page.             
           5. When a user clicks on that button, they will be logged out of that page.
 
 # Admin Account Creation
