@@ -41,7 +41,11 @@ Problem Statement
           5. create Hospital details (completed)
           6. Read Hospital details (completed)
           7. Delete Hospital details (completed)
-
+          
+ - Search Feature
+ 
+           1. search bar (completed)
+           
 # Medical-service
 
 # Patient
