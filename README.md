@@ -21,6 +21,7 @@ Problem Statement
           3. Update user CRUD (completed)
           4. Delete user CRUD (completed)
           5. Book appointment (completed)
+          6. user can Logout (completed)
 
  - Doctor CRUD
  
