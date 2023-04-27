@@ -14,25 +14,39 @@ Wireframe
 Problem Statement
 <https://docs.google.com/document/d/1Omq55hXgBxjmr9NQkc-E8Ix6Q3f5-mvr/edit>
 
- 1. User CRUD
-    - Create user CRUD
-    - Read user CRUD
-    - Update user CRUD
-    - Delete user CRUD
+ - User CRUD
+ 
+          1. Create user CRUD (completetd)
+          2. Read user CRUD (completed)
+          3. Update user CRUD (completed)
+          4. Delete user CRUD (completed)
+          5. Book appointment (completed)
+          6. user can Logout (completed)
 
- 2. Doctor CRUD
-    - Create Doctor CRUD
-    - Read Doctor CRUD
-    - Update Doctor CRUD
-    - Delete Doctor CRUD
-    - CRUD doctor details
+ - Doctor CRUD
+ 
+          1. Create Doctor CRUD (completed)
+          2. Read Doctor CRUD (completed)
+          3. Update Doctor CRUD (completed)
+          4. Delete Doctor CRUD (completed)
+          5. Create Doctor details (completed)
+          6. Read Doctor details (completed) 
+          7. Delete Doctor details (completed)
 
- 3. Hospital CRUD  
-     - Create hospital CRUD
-     - Read hospital CRUD
-     - Update hospital CRUD
-     - Delete hospital CRUD
-
+ - Hospital CRUD 
+ 
+          1. Create hospital CRUD (completed)
+          2. Read hospital CRUD (completed)
+          3. Update hospital CRUD (completed)
+          4. Delete hospital CRUD (completed)
+          5. create Hospital details (completed)
+          6. Read Hospital details (completed)
+          7. Delete Hospital details (completed)
+          
+ - Search Feature
+ 
+           1. search bar (completed)
+           
 # Medical-service
 
 # Patient
@@ -71,13 +85,13 @@ Create an Account
 - Scenario 1:
   - Steps:
 
-       1. The user can see the hospital and doctors button in the header.
-       2. The user can go to the hospital. If the user does not know the name of the doctor, he can search for a doctor
+        1. The user can see the hospital and doctors button in the header.
+        2. The user can go to the hospital. If the user does not know the name of the doctor, he can search for a doctor
            from their respective hospital.
-       3. The user can then click on the respective doctor.
+        3. The user can then click on the respective doctor.
            On the doctor details page, the user can see the book appointment button. The user can click that.
-       4. The user then fills out the required information that is shown on the appointment page.
-       5. Then, redirected appointment booked there, you can see the status on that page after booking the appointment.
+        4. The user then fills out the required information that is shown on the appointment page.
+        5. Then, redirected appointment booked there, you can see the status on that page after booking the appointment.
 
 - Scenario 2:
   - Steps:
@@ -98,7 +112,7 @@ Create an Account
           2. Then, by clicking on that icon, the user can see the dropdowns like view profile and past
                appointments.
           3. The user can click on the view profile button on the drop-down menu.
-          4. From the view profile page on down, the user can see the delete button on that page.             5.
+          4. From the view profile page on down, the user can see the delete button on that page.             
           5. When a user clicks on that button, they will be logged out of that page.
 
 # Admin Account Creation
