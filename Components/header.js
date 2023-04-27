@@ -7,13 +7,12 @@ var Admin = myOrigin + "/admin/admin_register.html";
 var doctor = myOrigin + "/pages/products/Doctors.html";
 var hospital = myOrigin + "/pages/products/hospital.html";
 var profile = myOrigin + "/pages/products/profile.html";
-var appointment = myOrigin + "/pages/products/past appointment.html"
+var appointment = myOrigin + "/pages/products/past appointment.html";
+
 
 
 
 const beforeLogin = `
-                    
-
 <a href="${home}" class="logo"><i class="fa fa-heart" style="font-size:28px;color:#0e6453"></i> Medical service </a>
 
 <nav class="navbar">
@@ -28,8 +27,6 @@ const beforeLogin = `
 `
 
 const afterLogin = `
-
-
         <a href="${home}" class="logo"><i class="fa fa-heart" style="font-size:28px;color:#0e6453"></i> Medical
             Service </a>
 
@@ -40,37 +37,60 @@ const afterLogin = `
             <a href="${doctor}">Doctors</a>
             <a href="${hospital}">Hospital</a>
             
+            
 
 
             <div class="dropdown">
-                <button class="dropbtn"><i class='fas fa-user-alt' style='font-size:18px;color:#0e6453'></i></button>
+                <button class="dropbtn" style='margin-left:2rem;'><i class='fa-solid fa-circle-user' style='font-size:2rem;color:#0e6453 ' ></i></button>
                 <div class="dropdown-content">
                     <a href="${profile}">View profile</a>
                     <a href="${appointment}">My appointment</a>
+                    <a href="#" onclick="logout_link()">Logout</a>
                     
                 </div>
             </div>
         </nav>
 
-        <div id="menu-btn" class="fas fa-bars"></div>
-
-  
-
+        <div id="menu-btn" class="fas fa-bars"></div>     
 `
 
-function home_header (){
+function home_header() {
 
-let user_name = JSON.parse(localStorage.getItem("name_id"));
-let logHeader = document.getElementById('header');
-if(!user_name){
-    logHeader.innerHTML = beforeLogin;
+    let user_name = JSON.parse(localStorage.getItem("name_id"));
+    let logHeader = document.getElementById('header');
+    if (!user_name) {
+        logHeader.innerHTML = beforeLogin;
+    }
+    else {
+        logHeader.innerHTML = afterLogin;
+        let user_date = JSON.parse(localStorage.getItem("formData"));
+        let user = user_date.find((userid) => userid.name === user_name);
 
+        const menu = document.querySelector('#menu-btn');
+        const navbar = document.querySelector('.navbar');
 
+        menu.addEventListener('click', () => {
+            menu.classList.toggle('fa-times');
+            navbar.classList.toggle('active');
+        });
 
+        window.onscroll = () => {
+            menu.classList.remove('fa-times');
+            navbar.classList.remove('active');
+        };
+
+    }
 }
-else{
-      logHeader.innerHTML = afterLogin;
-     let user_date = JSON.parse(localStorage.getItem("formData"));
-     let user = user_date.find((userid) => userid.name === user_name );
+
+
+function logout_link() {
+    if (confirm("Are you sure you want to logout?")) {
+
+        localStorage.removeItem("name_id");
+        window.location.href = "${home}"
+    }
 }
-}
+
+
+
+

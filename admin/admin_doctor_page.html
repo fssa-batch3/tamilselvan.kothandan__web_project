@@ -134,12 +134,12 @@
         linkedinLink.classList.add('fab', 'fa-linkedin');
 
 
-        const signOut = document.createElement('a');
-        signOut.setAttribute('href', '#');
-        signOut.setAttribute("id", doctors[i].id)
-        signOut.classList.add('fas', 'fa-sign-out-alt');
+        const Delete = document.createElement('a');
+        Delete.setAttribute('href', '#');
+        Delete.setAttribute("id", doctors[i].id)
+        Delete.classList.add('fas', 'fa-trash');
 
-        signOut.addEventListener("click", function () {
+        Delete.addEventListener("click", function () {
           if (confirm("Are you sure to Delete ?")) {
             let id = this.id;
             let doctors = JSON.parse(localStorage.getItem("doctors"));
@@ -165,7 +165,7 @@
         shareDiv.appendChild(twitterLink);
         shareDiv.appendChild(instagramLink);
         shareDiv.appendChild(linkedinLink);
-        shareDiv.appendChild(signOut);
+        shareDiv.appendChild(Delete);
 
         // select the HTML element where you want to append the parent div
         const container = document.querySelector('.box-container');
@@ -182,7 +182,7 @@
 
         window.location.href = "./admin_doctor_form.html"
       }
-
+      
 
 
 
