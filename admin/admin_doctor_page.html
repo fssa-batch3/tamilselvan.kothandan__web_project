@@ -1,156 +1,166 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>medical service </title>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>medical service </title>
 
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+        <link rel="stylesheet" href="../assets/css/style.css">
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-  <link rel="stylesheet" href="../assets/css/style.css">
+    </head>
 
-</head>
+    <body>
 
-<body>
+        <!-- header section starts  -->
 
-  <!-- header section starts  -->
+        <header class="header">
 
-  <header class="header">
+            <a href="./admin.html" class="logo"> Medical Service </a>
 
-    <a href="./admin.html" class="logo"> Medical Service </a>
+            <nav class="navbar">
 
-    <nav class="navbar">
+                <a href="#" id="logout_link">Logout</a>
 
-      <a href="#" id="logout_link">Logout</a>
+            </nav>
 
+            <div id="menu-btn" class="fas fa-bars"></div>
 
+        </header>
 
-    </nav>
+        <section class="doctors" id="doctors">
 
-    <div id="menu-btn" class="fas fa-bars"></div>
+            <h1 class="heading">
+                Add <span>doctors</span> 
+            </h1>
 
-  </header>
+            <div class="box-container">
 
+            </div>
+            <button class="btn" onclick="add_doctors()">Add Doctors</button>
+        </section>
 
+        <section class="footer">
 
-  <section class="doctors" id="doctors">
+            <div class="box-container">
 
-    <h1 class="heading"> Add <span>doctors</span> </h1>
+                <div class="box">
+                    <h3>quick links</h3>
+                    <a href="../../index.html">
+                        <i class="fas fa-chevron-right"></i> Home 
+                    </a>
+                    <a href="../../index.html">
+                        <i class="fas fa-chevron-right"></i> Services 
+                    </a>
+                    <a href="./About page.html">
+                        <i class="fas fa-chevron-right"></i> About 
+                    </a>
+                    <a href="./Doctors.html">
+                        <i class="fas fa-chevron-right"></i> Doctors 
+                    </a>
+                    <a href="./hospital.html">
+                        <i class="fas fa-chevron-right"></i> hospital 
+                    </a>
 
+                </div>
 
+                <div class="box">
+                    <h3>contact info</h3>
+                    <a href="#">
+                        <i class="fas fa-phone"></i> +91-9445535374 
+                    </a>
 
+                    <a href="#">
+                        <i class="fas fa-envelope"></i> tamilselvan.kothandan@fssa.freshworks.com 
+                    </a>
+                    <a href="#">
+                        <i class="fas fa-map-marker-alt"></i> Chennai-600081 
+                    </a>
+                </div>
 
+                <div class="box">
+                    <h3>follow us</h3>
+                    <a href="#">
+                        <i class="fab fa-facebook-f"></i> facebook 
+                    </a>
+                    <a href="#">
+                        <i class="fab fa-twitter"></i> twitter 
+                    </a>
 
-    <div class="box-container">
+                    <a href="#">
+                        <i class="fab fa-instagram"></i> instagram 
+                    </a>
+                    <a href="#">
+                        <i class="fab fa-linkedin"></i> linkedin 
+                    </a>
 
+                </div>
 
-
-    </div>
-    <button class="btn" onclick="add_doctors()">Add Doctors</button>
-  </section>
-
-  <section class="footer">
-
-    <div class="box-container">
-
-      <div class="box">
-        <h3>quick links</h3>
-        <a href="../../index.html"> <i class="fas fa-chevron-right"></i> Home </a>
-        <a href="../../index.html"> <i class="fas fa-chevron-right"></i> Services </a>
-        <a href="./About page.html"> <i class="fas fa-chevron-right"></i> About </a>
-        <a href="./Doctors.html"> <i class="fas fa-chevron-right"></i> Doctors </a>
-        <a href="./hospital.html"> <i class="fas fa-chevron-right"></i> hospital </a>
-
-
-      </div>
-
-
-      <div class="box">
-        <h3>contact info</h3>
-        <a href="#"> <i class="fas fa-phone"></i> +91-9445535374 </a>
-
-
-        <a href="#"> <i class="fas fa-envelope"></i> tamilselvan.kothandan@fssa.freshworks.com </a>
-        <a href="#"> <i class="fas fa-map-marker-alt"></i> Chennai-600081 </a>
-      </div>
-
-      <div class="box">
-        <h3>follow us</h3>
-        <a href="#"> <i class="fab fa-facebook-f"></i> facebook </a>
-        <a href="#"> <i class="fab fa-twitter"></i> twitter </a>
-
-        <a href="#"> <i class="fab fa-instagram"></i> instagram </a>
-        <a href="#"> <i class="fab fa-linkedin"></i> linkedin </a>
-
-      </div>
-
-    </div><a href="../pages/products/doctor details/doctor details.html"></a>
-    <script>
-
-
-
-
-      let doctors = JSON.parse(localStorage.getItem("doctors"));
+            </div>
+        </section>
+            <script>const doctors = JSON.parse(localStorage.getItem("doctors"));
       console.log(doctors);
 
       for (let i = 0; i < doctors.length; i++) {
-
         // create the parent div element
-        const parentDiv = document.createElement('div');
-        parentDiv.classList.add('Box');
+        const parentDiv = document.createElement("div");
+        parentDiv.classList.add("Box");
 
         // create the child elements
-        const imageLink = document.createElement('a');
-        imageLink.setAttribute('href', "../pages/products/doctor details/doctor details.html?doctor_id=" + doctors[i].id)
-        const image = document.createElement('img');
-        image.setAttribute('src', doctors[i].img_src);
-        image.setAttribute('alt', doctors[i].doctor_name);
+        const imageLink = document.createElement("a");
+        imageLink.setAttribute(
+    "href",
+    `../pages/products/doctor details/doctor details.html?doctor_id=${doctors[i].id}`
+  );
+        const image = document.createElement("img");
+        image.setAttribute("src", doctors[i].img_src);
+        image.setAttribute("alt", doctors[i].doctor_name);
 
-        const heading = document.createElement('h3');
+        const heading = document.createElement("h3");
         heading.innerText = doctors[i].doctor_name;
 
-        const span = document.createElement('span');
-        span.innerText = doctors[i].specialization
+        const span = document.createElement("span");
+        span.innerText = doctors[i].specialization;
 
-        const shareDiv = document.createElement('div');
-        shareDiv.classList.add('share');
+        const shareDiv = document.createElement("div");
+        shareDiv.classList.add("share");
 
-        const facebookLink = document.createElement('a');
-        facebookLink.setAttribute('href', doctors[i].Facebook);
-        facebookLink.classList.add('fab', 'fa-facebook-f');
+        const facebookLink = document.createElement("a");
+        facebookLink.setAttribute("href", doctors[i].Facebook);
+        facebookLink.classList.add("fab", "fa-facebook-f");
 
-        const twitterLink = document.createElement('a');
-        twitterLink.setAttribute('href', doctors[i].Twitter);
-        twitterLink.classList.add('fab', 'fa-twitter');
+        const twitterLink = document.createElement("a");
+        twitterLink.setAttribute("href", doctors[i].Twitter);
+        twitterLink.classList.add("fab", "fa-twitter");
 
-        const instagramLink = document.createElement('a');
-        instagramLink.setAttribute('href', doctors[i].Instagram);
-        instagramLink.classList.add('fab', 'fa-instagram');
+        const instagramLink = document.createElement("a");
+        instagramLink.setAttribute("href", doctors[i].Instagram);
+        instagramLink.classList.add("fab", "fa-instagram");
 
-        const linkedinLink = document.createElement('a');
-        linkedinLink.setAttribute('href', doctors[i].linkedin);
-        linkedinLink.classList.add('fab', 'fa-linkedin');
+        const linkedinLink = document.createElement("a");
+        linkedinLink.setAttribute("href", doctors[i].linkedin);
+        linkedinLink.classList.add("fab", "fa-linkedin");
 
+        const Delete = document.createElement("a");
+        Delete.setAttribute("href", "#");
+        Delete.setAttribute("id", doctors[i].id);
+        Delete.classList.add("fas", "fa-trash");
 
-        const Delete = document.createElement('a');
-        Delete.setAttribute('href', '#');
-        Delete.setAttribute("id", doctors[i].id)
-        Delete.classList.add('fas', 'fa-trash');
-
-        Delete.addEventListener("click", function () {
-          if (confirm("Are you sure to Delete ?")) {
-            let id = this.id;
-            let doctors = JSON.parse(localStorage.getItem("doctors"));
+        Delete.addEventListener("click", function deleteDoctor() {
+          const confirmation = window.confirm("Are you sure you want to delete?");
+          if (confirmation("Are you sure to Delete ?")) {
+            const { id } = this;
+            const doctor = JSON.parse(localStorage.getItem("doctors"));
             // Find the index of the post to delete
-            const indexOfUser = doctors.find(e => e.id == id);
+            const indexOfUser = doctor.find((e) => e.id === id);
             // Remove the post from the array
             if (indexOfUser !== -1) {
-              doctors.splice(indexOfUser, 1);
+              doctor.splice(indexOfUser, 1);
             }
-            localStorage.setItem('doctors', JSON.stringify(doctors));
-            location.reload();
+            localStorage.setItem("doctors", JSON.stringify(doctors));
+            window.location.reload();
           }
         });
 
@@ -168,32 +178,17 @@
         shareDiv.appendChild(Delete);
 
         // select the HTML element where you want to append the parent div
-        const container = document.querySelector('.box-container');
+        const container = document.querySelector(".box-container");
         container.appendChild(parentDiv);
-
-
-
       }
-
-
 
       function add_doctors() {
-
-
-        window.location.href = "./admin_doctor_form.html"
+        window.location.href = "./admin_doctor_form.html";
       }
-      
-
-
-
-
-
-
-
+      add_doctors();
     </script>
 
-    <script src="./logout.js"></script>
+            <script src="./logout.js"></script>
 
 </body>
-
 </html>

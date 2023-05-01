@@ -6,7 +6,7 @@
 This project is about providing medical services for patient appointments.
 
 User Flow
-<[def]>  
+<https://drive.google.com/file/d/1LrUHKzJGs1hypSu6LBHe0AGg1a7DHj-b/view>
 
 Wireframe
 <https://drive.google.com/file/d/13_xYXJgRDVW6E-hP9baRw56WZg6Sfyah/view>  
@@ -14,8 +14,8 @@ Wireframe
 Problem Statement
 <https://docs.google.com/document/d/1Omq55hXgBxjmr9NQkc-E8Ix6Q3f5-mvr/edit>
 
- - User CRUD
- 
+- User CRUD
+
           1. Create user CRUD (completetd)
           2. Read user CRUD (completed)
           3. Update user CRUD (completed)
@@ -23,8 +23,8 @@ Problem Statement
           5. Book appointment (completed)
           6. user can Logout (completed)
 
- - Doctor CRUD
- 
+- Doctor CRUD
+
           1. Create Doctor CRUD (completed)
           2. Read Doctor CRUD (completed)
           3. Update Doctor CRUD (completed)
@@ -33,8 +33,8 @@ Problem Statement
           6. Read Doctor details (completed) 
           7. Delete Doctor details (completed)
 
- - Hospital CRUD 
- 
+- Hospital CRUD
+
           1. Create hospital CRUD (completed)
           2. Read hospital CRUD (completed)
           3. Update hospital CRUD (completed)
@@ -42,11 +42,11 @@ Problem Statement
           5. create Hospital details (completed)
           6. Read Hospital details (completed)
           7. Delete Hospital details (completed)
-          
- - Search Feature
- 
+
+- Search Feature
+
            1. search bar (completed)
-           
+
 # Medical-service
 
 # Patient
@@ -148,6 +148,3 @@ Adding Doctors and Hospitals
             3. Complete the form on that page.
             4. You have successfully added doctors or hospitals to that page.
             5. Logout from the admin page.
-
-
-[def]: ttps://drive.google.com/file/d/1LrUHKzJGs1hypSu6LBHe0AGg1a7DHj-b/vie

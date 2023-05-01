@@ -7,7 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>medical service</title>
 
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="../assets/css/style.css">
 
@@ -25,28 +24,19 @@
 
             <a href="../index.html" id="logout_link">Logout</a>
 
-
-
         </nav>
 
         <div id="menu-btn" class="fas fa-bars"></div>
 
     </header>
 
-
-
     <section class="doctors">
 
-        <h1 class="heading"> Add <span>hospitals</span> </h1>
-
-
-
-
+        <h1 class="heading">
+            Add <span>hospitals</span>
+        </h1>
 
         <div class="box-container">
-
-
-
 
         </div>
         <button class="btn" onclick="add_hospital()">Add Hospital</button>
@@ -58,32 +48,53 @@
 
             <div class="box">
                 <h3>quick links</h3>
-                <a href="../../index.html"> <i class="fas fa-chevron-right"></i> Home </a>
-                <a href="../../index.html"> <i class="fas fa-chevron-right"></i> Services </a>
-                <a href="./About page.html"> <i class="fas fa-chevron-right"></i> About </a>
-                <a href="./Doctors.html"> <i class="fas fa-chevron-right"></i> Doctors </a>
-                <a href="./hospital.html"> <i class="fas fa-chevron-right"></i> hospital </a>
-
+                <a href="../../index.html">
+                    <i class="fas fa-chevron-right"></i> Home
+                </a>
+                <a href="../../index.html">
+                    <i class="fas fa-chevron-right"></i> Services
+                </a>
+                <a href="./About page.html">
+                    <i class="fas fa-chevron-right"></i> About
+                </a>
+                <a href="./Doctors.html">
+                    <i class="fas fa-chevron-right"></i> Doctors
+                </a>
+                <a href="./hospital.html">
+                    <i class="fas fa-chevron-right"></i> hospital
+                </a>
 
             </div>
 
-
             <div class="box">
                 <h3>contact info</h3>
-                <a href="#"> <i class="fas fa-phone"></i> +91-9445535374 </a>
+                <a href="#">
+                    <i class="fas fa-phone"></i> +91-9445535374
+                </a>
 
-
-                <a href="#"> <i class="fas fa-envelope"></i> tamilselvan.kothandan@fssa.freshworks.com </a>
-                <a href="#"> <i class="fas fa-map-marker-alt"></i> Chennai-600081 </a>
+                <a href="#">
+                    <i class="fas fa-envelope"></i> tamilselvan.kothandan@fssa.freshworks.com
+                </a>
+                <a href="#">
+                    <i class="fas fa-map-marker-alt"></i> Chennai-600081
+                </a>
             </div>
 
             <div class="box">
                 <h3>follow us</h3>
-                <a href="#"> <i class="fab fa-facebook-f"></i> facebook </a>
-                <a href="#"> <i class="fab fa-twitter"></i> twitter </a>
+                <a href="#">
+                    <i class="fab fa-facebook-f"></i> facebook
+                </a>
+                <a href="#">
+                    <i class="fab fa-twitter"></i> twitter
+                </a>
 
-                <a href="#"> <i class="fab fa-instagram"></i> instagram </a>
-                <a href="#"> <i class="fab fa-linkedin"></i> linkedin </a>
+                <a href="#">
+                    <i class="fab fa-instagram"></i> instagram
+                </a>
+                <a href="#">
+                    <i class="fab fa-linkedin"></i> linkedin
+                </a>
 
             </div>
 
@@ -93,103 +104,102 @@
     </section>
     <script src="./logout.js"></script>
     <script>
+// Get hospitals data from local storage
+const hospitals = JSON.parse(localStorage.getItem("hospitals"));
 
+// Log hospitals data to console
+console.log(hospitals);
 
+// Loop through each hospital and create a box element for each one
+for (let i = 0; i < hospitals.length; i++) {
+  // Create the parent div element
+  const parentDiv = document.createElement("div");
+  parentDiv.classList.add("Box");
 
-        let hospitals = JSON.parse(localStorage.getItem("hospitals"));
-        console.log(hospitals);
+  // Create the child elements
+  const imageLink = document.createElement("a");
+  imageLink.setAttribute(
+    "href",
+    `../pages/products/hospital details/Apollo hospital details.html?hospitals_id=${hospitals[i].id}`
+  );
+  const image = document.createElement("img");
+  image.setAttribute("src", hospitals[i].img_src);
+  image.setAttribute("alt", hospitals[i].doctor_name);
 
-        for (let i = 0; i < hospitals.length; i++) {
+  const heading = document.createElement("h3");
+  heading.innerText = hospitals[i].hospital_name;
 
-            // create the parent div element
-            const parentDiv = document.createElement('div');
+  const span = document.createElement("span");
+  span.innerText = hospitals[i].Address;
 
-            parentDiv.classList.add('Box');
+  const shareDiv = document.createElement("div");
+  shareDiv.classList.add("share");
 
-            // create the child elements
-            const imageLink = document.createElement('a');
-            imageLink.setAttribute('href', "../pages/products/hospital details/Apollo hospital details.html?hospitals_id=" + hospitals[i].id)
-            const image = document.createElement('img');
-            image.setAttribute('src', hospitals[i].img_src);
-            image.setAttribute('alt', hospitals[i].doctor_name);
+  const facebookLink = document.createElement("a");
+  facebookLink.setAttribute("href", hospitals[i].Facebook);
+  facebookLink.classList.add("fab", "fa-facebook-f");
 
-            const heading = document.createElement('h3');
-            heading.innerText = hospitals[i].hospital_name;
+  const twitterLink = document.createElement("a");
+  twitterLink.setAttribute("href", hospitals[i].Twitter);
+  twitterLink.classList.add("fab", "fa-twitter");
 
-            const span = document.createElement('span');
-            span.innerText = hospitals[i].Address
+  const instagramLink = document.createElement("a");
+  instagramLink.setAttribute("href", hospitals[i].Instagram);
+  instagramLink.classList.add("fab", "fa-instagram");
 
-            const shareDiv = document.createElement('div');
-            shareDiv.classList.add('share');
+  const linkedinLink = document.createElement("a");
+  linkedinLink.setAttribute("href", hospitals[i].linkedin);
+  linkedinLink.classList.add("fab", "fa-linkedin");
 
-            const facebookLink = document.createElement('a');
-            facebookLink.setAttribute('href', hospitals[i].Facebook);
-            facebookLink.classList.add('fab', 'fa-facebook-f');
+  const signOut = document.createElement("a");
+  signOut.setAttribute("href", "#");
+  signOut.setAttribute("id", hospitals[i].id);
+  signOut.classList.add("fas", "fa-sign-out-alt");
 
-            const twitterLink = document.createElement('a');
-            twitterLink.setAttribute('href', hospitals[i].Twitter);
-            twitterLink.classList.add('fab', 'fa-twitter');
+  // Add event listener to delete hospital data
+  signOut.addEventListener("click", function deleteHospital() {
+    const confirmation = window.confirm("Are you sure you want to delete?");
+    if (confirmation("Are you sure to Delete ?")) {
+      const { id } = this;
+      const hospital = JSON.parse(localStorage.getItem("hospitals")) || [];
 
-            const instagramLink = document.createElement('a');
-            instagramLink.setAttribute('href', hospitals[i].Instagram);
-            instagramLink.classList.add('fab', 'fa-instagram');
+      // Find the index of the hospital to delete
+      const indexOfHospital = hospital.findIndex((e) => e.id === id);
 
-            const linkedinLink = document.createElement('a');
-            linkedinLink.setAttribute('href', hospitals[i].linkedin);
-            linkedinLink.classList.add('fab', 'fa-linkedin');
+      // Remove the hospital from the array
+      if (indexOfHospital !== -1) {
+        hospital.splice(indexOfHospital, 1);
+      }
 
-            const signOut = document.createElement('a');
-            signOut.setAttribute('href', '#');
-            signOut.setAttribute("id", hospitals[i].id)
-            signOut.classList.add('fas', 'fa-sign-out-alt');
+      localStorage.setItem("hospitals", JSON.stringify(hospitals));
+      window.location.reload();
+    }
+  });
 
-            signOut.addEventListener("click", function () {
-                if (confirm("Are you sure to Delete ?")) {
-                    let id = this.id;
-                    let hospitals = JSON.parse(localStorage.getItem("hospitals"));
-                    // Find the index of the post to delete
-                    const indexOfUser = hospitals.find(e => e.id == id);
-                    // Remove the post from the array
-                    if (indexOfUser !== -1) {
-                        hospitals.splice(indexOfUser, 1);
-                    }
-                    localStorage.setItem('hospitals', JSON.stringify(hospitals));
-                    location.reload();
-                }
-            });
+  // Append the child elements to the parent div
+  imageLink.appendChild(image);
+  parentDiv.appendChild(imageLink);
+  parentDiv.appendChild(heading);
+  parentDiv.appendChild(span);
+  parentDiv.appendChild(shareDiv);
 
+  shareDiv.appendChild(facebookLink);
+  shareDiv.appendChild(twitterLink);
+  shareDiv.appendChild(instagramLink);
+  shareDiv.appendChild(linkedinLink);
+  shareDiv.appendChild(signOut);
 
+  // Select the HTML element where you want to append the parent div
+  const container = document.querySelector(".box-container");
+  container.appendChild(parentDiv);
+}
 
-            // append the child elements to the parent div
-            imageLink.appendChild(image);
-            parentDiv.appendChild(imageLink);
-            parentDiv.appendChild(heading);
-            parentDiv.appendChild(span);
-            parentDiv.appendChild(shareDiv);
-
-            shareDiv.appendChild(facebookLink);
-            shareDiv.appendChild(twitterLink);
-            shareDiv.appendChild(instagramLink);
-            shareDiv.appendChild(linkedinLink);
-            shareDiv.appendChild(signOut);
-
-            // select the HTML element where you want to append the parent div
-            const container = document.querySelector('.box-container');
-            container.appendChild(parentDiv);
-        }
-
-
-        function add_hospital() {
-
-            window.location.href = "./admin_hospital_form.html"
-        }
-
-
-    </script>
-
-
-
-
+// Redirect to the hospital form page
+function add_hospital() {
+  window.location.href = "./admin_hospital_form.html";
+}
+add_hospital();
+</script>
 </body>
 
 </html>

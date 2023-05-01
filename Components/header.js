@@ -1,16 +1,12 @@
-
-var myOrigin = window.location.origin;
-var home = myOrigin + "/index.html";
-var login = myOrigin + "/pages/products/login.html";
-var about = myOrigin + "/pages/products/About page.html"
-var Admin = myOrigin + "/admin/admin_register.html";
-var doctor = myOrigin + "/pages/products/Doctors.html";
-var hospital = myOrigin + "/pages/products/hospital.html";
-var profile = myOrigin + "/pages/products/profile.html";
-var appointment = myOrigin + "/pages/products/past appointment.html";
-
-
-
+const myOrigin = window.location.origin;
+const home = `${myOrigin}/index.html`;
+const login = `${myOrigin}/pages/products/login.html`;
+const about = `${myOrigin}/pages/products/About page.html`;
+const Admin = `${myOrigin}/admin/admin_register.html`;
+const doctor = `${myOrigin}/pages/products/Doctors.html`;
+const hospital = `${myOrigin}/pages/products/hospital.html`;
+const profile = `${myOrigin}/pages/products/profile.html`;
+const appointment = `${myOrigin}/pages/products/past appointment.html`;
 
 const beforeLogin = `
 <a href="${home}" class="logo"><i class="fa fa-heart" style="font-size:28px;color:#0e6453"></i> Medical service </a>
@@ -24,7 +20,7 @@ const beforeLogin = `
 </nav>
 <div id="menu-btn" class="fas fa-bars"></div>
 
-`
+`;
 
 const afterLogin = `
         <a href="${home}" class="logo"><i class="fa fa-heart" style="font-size:28px;color:#0e6453"></i> Medical
@@ -52,45 +48,40 @@ const afterLogin = `
         </nav>
 
         <div id="menu-btn" class="fas fa-bars"></div>     
-`
+`;
 
+// eslint-disable-next-line no-unused-vars
 function home_header() {
+  const user_name = JSON.parse(localStorage.getItem("name_id"));
+  const logHeader = document.getElementById("header");
+  if (!user_name) {
+    logHeader.innerHTML = beforeLogin;
+  } else {
+    logHeader.innerHTML = afterLogin;
 
-    let user_name = JSON.parse(localStorage.getItem("name_id"));
-    let logHeader = document.getElementById('header');
-    if (!user_name) {
-        logHeader.innerHTML = beforeLogin;
-    }
-    else {
-        logHeader.innerHTML = afterLogin;
-        let user_date = JSON.parse(localStorage.getItem("formData"));
-        let user = user_date.find((userid) => userid.name === user_name);
+    const menu = document.querySelector("#menu-btn");
+    const navbar = document.querySelector(".navbar");
 
-        const menu = document.querySelector('#menu-btn');
-        const navbar = document.querySelector('.navbar');
+    menu.addEventListener("click", () => {
+      menu.classList.toggle("fa-times");
+      navbar.classList.toggle("active");
+    });
 
-        menu.addEventListener('click', () => {
-            menu.classList.toggle('fa-times');
-            navbar.classList.toggle('active');
-        });
-
-        window.onscroll = () => {
-            menu.classList.remove('fa-times');
-            navbar.classList.remove('active');
-        };
-
-    }
+    window.onscroll = () => {
+      menu.classList.remove("fa-times");
+      navbar.classList.remove("active");
+    };
+  }
 }
 
-
+// eslint-disable-next-line no-unused-vars
 function logout_link() {
-    if (confirm("Are you sure you want to logout?")) {
-
-        localStorage.removeItem("name_id");
-        window.location.href = "${home}"
-    }
+  // eslint-disable-next-line no-restricted-globals
+  if (confirm("Are you sure you want to logout?")) {
+    localStorage.removeItem("name_id");
+    // eslint-disable-next-line no-template-curly-in-string
+    window.location.href = "${home}";
+  }
 }
 
-
-
-
+home_header();

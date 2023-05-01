@@ -7,13 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>medical service </title>
 
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
         integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        crossorigin="anonymous" referrerpolicy="no-referrer">
 </head>
 
 <body>
@@ -22,15 +21,13 @@
 
     <header class="header">
 
-        <a href="./admin.html" class="logo"><i class="fa fa-heart" style="font-size:28px;color:#0e6453"></i> Medical
+        <a href="./admin.html" class="logo">
+            <i class="fa fa-heart" style="font-size:28px;color:#0e6453"></i> Medical
             Service </a>
 
         <nav class="navbar" id="navbar">
 
             <a href="#" id="logout_link">Logout</a>
-
-
-
 
         </nav>
 
@@ -40,35 +37,32 @@
 
     <section class="home" style="margin-top: 30rem; ">
 
-
-
         <div style="margin-left: 30rem;">
             <button class="btn" onclick="add_doctor()">Add Doctors</button>
 
         </div>
 
-
-
         <div>
 
             <button class="btn" onclick="add_hospital()">Add hospital</button>
         </div>
-         
 
     </section>
-<script src="./logout.js"></script>
+    <script src="./logout.js"></script>
     <script>
+// Redirect to the admin doctor page
+function add_doctor() {
+  window.location.href = "./admin_doctor_page.html";
+}
 
-        function add_doctor() {
+add_doctor(); // Call the function to redirect to the admin doctor page
 
-            window.location.href = "./admin_doctor_page.html"
-        }
+// Redirect to the admin hospital page
+function add_hospital() {
+  window.location.href = "./admin_hospital.html";
+}
 
-
-        function add_hospital() {
-
-            window.location.href= "./admin_hospital.html"
-
-        }
-
-    </script>
+add_hospital(); // Call the function to redirect to the admin hospital page
+</script>
+</body>
+</html>

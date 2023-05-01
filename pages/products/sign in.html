@@ -1,124 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>medical service</title>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>medical service </title>
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        >
+        <link rel="stylesheet" href="../../assets/css/style.css">
+    </head>
 
+    <body>
+        <!-- header section starts  -->
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link rel="stylesheet" href="../../assets/css/style.css">
+        <header class="header" id="header"></header>
 
-</head>
+        <!-- header section ends -->
 
-<body>
+        <div class="signin">
+            <div class="container">
+                <div class="login">
+                    <form role="form" id="sign-up" onsubmit="signUp(event);">
+                        <h1>REGISTER</h1>
+                        <hr >
+                        <p>Explore the MEDICAL SERVICE!</p>
+                        <label>Name</label>
+                        <input
+                            type="text"
+                            id="name"
+                            pattern="[a-zA-Z0-9]+"
+                            placeholder="abc@exampl.com"
+                        >
+                        <label>Email</label>
+                        <input
+                            type="text"
+                            placeholder="abc@exampl.com"
+                            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                            id="email"
+                        >
+                        <label>Password</label>
+                        <span style="color: #0e6453">
+                            Note: 1 num, 1 uppercase/lowercase, 8+ char.
+                        </span>
+                        <input
+                            type="password"
+                            placeholder="enter your password!"
+                            pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                            id="password"
+                        >
+                        <label> Confirm Password</label>
+                        <input
+                            type="password"
+                            placeholder="reenter your password!"
+                            pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                            required
+                            id="confirm_password"
+                        >
 
-    <!-- header section starts  -->
-
-    <header class="header" id="header">
-
-
-    </header>
-
-    <!-- header section ends -->
-
-
-
-
-
-
-
-    <div class="signin">
-
-        <div class="container">
-            <div class="login">
-                <form role="form" onsubmit="signUp(event);">
-                    <h1>REGISTER</h1>
-                    <hr>
-                    <p>Explore the MEDICAL SERVICE!</p>
-                    <label>Name</label>
-                    <input type="text" id="name" pattern="[a-zA-Z0-9]+" placeholder="abc@exampl.com">
-                    <label>Email</label>
-                    <input type="text" placeholder="abc@exampl.com" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
-                        id="email">
-                    <label>Password</label>
-                    <span style="color: #0e6453;"> Note: 1 num, 1 uppercase/lowercase, 8+ char. </span>
-                    <input type="password" placeholder="enter your password!"
-                        pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" id="password">
-                    <label> Confirm Password</label>
-                    <input type="password" placeholder="reenter your password!"
-                        pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required id="confirm_password">
-
-
-                    <button>Submit</button>
-                    <p>
-                        <a href="../products/login.html">Already a member</a>
-                    </p>
-                    <closeform></closeform>
-                </form>
-            </div>
-            <div class="pic">
-                <img src="../../assets/img/Sign up-bro.png" alt="sign_up image">
+                        <button>Submit</button>
+                        <p>
+                            <a href="../products/login.html">Already a member</a>
+                        </p>
+                        <closeform></closeform>
+                    </form>
+                </div>
+                <div class="pic">
+                    <img src="../../assets/img/Sign up-bro.png" alt="sign_up image">
+                </div>
             </div>
         </div>
 
-    </div>
-
-
-
-    <script src="../../assets/js/login and signin .js"></script>
-    <script src="../../Components/header.js"></script>
-    <script>
-        home_header()
-
-    </script>
-    <script>
-// const form = document.querySelector('form');
-// const nameInput = document.querySelector('#name');
-// const emailInput = document.querySelector('#email');
-// const passwordInput = document.querySelector('#password');
-// const confirmPasswordInput = document.querySelector('#confirm_password');
-
-// form.addEventListener('submit', function(event) {
-//   // Validate name
-//   const nameValue = nameInput.value;
-//   if (nameValue.includes(' ')) {
-//     event.preventDefault();
-//     alert('Name cannot contain spaces');
-//   } else if (nameValue.length < 3) {
-//     event.preventDefault();
-//     alert('Name must be at least 3 characters long');
-//   }
-  
-//   // Validate email
-//   const emailValue = emailInput.value;
-//   const emailRegex = /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/;
-//   if (!emailRegex.test(emailValue)) {
-//     event.preventDefault();
-//     alert('Please enter a valid email address');
-//   }
-  
-//   // Validate password
-//   const passwordValue = passwordInput.value;
-//   const passwordRegex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$/;
-//   if (!passwordRegex.test(passwordValue)) {
-//     event.preventDefault();
-//     alert('Password must contain at least 1 number, 1 uppercase letter, 1 lowercase letter, and be at least 8 characters long');
-//   }
-  
-//   // Validate confirm password
-//   const confirmPasswordValue = confirmPasswordInput.value;
-//   if (confirmPasswordValue !== passwordValue) {
-//     event.preventDefault();
-//     alert('Passwords do not match');
-//   }
-// });
-
-
-    </script>
-
-</body>
-
+        <script src="../../assets/js/login and signin .js"></script>
+        <script src="../../Components/header.js"></script>
+    </body>
 </html>

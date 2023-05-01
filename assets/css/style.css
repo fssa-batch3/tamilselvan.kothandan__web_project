@@ -335,121 +335,120 @@
 
   /* hospital detail and doctor details section start */
 
+
+
+
   .content-1 {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
-      gap: 3rem;
-      padding: .060rem 3.75rem;
-
-
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 3rem;
+    padding: 0.060rem 3.75rem;
   }
-
+  
   .checked {
-      color: var(--green);
+    color: var(--green);
   }
-
+  
   .main {
-      margin-left: 3rem;
-      padding: 0 2rem;
+    margin-left: 3rem;
+    padding: 0 2rem;
   }
-
+  
   .main-img {
-      width: 400px;
-      margin-top: 35rem;
-      border-radius: 20px;
-      margin-left: 2rem;
+    width: 400px;
+    margin-top: 35rem;
+    border-radius: 20px;
+    margin-left: 2rem;
   }
-
+  
   .bottom-images {
-      display: flex;
-      flex-direction: row;
-      list-style: none;
-      justify-content: space-between;
-      max-width: 500px;
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    justify-content: space-between;
+    max-width: 500px;
   }
-
+  
   .small-image:hover {
-      transform: scale(1.1);
-      transition: 0.3s;
-      border: 1rem solid var(--green);
-      border-radius: 0.5rem;
+    transform: scale(1.1);
+    transition: 0.3s;
+    border: 1rem solid var(--green);
+    border-radius: 0.5rem;
   }
-
+  
   .small-image {
-      width: 100px;
-      margin-top: 30px;
-      border-radius: 10px;
+    width: 100px;
+    margin-top: 30px;
+    border-radius: 10px;
   }
-
+  
   .aside {
-      max-width: 500px;
-      width: 500px;
-      margin: 70px 20px 0 20px;
-      padding-left: 2rem;
-
+    max-width: 500px;
+    width: 500px;
+    margin: 70px 20px 0 20px;
+    padding-left: 2rem;
   }
-
+  
   .aside-content {
-      height: 300px;
+    height: 300px;
   }
-
+  
   .aside-content-parah {
-      color: var(--green);
-      padding: 50px 50px 15px 50px;
-      text-transform: uppercase;
-      font-weight: bold;
-      letter-spacing: 2px;
-      font-size: 15px;
-
+    color: var(--green);
+    padding: 50px 50px 15px 50px;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-size: 15px;
   }
-
+  
   .about {
-      margin-top: 40px;
-      margin-left: -40px;
+    margin-top: 40px;
+    margin-left: -40px;
   }
-
+  
   .aside-content h2 {
-      font-size: 16px;
-      padding: 10px 20px 50px 50px;
+    font-size: 16px;
+    padding: 10px 20px 50px 50px;
   }
-
+  
   .aside-content p:last-child {
-      font-size: 16px;
-      padding: 0 20px 50px 50px;
-      text-align: justify;
-      text-justify: inter-word;
+    font-size: 16px;
+    padding: 0 20px 50px 50px;
+    text-align: justify;
+    text-justify: inter-word;
   }
-
+  
   .exp {
-      margin-top: -45px;
-      color: #0e6453;
-      font-size: 16px;
+    margin-top: -45px;
+    color: #0e6453;
+    font-size: 16px;
   }
-
+  
   .details {
-      margin-left: -50px;
+    margin-left: -50px;
   }
-
+  
   .value {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
   }
-
+  
   .value h2 {
-      padding: 20px 20px 20px 50px;
-      font-size: 30px;
-
+    padding: 20px 20px 20px 50px;
+    font-size: 30px;
   }
-
+  
   .value h3 {
-      padding: 5px 10px;
-      background-color: hsl(25, 100%, 94%);
-      color: var(--green);
-      font-size: 15px;
-      border-radius: 5px;
-      font-weight: bolder;
+    padding: 5px 10px;
+    background-color: hsl(25, 100%, 94%);
+    color: var(--green);
+    font-size: 15px;
+    border-radius: 5px;
+    font-weight: bolder;
   }
+  
 
 
   /* booking section start */

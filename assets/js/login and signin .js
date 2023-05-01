@@ -1,109 +1,164 @@
+// function validatePassword(password, confirmPassword) {
+//   if (password === "") {
+//     alert("Password cannot be empty");
+//     return false;
+//   }
+//   if (password.length < 8) {
+//     alert("Password must be at least 8 characters long");
+//     return false;
+//   }
+//   if (password !== confirmPassword) {
+//     alert("Passwords do not match");
+//     return false;
+//   }
+//   alert("");
+//   return true;
+// }
+// document.addEventListener("DOMContentLoaded", () => {
+//   const form = document.getElementById("sign-up");
+//   if (form) {
+//     form.addEventListener("submit", (e) => {
+//       // your code here
+//       e.preventDefault();
+//       const name = document.getElementById("name").value;
+//       const email = document.getElementById("email").value;
+//       const password = document.getElementById("password").value;
+//       const confirmPassword = document.getElementById("confirm_password").value;
 
-function signUp(e) {
-    e.preventDefault();
+//       const isValidPassword = validatePassword(password, confirmPassword);
+//       if (!isValidPassword) {
+//         return;
+//       }
 
-    let name = document.getElementById('name').value,
-        email = document.getElementById('email').value,
-        password = document.getElementById('password').value;
-    confirm_password = document.getElementById('confirm_password').value;
-    // unqiue_id =  unqiue_id;
-    
-    phone_number = "";
-    date_of_birth = "";
-    gender = "";
-    blood_group = "";
-    street_name = "";
-    colony = "";
-    city = "";
-    state = "";
-    country = "";
-    pincode = "";
-    drug = "";
-    disease = "";
-    operation_dates = "";
-    medications = "";
+//       const formData = JSON.parse(localStorage.getItem("formData")) || [];
 
+//       const exist =
+//         formData.length &&
+//         JSON.parse(localStorage.getItem("formData")).some(
+//           (data) => data.name.toLowerCase() === name.toLowerCase()
+//         );
 
-    //    errorMessage = document.getElementById("errorMessage");
+//       if (!exist) {
+//         formData.push({
+//           name,
+//           email,
+//           password,
+//         });
+//         localStorage.setItem("formData", JSON.stringify(formData));
+//         form.reset();
 
-    function checkPassword() {
-        if (password !== confirm_password) {
-            alert("Re-enter the Password");
-            confirm_password.value = reset();
-        }
-        else {
-            alert("Password Matched");
-        }
-    }
-    checkPassword();
+//         alert("Account Created.\n\nPlease Sign In using the link below.");
+//         window.location.href = "../products/login.html";
+//       } else {
+//         alert("ALREADY EXISTED!!!\nYou have already signed up");
+//       }
+//     });
+//   }
 
+//   const login = document.getElementById("signIn");
+//   login.addEventListener("sumbit", (e) => {
+//     e.preventDefault();
 
-    let formData = JSON.parse(localStorage.getItem('formData')) || [];
+//     const name = document.getElementById("name").value;
+//     const password = document.getElementById("password").value;
 
-    let exist = formData.length &&
-        JSON.parse(localStorage.getItem('formData')).some(data =>
-            data.name.toLowerCase() == name.toLowerCase()
-        );
+//     const formData = JSON.parse(localStorage.getItem("formData")) || [];
 
-    if (!exist) {
-        formData.push({ name, email, password, phone_number, date_of_birth, gender, blood_group, street_name, colony, city, state, pincode, country, drug, disease, operation_dates, medications});
-        localStorage.setItem('formData', JSON.stringify(formData));
-        document.querySelector('form').reset();
+//     const exist =
+//       formData.length &&
+//       formData.some((data) => data.name === name && data.password === password);
 
-        alert("Account Created.\n\nPlease Sign In using the link below.");
-        window.location.href="../products/login.html"
-    }
-    else {
-        alert("ALREADY EXISTED!!!\nYou have already signed up");
-    }
+//     if (!exist) {
+//       alert(" Incorrect login credentials ");
+//     } else {
+//       localStorage.setItem("name_id", JSON.stringify(name));
+//       window.location.href = "../products/profile.html";
+//     }
+//   });
+// });
 
+function validatePassword(password, confirmPassword) {
+  if (password === "") {
+    alert("Password cannot be empty");
+    return false;
+  }
+  if (password.length < 8) {
+    alert("Password must be at least 8 characters long");
+    return false;
+  }
+  if (password !== confirmPassword) {
+    alert("Passwords do not match");
+    return false;
+  }
+  alert("");
+  return true;
 }
 
+function signUpHandler(e) {
+  e.preventDefault();
 
+  const name = document.getElementById("name").value;
+  const email = document.getElementById("email").value;
+  const password = document.getElementById("password").value;
+  const confirmPassword = document.getElementById("confirm_password").value;
 
+  const isValidPassword = validatePassword(password, confirmPassword);
+  if (!isValidPassword) {
+    return;
+  }
 
+  const formData = JSON.parse(localStorage.getItem("formData")) || [];
 
-function signIn(e) {
-    e.preventDefault();
+  const exist =
+    formData.length &&
+    JSON.parse(localStorage.getItem("formData")).some(
+      (data) => data.name.toLowerCase() === name.toLowerCase()
+    );
 
-    let name = document.getElementById('name').value,
-        password = document.getElementById('password').value;
+  if (!exist) {
+    formData.push({
+      name,
+      email,
+      password,
+    });
+    localStorage.setItem("formData", JSON.stringify(formData));
+    form.reset();
 
-    let formData = JSON.parse(localStorage.getItem('formData')) || [];
-
-    let exist = formData.length &&
-        JSON.parse(localStorage.getItem('formData')).some(data =>
-            data.name == name &&
-            data.password == password);
-
-    if (!exist) {
-        alert("Incorrect login credentials");
-
-
-    }
-    else {
-        localStorage.setItem("name_id", JSON.stringify(name));
-        location.href = "../products/profile.html"
-
-    }
+    alert("Account Created.\n\nPlease Sign In using the link below.");
+    window.location.href = "../products/login.html";
+  } else {
+    alert("ALREADY EXISTED!!!\nYou have already signed up");
+  }
 }
 
+function loginHandler(e) {
+  e.preventDefault();
 
+  const name = document.getElementById("name").value;
+  const password = document.getElementById("password").value;
 
+  const formData = JSON.parse(localStorage.getItem("formData")) || [];
 
+  const exist =
+    formData.length &&
+    formData.some((data) => data.name === name && data.password === password);
 
-function validatePassword() {
-    if (password.value === "") {
-        alert("Password cannot be empty");
-        return false;
-    } else if (password.value.length < 8) {
-        alert("Password must be at least 8 characters long");
-        return false;
-    } else if (password.value !== confirmPassword.value) {
-        alert("Passwords do not match");
-        return false;
-    } else {
-        alert("");
-        return true;
-    }
+  if (!exist) {
+    alert(" Incorrect login credentials ");
+  } else {
+    localStorage.setItem("name_id", JSON.stringify(name));
+    window.location.href = "../products/profile.html";
+  }
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+  const form = document.getElementById("sign-up");
+  if (form) {
+    form.addEventListener("submit", signUpHandler);
+  }
+
+  const login = document.getElementById("signIn");
+  if (login) {
+    login.addEventListener("submit", loginHandler);
+  }
+});

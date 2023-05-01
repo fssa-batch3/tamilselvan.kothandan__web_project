@@ -1,135 +1,153 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>medical service </title>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>medical service </title>
 
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+        <link rel="stylesheet" href="../assets/css/style.css">
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-  <link rel="stylesheet" href="../assets/css/style.css">
+    </head>
 
-</head>
+    <body>
 
-<body>
+        <!-- header section starts  -->
 
-  <!-- header section starts  -->
+        <header class="header">
 
-  <header class="header">
+            <a href="../../index.html" class="logo"> Medical Service </a>
 
-    <a href="../../index.html" class="logo"> Medical Service </a>
+            <nav class="navbar">
+                <a href="#" id="logout_link">Logout</a>
 
-    <nav class="navbar">
-      <a href="#" id="logout_link">Logout</a>
+            </nav>
 
+            <div id="menu-btn" class="fas fa-bars"></div>
 
-    </nav>
+        </header>
 
-    <div id="menu-btn" class="fas fa-bars"></div>
+        <section>
 
-  </header>
+            <form id="doctorForm" style="margin-top:20rem ; ">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <br>
+                <br>
 
-  <section>
+                <label for="specialty">Specialty:</label>
+                <input type="text" id="specialty" name="specialty" required>
+                <br>
+                <br>
 
+                <label for="hospital">image:</label>
+                <input type="text" id="image" name="hospital" required>
+                <br>
+                <br>
+                <label for="hospital">linkedin:</label>
+                <input type="text" id="linkedin" name="linkedin">
+                <br>
+                <br>
 
-    <form id="doctorForm" style="margin-top:20rem ; ">
-      <label for="name">Name:</label>
-      <input type="text" id="name" name="name" required><br><br>
+                <label for="hospital">Facebook:</label>
+                <input type="text" id="Facebook" name="Facebook">
+                <br>
+                <br>
 
-      <label for="specialty">Specialty:</label>
-      <input type="text" id="specialty" name="specialty" required><br><br>
+                <label for="hospital">Twitter:</label>
+                <input type="text" id="Twitter" name="Twitter">
+                <br>
+                <br>
 
-      <label for="hospital">image:</label>
-      <input type="text" id="image" name="hospital" required><br><br>
-      <label for="hospital">linkedin:</label>
-      <input type="text" id="linkedin" name="linkedin" ><br><br>
+                <label for="hospital">Instagram:</label>
+                <input type="text" id="Instagram" name="Instagram">
+                <br>
+                <br>
 
-      <label for="hospital">Facebook:</label>
-      <input type="text" id="Facebook" name="Facebook" ><br><br>
+                <label for="hospital">Descripition:</label>
+                <textarea type="text" id="Descripition" name="Instagram" required></textarea>
+                <br>
+                <br>
 
-      <label for="hospital">Twitter:</label>
-      <input type="text" id="Twitter" name="Twitter" ><br><br>
+                <label for="hospital">experenice:</label>
+                <input type="text" id="experenice" name="Instagram" required>
+                <br>
+                <br>
 
-      <label for="hospital">Instagram:</label>
-      <input type="text" id="Instagram" name="Instagram" ><br><br>
+                <label for="hospital">location:</label>
+                <input type="text" id="location" name="Instagram" required>
+                <br>
+                <br>
 
-      <label for="hospital">Descripition:</label>
-      <textarea type="text" id="Descripition" name="Instagram" required></textarea><br><br>
+                <label for="hospital">clinic:</label>
+                <input type="text" id="clinic" name="Instagram" required>
+                <br>
+                <br>
 
-      <label for="hospital">experenice:</label>
-      <input type="text" id="experenice" name="Instagram" required><br><br>
+                <label for="hospital">Address:</label>
+                <input type="text" id="Address" name="Instagram" required>
+                <br>
+                <br>
 
-      <label for="hospital">location:</label>
-      <input type="text" id="location" name="Instagram" required><br><br>
+                <label for="hospital">Timing:</label>
+                <input type="text" id="Timing" name="Instagram" required>
+                <br>
+                <br>
 
-      <label for="hospital">clinic:</label>
-      <input type="text" id="clinic" name="Instagram" required><br><br>
+                <button type="submit">Save</button>
+            </form>
 
-
-      <label for="hospital">Address:</label>
-      <input type="text" id="Address" name="Instagram" required><br><br>
-
-      <label for="hospital">Timing:</label>
-      <input type="text" id="Timing" name="Instagram" required><br><br>
-
-      <button type="submit">Save</button>
-    </form>
-
-
-  </section>
-  <script>
+        </section>
+        <script>
     // Check if doctors array exists in local storage
-    let doctors = JSON.parse(localStorage.getItem('doctors')) || [];
-    const doctorForm = document.getElementById('doctorForm');
-    doctorForm.addEventListener('submit', function (e) {
+    const doctors = JSON.parse(localStorage.getItem("doctors")) || [];
+    const doctorForm = document.getElementById("doctorForm");
+    doctorForm.addEventListener("submit", function details(e) {
       e.preventDefault(); // Prevent form from submitting
       // Get form values
-      const name = document.getElementById('name').value;
-      const specialty = document.getElementById('specialty').value;
-      const img_src = document.getElementById('image').value;
-      const linkedin = document.getElementById('linkedin').value;
-      const Facebook = document.getElementById('Facebook').value;
-      const Twitter = document.getElementById('Twitter').value;
-      const Instagram = document.getElementById('Instagram').value;
-      const Descripition = document.getElementById('Descripition').value;
-      const experenice = document.getElementById('experenice').value;
-      const location = document.getElementById('location').value;
-      const clinic = document.getElementById('clinic').value;
-      const Address = document.getElementById('Address').value;
-      const Timing = document.getElementById('Timing').value;
+      const name = document.getElementById("name").value;
+      const specialty = document.getElementById("specialty").value;
+      const img_src = document.getElementById("image").value;
+      const linkedin = document.getElementById("linkedin").value;
+      const Facebook = document.getElementById("Facebook").value;
+      const Twitter = document.getElementById("Twitter").value;
+      const Instagram = document.getElementById("Instagram").value;
+      const Descripition = document.getElementById("Descripition").value;
+      const experenice = document.getElementById("experenice").value;
+      const location = document.getElementById("location").value;
+      const clinic = document.getElementById("clinic").value;
+      const Address = document.getElementById("Address").value;
+      const Timing = document.getElementById("Timing").value;
 
       const id = Date.now();
       // Create object to store values
       const doctor = {
-        id: id,
+        id,
         doctor_name: name,
         specialization: specialty,
-        img_src: img_src,
-        linkedin: linkedin,
-        Facebook: Facebook,
-        Twitter: Twitter,
-        Instagram: Instagram,
-        Descripition: Descripition,
-        experenice: experenice,
-        location: location,
-        clinic: clinic,
-        Address: Address,
-        Timing: Timing
+        img_src,
+        linkedin,
+        Facebook,
+        Twitter,
+        Instagram,
+        Descripition,
+        experenice,
+        location,
+        clinic,
+        Address,
+        Timing,
       };
-      console.log(doctor)
+      console.log(doctor);
       doctors.push(doctor);
-      localStorage.setItem('doctors', JSON.stringify(doctors));
+      localStorage.setItem("doctors", JSON.stringify(doctors));
       // Clear form inputs
       doctorForm.reset();
-      window.location.href = "./admin_doctor_page.html"
+      window.location.href = "./admin_doctor_page.html";
     });
-
-
-
   </script>
-  <script src="./logout.js"></script>
-</body>
+        <script src="./logout.js"></script>
+    </body>
 
 </html>
