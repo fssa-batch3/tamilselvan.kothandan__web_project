@@ -80,7 +80,7 @@ function logout_link() {
   if (confirm("Are you sure you want to logout?")) {
     localStorage.removeItem("name_id");
     // eslint-disable-next-line no-template-curly-in-string
-    window.location.href = "${home}";
+    window.location.href = "../index.html";
   }
 }
 

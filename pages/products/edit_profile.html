@@ -61,7 +61,7 @@
                     <div class="section__row__column">
                         <div class="c-input c-input--text   ">
                             <input id="phone_number" name="mobile" type="tel"
-                                pattern="^(?:\+1)?[ -]?\(?([6-9]{3})\)?[ -]?([6-9]{3})[ -]?([6-9]{4})$" title= "phone_number does not match" required>
+                                 title= "phone_number does not match" required>
                             <label>Phone number</label>
 
                         </div>
@@ -94,7 +94,7 @@
                     <div class="section__row__column">
 
                         <div class="c-input c-input--text">
-                            <input id="date_of_birth" name="dob" type="date" value="None" max="2023-04-18" required>
+                            <input id="date_of_birth" name="dob" type="date" value="None" required>
                             <label>
                                 Date of birth
                             </label>
@@ -257,7 +257,7 @@
         </div>
 
         <div>
-            <button class="btn-1" type="submit" onclick="btn_save()">Save changes</button>
+            <button class="btn-1" type="submit" id="btn-save">Save changes</button>
         </div>
 
         <!-- footer section starts -->
@@ -348,7 +348,7 @@
     document.getElementById("operation_dates").value = user_data.operation_dates;
     document.getElementById("medications").value = user_data.medications;
 
-    function btn_save() {
+    function btnSaveClicked() {
       // e.preventDefault()
       const edit_name = document.getElementById("name").value;
       const edit_email = document.getElementById("email").value;
@@ -366,6 +366,49 @@
       const edit_disease = document.getElementById("disease").value;
       const edit_operation_dates = document.getElementById("operation_dates").value;
       const edit_medications = document.getElementById("medications").value;
+      const currentDate = new Date();
+  const userDate = new Date(edit_date_of_birth);
+  const dobRegex = /^[0-9]{4}-[0-9]{2}-[0-9]{2}$/;
+
+  // Validation for phone number
+  const phoneRegex = /^[6-9]\d{9}$/;
+  if (!phoneRegex.test(edit_phone_number)) {
+        alert("Invalid phone number format!");
+        return;
+  }
+
+  // Validation for gender
+  if (
+        edit_gender !== "Male" &&
+        edit_gender !== "Female" &&
+        edit_gender !== "Other"
+  ) {
+        alert("Please select a valid gender!");
+        return;
+  }
+
+  // Validation for date of birth
+  if (!dobRegex.test(edit_date_of_birth)) {
+        alert("Invalid date of birth format!");
+        return;
+  }
+  if (userDate >= currentDate) {
+        alert("Date of birth must be in the past!");
+        return;
+  }
+  const oneDay = 24 * 60 * 60 * 1000; // one day in milliseconds
+  const diffDays = Math.round(Math.abs((userDate - currentDate) / oneDay)); // calculate the difference in days between the two dates
+  if (diffDays <= 1) {
+        alert("Date of birth cannot be a continuous date or the current date!");
+        return;
+  }
+
+  // Validation for blood group
+  const bloodGroups = ["A+", "A-", "B+", "B-", "AB+", "AB-", "O+", "O-"];
+  if (!bloodGroups.includes(edit_blood_group)) {
+        alert("Please select a valid blood group!");
+        return;
+  }
 
       user_data.name = edit_name;
       user_data.email = edit_email;
@@ -388,7 +431,8 @@
       alert("updated successfully");
       window.location.href = "./profile.html";
     }
-    btn_save();
+    const btnSave = document.getElementById("btn-save");
+btnSave.addEventListener("click", btnSaveClicked);
   </script>
         <script src="../../Components/header.js"></script>
 

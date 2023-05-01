@@ -18,11 +18,41 @@ function validatePassword(password, confirmPassword) {
 function signUpHandler(e) {
   e.preventDefault();
 
-  const name = document.getElementById("name").value;
-  const email = document.getElementById("email").value;
-  const password = document.getElementById("password").value;
-  const confirmPassword = document.getElementById("confirm_password").value;
-  const form = document.getElementById("sign-up");
+  const nameInput = document.getElementById("name");
+  const emailInput = document.getElementById("email");
+  const passwordInput = document.getElementById("password");
+  const confirmPasswordInput = document.getElementById("confirm_password");
+
+  const name = nameInput.value.trim();
+  const email = emailInput.value.trim();
+  const password = passwordInput.value;
+  const confirmPassword = confirmPasswordInput.value;
+
+  // Validate name
+  const nameRegex = /^[A-Za-z][A-Za-z]*$/;
+  if (!nameRegex.test(name)) {
+    nameInput.setCustomValidity(
+      "Name must start with a letter and contain only letters"
+    );
+    nameInput.reportValidity();
+    return;
+  }
+
+  // Validate email
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!emailRegex.test(email)) {
+    emailInput.setCustomValidity("Invalid email format");
+    emailInput.reportValidity();
+    return;
+  }
+
+  // Validate password
+  const passwordRegex = /^\S*$/;
+  if (!passwordRegex.test(password)) {
+    passwordInput.setCustomValidity("Password cannot contain spaces");
+    passwordInput.reportValidity();
+    return;
+  }
 
   const isValidPassword = validatePassword(password, confirmPassword);
   if (!isValidPassword) {
@@ -44,6 +74,7 @@ function signUpHandler(e) {
       password,
     });
     localStorage.setItem("formData", JSON.stringify(formData));
+    const form = document.getElementById("sign-up");
     form.reset();
 
     alert("Account Created.\n\nPlease Sign In using the link below.");

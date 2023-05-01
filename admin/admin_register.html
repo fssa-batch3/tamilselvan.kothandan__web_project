@@ -89,11 +89,41 @@ const form = document.querySelector("form");
 form.addEventListener("submit", function signUp(e) {
   e.preventDefault();
 
-  const full_name = document.getElementById("fullname").value;
-  const email = document.getElementById("email").value;
+  const full_name = document.getElementById("fullname").value.trim();
+  const email = document.getElementById("email").value.trim();
   const password = document.getElementById("password").value;
   const confirm_password = document.getElementById("confirm_password").value;
-  const phone_number = document.getElementById("Phone_number").value;
+  const phone_number = document.getElementById("Phone_number").value.trim();
+
+  // Validate full name
+  const nameRegex = /^[A-Za-z][A-Za-z\s]*$/;
+  if (!nameRegex.test(full_name)) {
+    alert(
+      "Invalid full name. Full name must contain only letters and spaces, and start with a letter."
+    );
+    return;
+  }
+
+  // Validate email
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!emailRegex.test(email)) {
+    alert("Invalid email address. Please enter a valid email address.");
+    return;
+  }
+
+  // Validate password
+  const passwordRegex = /^\S*$/;
+  if (!passwordRegex.test(password)) {
+    alert("Invalid password. Password cannot contain spaces.");
+    return;
+  }
+
+  // Validate phone number
+  const phoneRegex = /^[0-9]{10}$/;
+  if (!phoneRegex.test(phone_number)) {
+    alert("Invalid phone number. Please enter a valid 10-digit phone number.");
+    return;
+  }
 
   // Check if the passwords match
   function checkPassword() {
