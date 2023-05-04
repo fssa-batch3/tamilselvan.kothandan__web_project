@@ -72,6 +72,20 @@ function signUpHandler(e) {
       name,
       email,
       password,
+      phone_number: "123-456-7890",
+      gender: "male",
+      date_of_birth: "1990-01-01",
+      blood_group: "A+",
+      street_name: "Main St",
+      colony: "Downtown",
+      city: "Cityville",
+      state: "State",
+      country: "USA",
+      pincode: "12345",
+      drug: "Aspirin",
+      disease: "Fever",
+      operation_dates: "2023-05-03",
+      medications: "Take twice a day",
     });
     localStorage.setItem("formData", JSON.stringify(formData));
     const form = document.getElementById("sign-up");

@@ -41,7 +41,7 @@ const afterLogin = `
                 <div class="dropdown-content">
                     <a href="${profile}">View profile</a>
                     <a href="${appointment}">My appointment</a>
-                    <a href="#" onclick="logout_link()">Logout</a>
+                    <a href="#" id="logoutLink">Logout</a>
                     
                 </div>
             </div>
@@ -50,7 +50,6 @@ const afterLogin = `
         <div id="menu-btn" class="fas fa-bars"></div>     
 `;
 
-// eslint-disable-next-line no-unused-vars
 function home_header() {
   const user_name = JSON.parse(localStorage.getItem("name_id"));
   const logHeader = document.getElementById("header");
@@ -74,14 +73,17 @@ function home_header() {
   }
 }
 
-// eslint-disable-next-line no-unused-vars
 function logout_link() {
-  // eslint-disable-next-line no-restricted-globals
-  if (confirm("Are you sure you want to logout?")) {
+  const confirmation = window.confirm("Are you sure you want to Logout?");
+  if (confirmation) {
     localStorage.removeItem("name_id");
-    // eslint-disable-next-line no-template-curly-in-string
     window.location.href = "../index.html";
   }
 }
 
-home_header();
+document.addEventListener("DOMContentLoaded", function header() {
+  home_header();
+
+  const logoutButton = document.getElementById("logoutLink");
+  logoutButton.addEventListener("click", logout_link);
+});

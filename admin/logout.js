@@ -5,4 +5,4 @@ function logoutLink() {
     window.location.href = "../index.html";
   }
 }
-logoutLink();
+
