@@ -86,7 +86,7 @@
     <script>
 const form = document.querySelector("form");
 
-form.addEventListener("submit", function signUp(e) {
+form.addEventListener("submit", (e) => {
   e.preventDefault();
 
   const full_name = document.getElementById("fullname").value.trim();
@@ -141,9 +141,7 @@ form.addEventListener("submit", function signUp(e) {
 
   // Save the user account to local storage
   const admin = JSON.parse(localStorage.getItem("admin")) || [];
-  const exist = admin.some((data) => {
-    return data.full_name.toLowerCase() === full_name.toLowerCase();
-  });
+  const exist = admin.some((data) => data.full_name.toLowerCase() === full_name.toLowerCase());
   if (!exist) {
     admin.push({ full_name, email, password, phone_number });
     localStorage.setItem("admin", JSON.stringify(admin));

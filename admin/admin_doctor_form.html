@@ -104,7 +104,7 @@
     // Check if doctors array exists in local storage
     const doctors = JSON.parse(localStorage.getItem("doctors")) || [];
     const doctorForm = document.getElementById("doctorForm");
-    doctorForm.addEventListener("submit", function details(e) {
+    doctorForm.addEventListener("submit", (e) => {
       e.preventDefault(); // Prevent form from submitting
       // Get form values
       const name = document.getElementById("name").value;

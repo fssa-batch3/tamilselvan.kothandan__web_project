@@ -22,7 +22,7 @@
 
             <nav class="navbar">
 
-                <a href="#" id="logout_link">Logout</a>
+                <a href="#" id="logoutBtn">Logout</a>
 
             </nav>
 
@@ -39,7 +39,7 @@
             <div class="box-container">
 
             </div>
-            <button class="btn" onclick="add_doctors()">Add Doctors</button>
+            <button class="btn" id="add_doctors">Add Doctors</button>
         </section>
 
         <section class="footer">
@@ -185,8 +185,9 @@
       function add_doctors() {
         window.location.href = "./admin_doctor_form.html";
       }
-      
-    </script>
+      const doctorAdd = document.getElementById("add_doctors");
+      doctorAdd.addEventListener("click", add_doctors);
+          </script>
 
             <script src="./logout.js"></script>
 

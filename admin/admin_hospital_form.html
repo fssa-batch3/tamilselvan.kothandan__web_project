@@ -82,7 +82,7 @@
         <script>
           const hospitalForm = document.getElementById("hospitalForm");
         
-          hospitalForm.addEventListener("submit", function formDetail(e) {
+          hospitalForm.addEventListener("submit", (e) => {
             e.preventDefault(); // Prevent form from submitting
         
             // Get form values
@@ -118,7 +118,7 @@
              // Add new hospital to array and save to local storage
             hospitals.push(hospital);
             localStorage.setItem("hospitals", JSON.stringify(hospitals));
-       n    // Clear form inputs
+          // Clear form inputs
             hospitalForm.reset();
             // Display success message to user
             const successDiv = document.createElement("div");

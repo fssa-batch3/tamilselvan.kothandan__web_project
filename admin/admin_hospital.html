@@ -22,7 +22,7 @@
 
         <nav class="navbar">
 
-            <a href="../index.html" id="logout_link">Logout</a>
+            <a href="../index.html" id="logoutBtn">Logout</a>
 
         </nav>
 
@@ -39,7 +39,7 @@
         <div class="box-container">
 
         </div>
-        <button class="btn" onclick="add_hospital()">Add Hospital</button>
+        <button class="btn" id="hospitalAdd">Add Hospital</button>
 
     </section>
     <section class="footer">
@@ -195,10 +195,11 @@ for (let i = 0; i < hospitals.length; i++) {
 }
 
 // Redirect to the hospital form page
-function add_hospital() {
+function hospitalAdd() {
   window.location.href = "./admin_hospital_form.html";
 }
-
+const hospital_add=document.getElementById("hospitalAdd");
+hospital_add.addEventListener("click", hospitalAdd)
 </script>
 </body>
 

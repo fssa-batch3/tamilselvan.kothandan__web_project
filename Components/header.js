@@ -81,7 +81,7 @@ function logout_link() {
   }
 }
 
-document.addEventListener("DOMContentLoaded", function header() {
+document.addEventListener("DOMContentLoaded", () => {
   home_header();
 
   const logoutButton = document.getElementById("logoutLink");
