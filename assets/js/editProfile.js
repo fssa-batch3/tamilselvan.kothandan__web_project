@@ -2,7 +2,7 @@ const name_id = JSON.parse(localStorage.getItem("name_id"));
 const formData = JSON.parse(localStorage.getItem("formData"));
 
 function check(e) {
-  return e.name === name_id;
+  return e.name == name_id;
 }
 
 const user_data = formData.find(check);

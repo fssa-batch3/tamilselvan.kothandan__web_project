@@ -5,7 +5,7 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>medical service </title>
+        <title>DOC 4 YOU</title>
 
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -28,7 +28,7 @@
 
             </div>
 
-            <table style="margin-top: 10rem; width: 50%; margin-left: 25rem; margin-bottom: 10rem;">
+            <!-- <table style="margin-top: 10rem; width: 50%; margin-left: 25rem; margin-bottom: 10rem;">
                 <caption></caption>
                 <tr>
                     <th class="th"></th>
@@ -76,11 +76,25 @@
                     </td>
                 </tr>
 
-            </table>
+            </table> -->
 
             <a href="./past appointment.html" class="btn" style="margin-left: 45rem; margin-top: -20rem;">
                 Home <span
                     class="fas fa-chevron-right"></span> </a>
+
+                    <table>
+                        <thead>
+                          <tr>
+                            <th>Doctor Name</th>
+                            <th>Status</th>
+                            <th>Appointment Date</th>
+                          </tr>
+                        </thead>
+                        <tbody id="appointmentTableBody">
+                          <!-- Table rows will be dynamically appended here -->
+                        </tbody>
+                      </table>
+                      
 
         </section>
 
@@ -145,6 +159,43 @@
         </section>
         <!-- footer section ends -->
         <script src="../../Components/header.js"></script>
+        <script>
+            const nameId = JSON.parse(localStorage.getItem("name_id"));
+const formData = JSON.parse(localStorage.getItem("formData"));
+const appointmentDetails = JSON.parse(localStorage.getItem("appointment_details"));
+
+const tableBody = document.getElementById("appointmentTableBody");
+
+for (let i = 0; i < appointmentDetails.length; i++) {
+  const { name, doctor_id, status, appointmentBookingDate } = appointmentDetails[i];
+
+  if (name === nameId) {
+    const matchedDoctor = formData.find((doctor) => doctor.id === doctor_id);
+
+    if (matchedDoctor) {
+      const { name: doctorName } = matchedDoctor;
+
+      const row = document.createElement("tr");
+
+      const doctorNameCell = document.createElement("td");
+      doctorNameCell.textContent = doctorName;
+
+      const statusCell = document.createElement("td");
+      statusCell.textContent = status;
+
+      const bookingDateCell = document.createElement("td");
+      bookingDateCell.textContent = appointmentBookingDate;
+
+      row.appendChild(doctorNameCell);
+      row.appendChild(statusCell);
+      row.appendChild(bookingDateCell);
+
+      tableBody.appendChild(row);
+    }
+  }
+}
+
+        </script>
 
     </body>
 

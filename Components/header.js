@@ -2,14 +2,19 @@ const myOrigin = window.location.origin;
 const home = `${myOrigin}/index.html`;
 const login = `${myOrigin}/pages/products/login.html`;
 const about = `${myOrigin}/pages/products/About page.html`;
-const Admin = `${myOrigin}/admin/admin_register.html`;
+const Admin = `${myOrigin}/admin/admin_login.html`;
 const doctor = `${myOrigin}/pages/products/Doctors.html`;
 const hospital = `${myOrigin}/pages/products/hospital.html`;
 const profile = `${myOrigin}/pages/products/profile.html`;
 const appointment = `${myOrigin}/pages/products/past appointment.html`;
+const doctor_login = `${myOrigin}/Doctor/login.html`;
+const image = `${myOrigin}/assets/img/image.png`;
 
 const beforeLogin = `
-<a href="${home}" class="logo"><i class="fa fa-heart" style="font-size:28px;color:#0e6453"></i> Medical service </a>
+<a href="${home}" class="logo">
+  <img src="${image}" alt="logo">
+</a>
+
 
 <nav class="navbar">
   <a href="${home}">Home</a>
@@ -17,18 +22,20 @@ const beforeLogin = `
   <a href="${about}">About</a>
   <a href="${login}">Login</a>
   <a href="${Admin}">Admin</a>
+  <a href="${doctor_login}">Doctor login</a>
 </nav>
 <div id="menu-btn" class="fas fa-bars"></div>
 
 `;
 
 const afterLogin = `
-        <a href="${home}" class="logo"><i class="fa fa-heart" style="font-size:28px;color:#0e6453"></i> Medical
-            Service </a>
+<a href="${home}" class="logo">
+  <img src="${image}" alt="logo">
+</a>
+
 
         <nav class="navbar" id="navbar">
             <a href="${home}">Home</a>
-            <a href="${home} ">Services</a>
             <a href="${about}">About</a>
             <a href="${doctor}">Doctors</a>
             <a href="${hospital}">Hospital</a>
@@ -37,7 +44,7 @@ const afterLogin = `
 
 
             <div class="dropdown">
-                <button class="dropbtn" style='margin-left:2rem;'><i class='fa-solid fa-circle-user' style='font-size:2rem;color:#0e6453 ' ></i></button>
+                <button class="dropbtn" id="dropdtn" style='margin-left:2rem;'><i class='fa-solid fa-circle-user' style='font-size:2rem;color:#0e6453 ' ></i></button>
                 <div class="dropdown-content">
                     <a href="${profile}">View profile</a>
                     <a href="${appointment}">My appointment</a>
@@ -77,7 +84,7 @@ function logout_link() {
   const confirmation = window.confirm("Are you sure you want to Logout?");
   if (confirmation) {
     localStorage.removeItem("name_id");
-    window.location.href = "../index.html";
+    window.location.href = `${home}`;
   }
 }
 

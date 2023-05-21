@@ -64,7 +64,7 @@ function signUpHandler(e) {
   const exist =
     formData.length &&
     JSON.parse(localStorage.getItem("formData")).some(
-      (data) => data.name.toLowerCase() === name.toLowerCase()
+      (data) => data.name.toLowerCase() == name.toLowerCase()
     );
 
   if (!exist) {
@@ -72,20 +72,20 @@ function signUpHandler(e) {
       name,
       email,
       password,
-      phone_number: "123-456-7890",
-      gender: "male",
+      phone_number: "",
+      gender: "",
       date_of_birth: "1990-01-01",
-      blood_group: "A+",
-      street_name: "Main St",
-      colony: "Downtown",
-      city: "Cityville",
-      state: "State",
-      country: "USA",
-      pincode: "12345",
-      drug: "Aspirin",
-      disease: "Fever",
-      operation_dates: "2023-05-03",
-      medications: "Take twice a day",
+      blood_group: "",
+      street_name: " ",
+      colony: "",
+      city: "",
+      state: "",
+      country: "",
+      pincode: "",
+      drug: "",
+      disease: "",
+      operation_dates: "",
+      medications: "",
     });
     localStorage.setItem("formData", JSON.stringify(formData));
     const form = document.getElementById("sign-up");
@@ -108,7 +108,7 @@ function loginHandler(e) {
 
   const exist =
     formData.length &&
-    formData.some((data) => data.name === name && data.password === password);
+    formData.some((data) => data.name == name && data.password == password);
 
   if (!exist) {
     alert(" Incorrect login credentials ");

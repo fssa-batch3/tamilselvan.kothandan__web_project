@@ -80,14 +80,14 @@ if (!JSON.parse(localStorage.getItem("formData"))) {
   localStorage.setItem("formData", JSON.stringify(formData));
 }
 
-if (!JSON.parse(localStorage.getItem("product_data"))) {
+if (!JSON.parse(localStorage.getItem("doctors"))) {
   const doctors = [
     {
       id: 1681717361383,
       Address:
         "33,7th st,Vinobaji Nagar, Hasthinapuram, Landmark: Annai Clinic, Chennai",
       Descripition:
-        "Dr. Sujith Kumar is a Proctologist,Laparoscopic Surgeon and General Surgeon in Tambaram East, Chennai and has an experience of 22 years in these fields",
+        "Dr. Arjun is a Proctologist,Laparoscopic Surgeon and General Surgeon in Tambaram East, Chennai and has an experience of 22 years in these fields",
       Facebook:
         "https://imagesx.practo.com/providers/dr-sujith-kumar-proctologist-chennai-4ac93f50-73e0-4f53-ab35-77421e3564c6.jpg?i_type=t_100x100-2x",
       Instagram:
@@ -95,8 +95,8 @@ if (!JSON.parse(localStorage.getItem("product_data"))) {
       Timing: "Mon - Sat  06:45 PM - 08:45 PM",
       Twitter:
         "https://imagesx.practo.com/providers/dr-sujith-kumar-proctologist-chennai-4ac93f50-73e0-4f53-ab35-77421e3564c6.jpg?i_type=t_100x100-2x",
-      clinic: "Practo Care Surgeries",
-      doctor_name: " Dr. Sujith Kumar",
+      clinic: "Apollo Hospital",
+      doctor_name: " Dr. Arjun",
       experenice: "22 Years Experience Overall  (17 years as specialist)",
 
       img_src:
@@ -105,13 +105,16 @@ if (!JSON.parse(localStorage.getItem("product_data"))) {
         "https://imagesx.practo.com/providers/dr-sujith-kumar-proctologist-chennai-4ac93f50-73e0-4f53-ab35-77421e3564c6.jpg?i_type=t_100x100-2x",
       location: "Chromepet, Chennai",
       specialization: "MBBS, MS - General Surgery",
+      hospitals_id: 1,
+      Password: "Kalai@1234",
     },
     {
       id: 1681717316383,
+      Password: "Tamil@1234",
       Address:
         "33,7th st,Vinobaji Nagar, Hasthinapuram, Landmark: Annai Clinic, Chennai",
       Descripition:
-        "Dr. Sujith Kumar is a Proctologist,Laparoscopic Surgeon and General Surgeon in Tambaram East, Chennai and has an experience of 22 years in these fields",
+        "Dr. PKS is a Proctologist,Laparoscopic Surgeon and General Surgeon in Tambaram East, Chennai and has an experience of 22 years in these fields",
       Facebook:
         "https://imagesx.practo.com/providers/dr-sujith-kumar-proctologist-chennai-4ac93f50-73e0-4f53-ab35-77421e3564c6.jpg?i_type=t_100x100-2x",
       Instagram:
@@ -119,8 +122,8 @@ if (!JSON.parse(localStorage.getItem("product_data"))) {
       Timing: "Mon - Sat  06:45 PM - 08:45 PM",
       Twitter:
         "https://imagesx.practo.com/providers/dr-sujith-kumar-proctologist-chennai-4ac93f50-73e0-4f53-ab35-77421e3564c6.jpg?i_type=t_100x100-2x",
-      clinic: "Practo Care Surgeries",
-      doctor_name: " Dr. Sujith Kumar",
+      clinic: "Billroth Hospital",
+      doctor_name: " Dr. PKS",
       experenice: "22 Years Experience Overall  (17 years as specialist)",
 
       img_src:
@@ -129,13 +132,14 @@ if (!JSON.parse(localStorage.getItem("product_data"))) {
         "https://imagesx.practo.com/providers/dr-sujith-kumar-proctologist-chennai-4ac93f50-73e0-4f53-ab35-77421e3564c6.jpg?i_type=t_100x100-2x",
       location: "Chromepet, Chennai",
       specialization: "MBBS, MS - General Surgery",
+      hospitals_id: 2,
     },
     {
       id: 1681717631383,
       Address:
         "33,7th st,Vinobaji Nagar, Hasthinapuram, Landmark: Annai Clinic, Chennai",
       Descripition:
-        "Dr. Sujith Kumar is a Proctologist,Laparoscopic Surgeon and General Surgeon in Tambaram East, Chennai and has an experience of 22 years in these fields",
+        "Dr. Kishore  is a Proctologist,Laparoscopic Surgeon and General Surgeon in Tambaram East, Chennai and has an experience of 22 years in these fields",
       Facebook:
         "https://imagesx.practo.com/providers/dr-sujith-kumar-proctologist-chennai-4ac93f50-73e0-4f53-ab35-77421e3564c6.jpg?i_type=t_100x100-2x",
       Instagram:
@@ -144,7 +148,7 @@ if (!JSON.parse(localStorage.getItem("product_data"))) {
       Twitter:
         "https://imagesx.practo.com/providers/dr-sujith-kumar-proctologist-chennai-4ac93f50-73e0-4f53-ab35-77421e3564c6.jpg?i_type=t_100x100-2x",
       clinic: "Practo Care Surgeries",
-      doctor_name: " Dr. Sujith Kumar",
+      doctor_name: " Dr. Kishore ",
       experenice: "22 Years Experience Overall  (17 years as specialist)",
 
       img_src:
@@ -153,13 +157,15 @@ if (!JSON.parse(localStorage.getItem("product_data"))) {
         "https://imagesx.practo.com/providers/dr-sujith-kumar-proctologist-chennai-4ac93f50-73e0-4f53-ab35-77421e3564c6.jpg?i_type=t_100x100-2x",
       location: "Chromepet, Chennai",
       specialization: "MBBS, MS - General Surgery",
+      hospitals_id: 3,
+      Password: "Durga@1234",
     },
     {
       id: 1681717361338,
       Address:
         "33,7th st,Vinobaji Nagar, Hasthinapuram, Landmark: Annai Clinic, Chennai",
       Descripition:
-        "Dr. Sujith Kumar is a Proctologist,Laparoscopic Surgeon and General Surgeon in Tambaram East, Chennai and has an experience of 22 years in these fields",
+        "Dr. Raj  is a Proctologist,Laparoscopic Surgeon and General Surgeon in Tambaram East, Chennai and has an experience of 22 years in these fields",
       Facebook:
         "https://imagesx.practo.com/providers/dr-sujith-kumar-proctologist-chennai-4ac93f50-73e0-4f53-ab35-77421e3564c6.jpg?i_type=t_100x100-2x",
       Instagram:
@@ -168,7 +174,7 @@ if (!JSON.parse(localStorage.getItem("product_data"))) {
       Twitter:
         "https://imagesx.practo.com/providers/dr-sujith-kumar-proctologist-chennai-4ac93f50-73e0-4f53-ab35-77421e3564c6.jpg?i_type=t_100x100-2x",
       clinic: "Practo Care Surgeries",
-      doctor_name: " Dr. Sujith Kumar",
+      doctor_name: " Dr. Raj ",
       experenice: "22 Years Experience Overall  (17 years as specialist)",
 
       img_src:
@@ -177,6 +183,8 @@ if (!JSON.parse(localStorage.getItem("product_data"))) {
         "https://imagesx.practo.com/providers/dr-sujith-kumar-proctologist-chennai-4ac93f50-73e0-4f53-ab35-77421e3564c6.jpg?i_type=t_100x100-2x",
       location: "Chromepet, Chennai",
       specialization: "MBBS, MS - General Surgery",
+      hospitals_id: 4,
+      Password: "Selvan@1234",
     },
   ];
   localStorage.setItem("doctors", JSON.stringify(doctors));
@@ -200,11 +208,13 @@ if (!JSON.parse(localStorage.getItem("hospitals"))) {
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_WpYX73aeSJeEeZbrHNK9o_OpUSarUWrullY7c5FasQ&s",
       linkedin:
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_WpYX73aeSJeEeZbrHNK9o_OpUSarUWrullY7c5FasQ&s",
+      hospitals_id: 1,
     },
     {
       Address: " Shenoy Nagar, Chennai",
       Details:
         " Billroth Hospitals is home to some of the most eminent doctors in the world, most of whom are pioneers in their respective arenas and are renowned for developing innovative and revolutionary procedures.",
+      hospitals_id: 2,
       Facebook:
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJmEKlIxnstTzGPRpr-yfbk-jtV978iZjBPQ&usqp=CAU",
       Instagram:
