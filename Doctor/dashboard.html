@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Doc 4 YOU </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link href="../assets/css/style.css" rel="stylesheet">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+    <header class="header">
+        <a href="../Doctor/index.html" class="logo">
+            <img src="../assets/img/image.png" alt="logo">
+          </a>
+          
+          <nav class="navbar">
+            <a href="./profile.html">Home</a>
+           <a href="./dashboard.html">Appointment List</a>
+            <a href="" id="logoutLink">logout</a>
+          </nav>
+          <div id="menu-btn" class="fas fa-bars"></div>
+          
+    </header>
+
+    <section class="appointDetails" id="appointDetails">
+
+    </section>
+
+     <script>     const doctorId = JSON.parse(localStorage.getItem("doctor_id"));
+const appointmentDetails = JSON.parse(localStorage.getItem("appointment_details"));
+
+const doctorAppointments = appointmentDetails.filter(appointment => appointment.doctor_id === doctorId);
+const appointDetails = document.getElementById("appointDetails");
+
+for (let i = 0; i < doctorAppointments.length; i++) {
+  const appointment = doctorAppointments[i];
+
+  const appointmentElement = document.createElement("div");
+  appointmentElement.classList.add("appointment-card");
+
+  const nameElement = document.createElement("h2");
+  nameElement.textContent = appointment.name;
+
+  const ageGenderElement = document.createElement("div");
+  ageGenderElement.classList.add("each");
+
+  const ageElement = document.createElement("div");
+  ageElement.textContent = `Age: ${appointment.age}`;
+
+  const genderElement = document.createElement("div");
+  genderElement.style.marginLeft = "20px";
+  genderElement.textContent = `Gender: ${appointment.gender}`;
+
+  const dateElement = document.createElement("div");
+  dateElement.classList.add("each");
+  dateElement.textContent = "Date and time of consultation:";
+
+  const dateTimeElement = document.createElement("div");
+  dateTimeElement.textContent = appointment.appointmentBookingDate;
+
+  const mobileElement = document.createElement("div");
+  mobileElement.classList.add("each");
+  mobileElement.textContent = "Mobile number:";
+
+  const numberElement = document.createElement("div");
+  numberElement.textContent = appointment.number;
+
+  const statusElement = document.createElement("div");
+  statusElement.classList.add("each");
+  statusElement.textContent = "Status:";
+
+  const appointmentStatusElement = document.createElement("div");
+  appointmentStatusElement.textContent = appointment.status;
+
+  const buttonContainerElement = document.createElement("div");
+  buttonContainerElement.classList.add("each");
+
+  const acceptButton = document.createElement("button");
+  acceptButton.type = "button";
+  acceptButton.id = "accept";
+  acceptButton.textContent = "ACCEPT";
+  acceptButton.addEventListener("click", () => acceptAppointment(appointment.id));
+
+  const rejectButton = document.createElement("button");
+  rejectButton.type = "button";
+  rejectButton.id = "reject";
+  rejectButton.textContent = "REJECT";
+  rejectButton.addEventListener("click", () => rejectAppointment(appointment.id));
+
+  buttonContainerElement.appendChild(acceptButton);
+  buttonContainerElement.appendChild(rejectButton);
+
+  ageGenderElement.appendChild(ageElement);
+  ageGenderElement.appendChild(genderElement);
+
+  appointmentElement.appendChild(nameElement);
+  appointmentElement.appendChild(ageGenderElement);
+  appointmentElement.appendChild(dateElement);
+  appointmentElement.appendChild(dateTimeElement);
+  appointmentElement.appendChild(mobileElement);
+  appointmentElement.appendChild(numberElement);
+  appointmentElement.appendChild(statusElement);
+  appointmentElement.appendChild(appointmentStatusElement);
+  appointmentElement.appendChild(buttonContainerElement);
+
+  appointDetails.appendChild(appointmentElement);
+}
+
+// Rest of the code for acceptAppointment, rejectAppointment, and event listener
+
+
+        function acceptAppointment(appointmentId) {
+            const appointmentToUpdate = appointmentDetails.find(appointment => appointment.id === appointmentId);
+            if (appointmentToUpdate) {
+                appointmentToUpdate.status = "accept";
+                // Update the appointment details array in localStorage
+                localStorage.setItem("appointment_details", JSON.stringify(appointmentDetails));
+            }
+        }
+
+        function rejectAppointment(appointmentId) {
+            const appointmentToUpdate = appointmentDetails.find(appointment => appointment.id === appointmentId);
+            if (appointmentToUpdate) {
+                appointmentToUpdate.status = "reject";
+                // Update the appointment details array in localStorage
+                localStorage.setItem("appointment_details", JSON.stringify(appointmentDetails));
+            }
+        }
+
+        document.addEventListener("DOMContentLoaded", () => {
+            rejectAppointment();
+            acceptAppointment();
+
+        });
+    </script>
+    <script src="../Components/doctor_sidebar.js"></script>
+
+</body>
+
+</html>

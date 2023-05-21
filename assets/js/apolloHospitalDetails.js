@@ -1,15 +1,25 @@
 const params = new URLSearchParams(window.location.search);
-const hospitals_id = params.get("hospitals_id");
-
+const hospital_id = params.get("hospitals_id"); // Corrected query parameter name
 const hospitals = JSON.parse(localStorage.getItem("hospitals"));
+console.log(hospital_id); // Check if hospital_id is not null or undefined
+console.log(hospitals); // Check if hospitals is not null or undefined and has expected data
 
-const find_hospitals = hospitals.find((e) => e.id === hospitals_id);
+const find_hospitals = hospitals.find((e) => e.hospitals_id == hospital_id); // Corrected property name
 
 console.log(find_hospitals);
 
-document.getElementById("name").innerText = find_hospitals.hospital_name;
+const details_p = document.getElementById("details");
 
-document.getElementById("details").innerText = find_hospitals.Details;
+if (find_hospitals) {
+  document.getElementById("name").innerText = find_hospitals.hospital_name;
+  details_p.innerText = find_hospitals.Details;
 
-const doctor_img = document.getElementById("img_src");
-doctor_img.setAttribute("src", find_hospitals.img_src);
+  const doctor_img = document.getElementById("img_src");
+  doctor_img.setAttribute("src", find_hospitals.img_src);
+
+  const apolloHospital = document.getElementById("apolloHospital");
+  apolloHospital.setAttribute(
+    "href",
+    `../hospitalDoctorList.html?hospital_id=${hospital_id}` // Corrected query parameter name
+  );
+}

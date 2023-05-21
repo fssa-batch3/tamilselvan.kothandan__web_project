@@ -5,7 +5,7 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>medical service </title>
+        <title>DOC 4 YOU</title>
 
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -28,7 +28,7 @@
         <section>
             <div style="overflow-x: auto;">
 
-                <table>
+                <!-- <table>
                     <caption></caption>
                     <tr>
                         <th>Doctor Name</th>
@@ -107,8 +107,22 @@
                             </a>
                         </td>
                     </tr>
-                </table>
+                </table> -->
 
+                <table id="appointmentTable">
+                    <thead>
+                      <tr>
+                        <th>Appointment Date</th>
+                        <th>Doctor ID</th>
+                        <th>Status</th>
+                        <th>Name</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <!-- Existing table rows -->
+                    </tbody>
+                  </table>
+                  
                 <a href="../../index.html" class="btn" style="margin-left: 55rem; margin-top: 4rem;">
                     Home <span
                         class="fas fa-chevron-right"></span> </a>
@@ -177,6 +191,43 @@
         <!-- footer section ends -->
         <script src="../../assets/js/script.js"></script>
         <script src="../../Components/header.js"></script>
+        <script>
+
+const appointment_details = JSON.parse(localStorage.getItem("appointment_details"));
+const name_id =JSON.parse(localStorage.getItem("name_id"));
+
+// Get reference to the table body
+const tableBody = document.querySelector("#appointmentTable tbody");
+
+// Iterate over appointment_details and check for matching names
+for (let i = 0; i < appointment_details.length; i++) {
+  const appointment = appointment_details[i];
+  if (appointment.name === name_id) {
+    // Create a new table row
+    const row = document.createElement("tr");
+
+    // Create table cells for each appointment property
+    const appointmentDateCell = document.createElement("td");
+    appointmentDateCell.textContent = appointment.appointmentDateTime;
+    row.appendChild(appointmentDateCell);
+
+    const doctorIdCell = document.createElement("td");
+    doctorIdCell.textContent = appointment.doctor_id;
+    row.appendChild(doctorIdCell);
+
+    const statusCell = document.createElement("td");
+    statusCell.textContent = appointment.status;
+    row.appendChild(statusCell);
+
+    const nameCell = document.createElement("td");
+    nameCell.textContent = appointment.name;
+    row.appendChild(nameCell);
+
+    // Append the new row to the table body
+    tableBody.appendChild(row);
+  }
+}
+ </script>
        
     </body>
 

@@ -1,8 +1,11 @@
+const myOrigin = window.location.origin;
+const home = `${myOrigin}/index.html`;
+
 function logoutLink() {
   const confirmation = window.confirm("Are you sure you want to logout?");
   if (confirmation) {
-    localStorage.removeItem("name_id");
-    window.location.href = "../index.html";
+    localStorage.removeItem("admin_id");
+    window.location.href = `${home}`;
   }
 }
 

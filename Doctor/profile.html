@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Doctor </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link href="../assets/css/style.css" rel="stylesheet">
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+  <header class="header">
+    <a href="../Doctor/index.html" class="logo">
+      <img src="../assets/img/image.png" alt="logo">
+    </a>
+
+    <nav class="navbar">
+      <a href="./index.html">Home</a>
+      <a href="./dashboard.html">Appointment list</a>
+      <a href="" id="logoutLink">logout</a>
+    </nav>
+    <div id="menu-btn" class="fas fa-bars"></div>
+
+  </header>
+  <div class="profile-container">
+    <div class="profile">
+      <h2>Profile</h2>
+      <div class="profile-info">
+        <div class="profile-field">
+          <label for="specialty">Name:</label>
+          <input id="Name" type="text" disabled>
+        </div>
+        <div class="profile-field">
+          <label for="specialty">Specialty:</label>
+          <input id="specialty" type="text" disabled>
+        </div>
+        <div class="profile-field">
+          <label for="description">Description:</label>
+          <input id="description" type="text" disabled>
+        </div>
+        <div class="profile-field">
+          <label for="experience">Experience:</label>
+          <input id="experience" type="text" disabled>
+        </div>
+        <div class="profile-field">
+          <label for="location">Location:</label>
+          <input id="location" type="text" disabled>
+        </div>
+        <div class="profile-field">
+          <label for="clinic">Clinic:</label>
+          <input id="clinic" type="text" disabled>
+        </div>
+        <div class="profile-field">
+          <label for="address">Address:</label>
+          <input id="address" type="text" disabled>
+        </div>
+        <div class="profile-field">
+          <label for="timing">Timing:</label>
+          <input id="timing" type="text" disabled>
+        </div>
+      </div>
+      <button class="btn-2" id="edit-btn">Edit Profile</button>
+      <button class="btn-2" id="delete-btn">Delete profile</button>
+
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      // retrieve user data from localStorage
+      const doctor_id = JSON.parse(localStorage.getItem("doctor_id"));
+      const doctors = JSON.parse(localStorage.getItem("doctors"));
+
+      // find the user data that matches the doctor_id
+      function check(e) {
+        return e.id == doctor_id;
+      }
+      const doctorData = doctors.find(check);
+
+      document.getElementById("Name").value = doctorData.doctor_name;
+      document.getElementById("specialty").value = doctorData.specialization;
+      document.getElementById("description").value = doctorData.Descripition;
+      document.getElementById("experience").value = doctorData.experenice;
+      document.getElementById("location").value = doctorData.location;
+      document.getElementById("clinic").value = doctorData.clinic;
+      document.getElementById("address").value = doctorData.Address;
+      document.getElementById("timing").value = doctorData.Timing;
+
+      function btnDelete() {
+        const indexOfUser = doctors.indexOf(doctorData);
+        doctors.splice(indexOfUser, 1);
+
+        localStorage.setItem("doctors", JSON.stringify(doctors));
+        localStorage.removeItem("doctor_id");
+        alert("account deleted");
+        window.location.href = "./index.html";
+      }
+      document.getElementById("delete-btn").addEventListener("click", btnDelete);
+
+      // redirect to edit profile page
+      function btnEdit() {
+        window.location.href = "./editProfile.html";
+      }
+      document.getElementById("edit-btn").addEventListener("click", btnEdit);
+    });
+  </script>
+<script src="../Components/doctor_sidebar.js"></script>
+</body>
+
+</html>
