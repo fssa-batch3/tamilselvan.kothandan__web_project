@@ -1,4 +1,5 @@
-const params = new URLSearchParams(window.location.search);
+
+const params = new URL(document.location).searchParams;
 const doctor_id = params.get("doctor_id");
 console.log(doctor_id);
 
@@ -6,11 +7,11 @@ const doctors = JSON.parse(localStorage.getItem("doctors"));
 const name_id = JSON.parse(localStorage.getItem("name_id"));
 const formData = JSON.parse(localStorage.getItem("formData"));
 
-const find_doctor = doctors.find((e) => e.id == doctor_id);
+const find_doctor = doctors.find((e) => e.id === doctor_id);
 console.log(find_doctor);
 
 function check(e) {
-  return e.name == name_id;
+  return e.name === name_id;
 }
 
 const user_data = formData.find(check);
