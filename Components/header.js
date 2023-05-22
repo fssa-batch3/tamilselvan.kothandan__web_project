@@ -6,7 +6,7 @@ const Admin = `${myOrigin}/admin/admin_login.html`;
 const doctor = `${myOrigin}/pages/products/Doctors.html`;
 const hospital = `${myOrigin}/pages/products/hospital.html`;
 const profile = `${myOrigin}/pages/products/profile.html`;
-const appointment = `${myOrigin}/pages/products/past appointment.html`;
+const appointment1 = `${myOrigin}/pages/products/past appointment.html`;
 const doctor_login = `${myOrigin}/Doctor/login.html`;
 const image = `${myOrigin}/assets/img/image.png`;
 
@@ -47,7 +47,7 @@ const afterLogin = `
                 <button class="dropbtn" id="dropdtn" style='margin-left:2rem;'><i class='fa-solid fa-circle-user' style='font-size:2rem;color:#0e6453 ' ></i></button>
                 <div class="dropdown-content">
                     <a href="${profile}">View profile</a>
-                    <a href="${appointment}">My appointment</a>
+                    <a href="${appointment1}">My appointment</a>
                     <a href="#" id="logoutLink">Logout</a>
                     
                 </div>
