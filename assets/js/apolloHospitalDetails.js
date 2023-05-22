@@ -14,7 +14,7 @@ if (find_hospitals) {
   document.getElementById("name").innerText = find_hospitals.hospital_name;
   details_p.innerText = find_hospitals.Details;
 
-  const doctor_img = document.getElementById("img_src");
+  const doctor_img = document.getElementById("imgsrc");
   doctor_img.setAttribute("src", find_hospitals.img_src);
 
   const apolloHospital = document.getElementById("apolloHospital");

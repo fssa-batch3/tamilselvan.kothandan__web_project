@@ -1,15 +1,16 @@
 const myOrigin = window.location.origin;
 const home = `${myOrigin}/index.html`;
 
-function logout_link() {
+function logoutDoctor(event) {
+  event.preventDefault();
   const confirmation = window.confirm("Are you sure you want to Logout?");
   if (confirmation) {
     localStorage.removeItem("doctor_id");
-    window.location.href = `${home}`;
+    window.location.href = home;
   }
 }
 
-document.addEventListener("DOMContentLoaded", () => {
-  const logoutButton = document.getElementById("logoutLink");
-  logoutButton.addEventListener("click", logout_link);
-});
+const logoutButton = document.getElementById("logoutLink");
+if (logoutButton) {
+  logoutButton.addEventListener("click", logoutDoctor);
+}
