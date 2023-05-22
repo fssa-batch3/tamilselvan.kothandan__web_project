@@ -49,7 +49,7 @@ function appointment(e) {
     appointmentDateTime: formattedAppointmentDateTime,
     appointmentBookingDate: now.toLocaleString(),
     doctor_id,
-    status: "",
+    status: "Waiting",
   };
 
   const appointmentDetails =

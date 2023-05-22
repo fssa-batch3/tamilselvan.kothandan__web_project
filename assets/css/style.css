@@ -1749,8 +1749,6 @@
     line-height: 1.5rem;
     margin: 5px 0 10px;
     display: -webkit-box;
-    
-    -webkit-box-orient: vertical;
     overflow: hidden;
   }
 

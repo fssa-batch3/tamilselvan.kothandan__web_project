@@ -92,5 +92,7 @@ document.addEventListener("DOMContentLoaded", () => {
   home_header();
 
   const logoutButton = document.getElementById("logoutLink");
-  logoutButton.addEventListener("click", logout_link);
+  if (logoutButton) {
+    logoutButton.addEventListener("click", logout_link);
+  }
 });
