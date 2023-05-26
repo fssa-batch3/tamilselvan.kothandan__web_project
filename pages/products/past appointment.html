@@ -114,7 +114,7 @@
                     <thead>
                       <tr>
                         <th>Appointment Date</th>
-                        <th>Doctor ID</th>
+                        <th>Doctor Name</th>
                         <th>Status</th>
                         <th>Name</th>
                       </tr>
@@ -192,43 +192,7 @@
         <!-- footer section ends -->
         <script src="../../assets/js/script.js"></script>
         <script src="../../Components/header.js"></script>
-        <script>
-
-const appointment_details = JSON.parse(localStorage.getItem("appointment_details"));
-const name_id =JSON.parse(localStorage.getItem("name_id"));
-
-// Get reference to the table body
-const tableBody = document.querySelector("#appointmentTable tbody");
-
-// Iterate over appointment_details and check for matching names
-for (let i = 0; i < appointment_details.length; i++) {
-  const appointment = appointment_details[i];
-  if (appointment.name === name_id) {
-    // Create a new table row
-    const row = document.createElement("tr");
-
-    // Create table cells for each appointment property
-    const appointmentDateCell = document.createElement("td");
-    appointmentDateCell.textContent = appointment.appointmentDateTime;
-    row.appendChild(appointmentDateCell);
-
-    const doctorIdCell = document.createElement("td");
-    doctorIdCell.textContent = appointment.doctor_id;
-    row.appendChild(doctorIdCell);
-
-    const statusCell = document.createElement("td");
-    statusCell.textContent = appointment.status;
-    row.appendChild(statusCell);
-
-    const nameCell = document.createElement("td");
-    nameCell.textContent = appointment.name;
-    row.appendChild(nameCell);
-
-    // Append the new row to the table body
-    tableBody.appendChild(row);
-  }
-}
- </script>
+<script src="../../assets/js/past appointment.js"></script>
        
     </body>
 

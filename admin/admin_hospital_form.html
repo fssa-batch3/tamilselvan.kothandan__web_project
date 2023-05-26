@@ -1,139 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>DOC 4 YOU </title>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOC 4 YOU </title>
 
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-        <link rel="stylesheet" href="../../assets/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="../../assets/css/style.css">
 
-    </head>
+</head>
 
-    <body>
+<body>
 
-        <!-- header section starts  -->
+  <!-- header section starts  -->
 
-        <header class="header">
+  <header class="header">
 
-          <a href="./admin.html" class="logo">
-            <img src="../assets/img/image.png" alt="logo">
-        </a>
-            <nav class="navbar">
+    <a href="./admin.html" class="logo">
+      <img src="../assets/img/image.png" alt="logo">
+    </a>
+    <nav class="navbar">
 
-                <a href="../index.html" id="logoutBtn">Logout</a>
+      <a href="../index.html" id="logoutBtn">Logout</a>
 
-            </nav>
+    </nav>
 
-            <div id="menu-btn" class="fas fa-bars"></div>
+    <div id="menu-btn" class="fas fa-bars"></div>
 
-        </header>
+  </header>
 
-        <section>
+  <section>
 
-            <form id="hospitalForm" style="margin-top:20rem ; ">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" value="" required>
-                <br>
-                <br>
+    <form id="hospitalForm" style="margin-top:20rem ; ">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" value="" required>
+      <br>
+      <br>
 
-                <label for="specialty">Address:</label>
-                <input type="text" id="Address" name="Address" value="Metro No.1 Jawaharlal Nehru Road, Chennai" required>
-                <br>
-                <br>
+      <label for="specialty">Address:</label>
+      <input type="text" id="Address" name="Address" value="Metro No.1 Jawaharlal Nehru Road, Chennai" required>
+      <br>
+      <br>
 
-                <label for="hospital">image:</label>
-                <input type="text" id="img_src" name="hospital" value="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAWAAAACPCAMAAADz2vGdAAABAlBMVEX///8pWJ//yjn4qm/2k0v95NL0egD96Nz6yKv6+vomVp71iDb09vkASJisutUVTpsfU51Lb6uUq87s8PWis9LQ0dH/yC/p6enZ2trF0eSNpsw9Zqf//feanJz/zUqipKT/4JddYGCBg4Oys7OPkZHLzMx4eno/Q0Nsbm64xt67vLxYW1tlaGhQU1OGiIj1hS21trbq7/b/2Xrj4+N1kb/+9vH/24ZniLrR2ulGSkre5O7/7MD/+fRgf7T1jD30gB/6xaEAQ5dyjbv71br2mVhQdK75uY3828b3n2L/9d34rnz/67v/+ur/78z/01qCnMX4q3j/1Gn/45/5uIcAOZP/5Z5SHKSqAAAbWUlEQVR4nO2dCXvauNaATZab2BhwWMIW18Nil30ppBAmBJqEJE3bMJ3e+f9/5dNu2ZYXoH1un298npkGbEk+enV8dCRLRpJ2lOtdM4SLmsuNF3Mgi3Eul1PVn3+FXy6gCjm+CvLeJT0//ES1gKiLcv7+IpFJpTLg/5SWqC6n+fZ84UN5nBbJQpBy4UnVjlTruTtbOazBZVCF6YZVIZO4WE6zoAq5KJdzy9nJT7XgXHt7oWU0JUFFSSialskkNkDFsSBDOZHxyqe0IGX6kzuZJmoHt4yXKWeu1Eykhy1qewvguquggSrcZ9tRruiQ2+PHXbMESX6T0BQFKUX/oVpqmpIX5ACAFT4dSuoDWHMlzIgKdMvclUsLAdxeVjVOey6zXxVsufUeOh8eew+e7WnU5QtNw5UAf6pVrBLHIyvKtKhsHC2RUC62c1FCubytOlkp1QhKTTVnllk7yEMsLjKeKvBNKqwCldtzz6Hr45UA8MNeblnNKhpu6Opym2+Xy+10drtM2Pr5GZyadoDb+ru6xdZpwilhSzhk7Gy8ZTmwCukEqUKCViHvrEIg4OcfnkOnd0OBi3g4Fth6mKjbDLmRtmX7Hly0l8yI/e/otl0FbRtkYOrUwUvbhqqVz/B8N4E+VM0S16bcc/3FuHyfYVUIBLx+8Rx6WCVPzrwJh3sArmAttITrFhxvKeEAl8lMWKkGG2XZYezKRWgEeOFIH8hHonwTeWexapa2UjDgH3fP7kPnq2Ry7T54/fIfL/QwySu+gCqZUMAVasJaWBe/dLjURDtErbKzBw10EG2ip+ZNlaY2Egx49Ze79wKAh3+5zfV8uDoN0dsjxLKUqqgKMy0MMK1b+E1/7wAcmtzRxSnVoNZbEPvVBGrKFdxQwYCfhskn16HnYTJ54qJ5dpdc7WrBKqm3IqzwAtMPADxngINvYkna4l6IWFSIU5XmTg9RDRqZbEn4cC9yO+NlBMDA4boJn94lk0NnzHD9Mkyudo3TWLAp9qC4pwkAvEhFBYydyYZ4CkUJ9hFp1BJUucCwbk7uQUXsRnBJIWEaADx8dRy6Ph6CQ7yPuP0LHHnctZMjTkDZiE8vNkow4DEFHBLJE8BKtkxiZ20a1M2NkV5ahdixchGQNksMeOlzT1TDAUuvwCEMnX54DXC+cEdun2Aab8AcLHJKCXaJSPufAhiVpG3HrLML8hFlgjUC4AUpUNv6uBF0F4YAPjuB9F55wqcnSUegdp4EKR53dcFlGieIhrhQ2rD9AwDnCGAlIuCpVAmP/SR5S9o1EQ54Tn2UX3ljGIaGAEb4kkN+vHEFPC4HGHRwQHY1YHp7JTJ+HjG30TQt5a/d7oDL1UQotBxsVhg4auFpaRzjq4C8yWhaphKiHvAIyeSKD4efhsMXGzByIu5QA0iISd+HAZayy9ls6d8h7Qr43h5BZPx9RDpDvHQqHHA+DLCUhlVw3aLeYODhDvZh/IEh5zOuvN0gktt1cFhBHaKviwiTXQHPbCIBoTCOC9qSGg5YJUGav4sQioDLA/DDd1zkezrkurQH2OUJIojnkMmJDbGm0CDLT3YGrAKfSLJU/eIIFFxry7FdegBgOiLRwpyAQ54E3hQSXttfr1ePNm7gL9zDDpTmOCrg2S7acbIr4KXKbhvFd7iMjFKp2FF2EGDq5bT7XZ5brO9EU8CObu52xbnc16EwQntdPV0FXmcTJZIPkp0B57ipAx8fscBeeh4N8JR1hLs8tDh3xLhUnlZ/2V/OXjh2r6tXb4ucPQ6Hnlkip1Af7G9NIbIz4DGIm6o0+PIZPsKxF7qn5uGAZTbdtFM/cnoyfPHe8rcnXD92ygcIT0kPybP13TA0MKY9BHKO+8iOgBUIWK1QHyFEgkdxGTjwpTMdQVFEms6GKBfB83lOeQFO9clD51wQKCB5eHS5gtv1Iwzc1iGXaduz2jt1wkx2BYzmeMq0VYVz9ChQxtM75QiA56wGEWbxbYHzO8PHtQvbtd9I4tZF/vR4CPk+hs390DjIb74yVPYCTEe3SlXgNvE9j0de7QiAFxt6FyraLn7uBY4shieuO58Av7q6+vrtzz+/fQYf8BGnsT8kce7wkfOMTbv6zUYFS263uQgyS5kNCL/HeBSH0kUBzArz9TliucaEV16bvfr858e3SyJvH7589gQKz2hgnTyOMDMx51YRaIGPbcWyqwXjfo0+P9I23gkaPIrDziMSYG7q2PPMKEjO4OgXiOtB8dWfH99dXh4xubx89/HLV0eS2zvkHs6jzA2zgRBSr7JLN4FkP8AyG0F6fcQFGcVBSUcBbD+2gmpMowdr1/hGdw4gvn044ugSxkffv/BpnlbA8kPGyEzmF7x6AbMOYtkPsJT3HX6RURzGlI8EWK1yVdA2O7iJ2yc4AcHNUl4J8GIz/v6ZJTo7cUwDhUm7ynsJbbbbGqM9Aecy9FGrO9kUz8vjL9EA04dyzErCF10wgX5iyEz42zshXoT4HTPi8+TdepcHG2n++a2iKZUd9NsXMBsuuzt+vouLDBj4dI2vQmrqt2LRK7fr5GpNPn+x+V7awvzE3yTZWtAxBkreuQJKq2ajI94VMA0G/YbLSBc2M5KNCBjchs5n1tVK9JDoIUmmyTi+70CMhuXLBxv6HzjD6zpy2WL1FO0icm+3L+AcHS47ny7jqZsUNevIgJ02jFaBbSP7uocTBPgL5xDesZNXf9he4xLbcKTowSnzjXMlo6JUI85f7gtYFg+XUfymJBx5IgGWxu4qACuOOr2GAoLPl6GAj46QHxb63+BJNRCtVV36ZaqRouJ9AduP0vinyzIyWftp3Q6AQV5vFdLuKoiXn8KDX98iAL58+yzKD+U5zKzbM9dqX02ZRnDFewMe0wUD/JItMlHJbu7KDoBBm00dK1Yh4ntXFc5++HX//zhiBj8Lvvzgk/30KdRv5NLVjFM9rRoeUu4N2A6FuYu0uVEclN0AS7n2JuOykmrWacR/iaaBJRigRQJ8dPmnMPv1yTqKflvFdZMlpmGd3f6A2XCZmyiFwRsfue0IGKiTJwv1WRXQBKktZ8Ph09m1x4yvPl5GA8ydseX6YXUXbVHguHLhRJzxmRO3a7Q3YLaoyB4uowcYGkdkZ8Cw97xwEtacKzN/rMAw7On8+fSMp/z56Cgi4EvHoBnI2fP5y3AoeN4hlvnWHVEGEz4AcJ4+D2TDZTyK4wraAzBopuzG4euUKj+YgZNow+FqePfyyoVbLopBgB1e+Ozh6eVu6HwaHSbzrcIj1oJt+ADAY+aIaFl0uQmTvQBDxM4qOKa6zx7xJBrA8sgmg10GHAAYjEHYuesfJ5Bu0h4LRhJ5fsF3FdoyyA8fANhelEGQphXF9Xx7T8CgCktHFRzLi69f7zBiwPgJ39nfMER7eMwB/ugeNNMRM3wIjYvxLC4OlXyV82OZoM0Xu06484DpAyFtir6q9rM4KvsCBtLmZgnBbeg49/D6mFwh0yOEsZW+/cGEQZSu/rSPvqFW+EjGFGt6J7zssfVowa1HD3wSc4gFy+zpMjIwPIpzTK8dAFgaT7kpFteyn9uz54f1XyfDIVnt8P0SkQsrErXD5Xc8+77GD0SSx+e7b9sAksva95h24b++/BDAdA8IHi7LWftZHEtwAGBJzdsTsaJFE9fXZ093qyHs6YhphpVIDB2N5k4h3eHrw75bEyWZ20blvzTwMMBzha5OlunDS+cm24MAA6fObNhXvYfHH2CY/G4XwEeolzsGcciBm8XzzA9rPuvfpQMBs+EyjFTIKM5xsxwIWEqzqN63q74FHdTn3QE/H4zXuXfQN5A4CDAAQKqfxo/p3E+2DwUsTe3b0C/avL3dEfAlBLwOn3sIlzn1YQELqw4DTB8Ia/fqAhqb284OBjxmbjjAze0B+DZ08iySsL1q/hstDwMss2BljFi61/geDNjekKtV/HvqPVzEz5Ey0853UdJhgFk3pGWZL+blcMDsLgza1XS1E+B3vnPCu0uGaeeX4kDAY9sLiS5zOGDajwavbnzbIQ4+8p90310ufjVgx45Zr6s/HLC9w2AZABg92Lz88JUJ9wDoyj74kSTbVxmvsOb/ZYDLKQ6wZ5HE4YDteX1owdc+g66/sXN9x+SNnbr6wz6KJyz+FpcRtt9IKGz/w6/ywdz7EER72X4mYLiT+frHg3De9qtrxuwyYDbtyD0hjOXMs18fSns2my0Dnh/T+0vx3WByMOCsHakqnqfAEQCXl6AOFf/bnwFGQ5jnu6dTEYi36PPBbyIPcXb+uBZdPasBSYjOYGH7H3zpHQx4wfgK/FAEwO0UqELAnDUFTB5VP63ujp/WVB7obf0lOmDWFZ49UDl/ehFu+QCVhvdnyn+FBtsP5LtO5mDAOernFcHrNKIARneA/yjCvZf1cYjmKZNwJi15d3KMB7xf30UGjGOI6/XLyR2VpHiPl0QAB2wwY5Mlvks4dtwMLlhHT5eoimYLogL2H0WwTUj0QcntcZKX4Qqj+RLxoSd+YnT9NFwN+VJ8+GLA/u/PoRsMtKVv/Q4HzIbLgjUCUQH7b+FabOiza9p81093QwditFTy6/fLSICPoAGfnqycrSTYsEQqjV9F57f8gRpXwAapRWTAFR/AJFIV7unaRnURvhqy/TZ2V357+krsb0hIwyc+X46iAEYx2vOJw3pXJ2vfCC2rOFvXJcwFB7wQLfIbTzCsqtdbpnF+USTIOln/fZIYsFIVqyhvBeuHpNuz8+PHk5PHl5fHk+QKCHTEjpURfkun4CADbj9cMUm+PATM+2TJy1jE7d8m7ILetWBPV4QBJrC8gMfVT0BSon6KdYC+25rpOlifSH0eOlICN/z6JQlNkA/VfFZXwmXu18d3x2thrCeQLHkoJtxgRDcXBD5WTtvzQSFrBTEskaf1F3unr2+kQwArQiehsvdYBq9QeoZP5ng3/M4eINuWfYme2D/7OwSvZNlUi5fwnG1mC1rLzOYSfF+ZQ2SMYQXNGnrzRJiQZhuRqmlPyQs21A9rVjS++8wR/sDkzcl3t7c2Z9kzq0TeyUdlj72VfAASlRvpBq8pb+MXnYS9zssh3DM137E626uqJNyvJm0vPWuHgoWzYc8OgqClq/7CAAMvseH2ZozTM/JiTSXgdTKSYwcV2kjvKwtW2ej7XWmIlXAvf+LF3gwMF+bbjZxrz6p08VuY97LlD/EmI7hD4+M+k2g2YEAYDJo3s+22sgWaaXSPStAKVnW+5JcKatW2z/u8ZTnNVrwp2mYepb6ymnbsbFG2Y2Hh3G5r9Ebbi9m2AqvA3m6rVXfZhS3aJgft+U08xRMmWf590eSF0UDo42QtEbAGO5enb+xl+TPijRGLbdWxkCmzyYYinjvzwGzarCxADOciRFWguRKz3XYIf/3y/dI9t3b5/e8954AXafjGc839gmpsDZnENOil6a5tJzhTSvgG7JSrfO1T6B6bvDsPkIwoXh+nt0u/KiiZxH175/e3f/328Yg5X/jhw7cDptjVxaJcWSZSqQyyXCyalklllvl5oG5l5VPKI/8VAc7/15MstKfz5kmlPonjRXW8KGdnVUEVNtn9Xo8PAop/PryhifcP/3wL2d4SSWR1nq5Ml5sqEuCJ0/PwaEoViSib7E0WQSORBFehneWrkI/k6mOJJZZYYoklllhiiSWWWGKJJZZYYoklllhi+f8op8ex/Do5h+uvT2L5VXK3lqTr01h+nez11oFYYoklllhiiSWWWGKJJZZYYoklllhi+ReLrMpwkbiMhBziP7F0Mk3nOCFzuXES2XXIkcibVHRZwRn+MK89++a8qjut7E5IPnqv7KDCn3Spb2f3FM0rLxf0ZtOYSNLE0A3D6EzgQfC5gc829EaR5DV1vQP+giMq+NbBJyYNkL2jSh1dN8B/KN8EfFClIiwP/qdP0GeQGpRgSpJOj4PPMBv42IRXLXagJlRVk5wpYh11eBEgJd3WUiIHOugDuEZHhuqxfAX00Swy7VHZSOMGqZPelJxnKSjTaDb1EtbE0Ad6AV0AciohTii9augjmNigRRsQBlLCoErIo5ZZanQb8GJ9o2BarQLK0u+h0ku9foNeeGLdwHqVbvqAjFTojsCJoqWXCoPWRGrWGgWr1TFblirJgz64bqmvFxrvjYJxUwDlvYfFFHsWuOT7umneDAqjvgHK7FtmwYRJJLU5KJX0G4pu0mt1wJn3EM+oZ5Y6NcS+OHhvmp2WxQgXBzc99KHTx+r166jEElSu2zE7llXC5dVwjVoG0Pg9rlSp18Ufii18lkrH6pRGXdQMo16nZPab0NjeQxXUQbdRMM2aLoMj/T7Ur1MzWdH12sRWAtptC7b/ABbV6RZgjZsqukB3hEu3Lyw3u+hvrVtHsGB1Gi1wgRKoblMHpQB8HQBYasBMJYB98r4AdAfFFt6jYixoMF1TkiFcC/wv9ZqomUASE+qq1hi5er0IKz6BbWkigMhSjffQqLoGY9HAbGS91kda9nRYYgsea/ZU+NFCNlxvIZL1gQwBYK4jC9bZPktF7cHa6wYyJHhZYwABvkccUe2kEVS80OrrqHmKqOg6/Lc7sZWAyvfhFSYTBBjkl+sosVmvQ9DFps4DrqE/VhOasIoA1yFruaRKRgcDlusMMHATpffQel2AYSoIuNNAgGF7lsA1G6jSBbZPBwGG3wE6dAA3PQIs1+oMhmHUIIjioN61AUsFmFnvoSJuGjZC8wYpgr2K2jR7hghwEaEsTphVqaYbcLEEATfr8E7HgDukaNVWAnws2bZAAKP2BrcIzFlqNgSAO/UeBTxocXfWwCLummWCgJHwgGEZfXpVBBhl69wU+DoiwDJEOmnhXNATMcADG/AItXLH0G0LlnEzNRHgomXJFKHcbBXtS5QGqlUXAr6hfQG9uOQCjEspDIAjlDFgYAfMODglioM+9e4YMGZvWkX4rdHoeAG3SvBuxYCBM7X7m/0Ag04RfSn1Wg43CAEXYT2pDRjdEgU84VyE0UC2MDANG3AJdxwYsNrsqgxwa8AB7hiS0ZoIAMvAz2IqhW5DCBh1vlKhLjfBxRHgYt2ygxOsBM7V6+oTAhjQaODOzWzJdV2WBwUhYBl0ZRiwbNy0RocAblmNUR0f7fR7DW4j38AySzpydDf4Cg3kzSBgWe/ZCQ1Dhe3dKhILBiU2LJ0DLOs3NuBu084pN03gIk0BYNCB9FFkA3qGjgdwVx8ZuK8o1NVJ35Ax4NaAA4yUwF+K9X6vgCtYb7bqGLbZkkY1dVJXRYALsMOREWAQrvX6VOf9ABsNeheCkMWy7WtQGzRrPOAR8iHGTXPQ4igBwFK9KY+aEnURoG4tB2DDB3ARXq3fEAEGvU+/B3GaNyLADZ0AtlQQcE0I4KYTcEunXwEj5HdB+NFsMcClbgnoLgYs9awJSQlUoQ7rMBeBUHTtetYHKuhEZNZJMQsumXWuHSDgTm8C4hDOB5cMhwVzLqLGAe5YpVKJ+Aw3YEgFuiSRBcPa4VwAMIj/BqrXgpESdlnIpUEfrPYHKgFcrOtAax/AZn9EAYNej3w8rJNDx/Ubdjnog9UC8sHYFIwe9cGFLjMOBHhSMwAf305u0LI7uVbdbpt6HYwX6vhOxIAdwzkTKlngvL2gk4NRv9EvWCIfLNtXKqKKo05ORzEnBCwZNUvyA6xaVpf1bp1uKRTwTRBgaUJ1MbvMYOoUxcSy0F8LHUA+eNC1lQeAiwNInAOMAz8KuKZzUQTmCS+qggaTgWamDXjEBzKACjDDFo5XVBdgSUVhGoz6Sz2kKrlRJNmphNlARekUcBF7VAgYtaAPYEDiBiqPXDZNEwC4hMH16BDVCVgGo2bZgHnwmMIJmHRS8g3K4xloAMBSA94gPGC5CS+M4+ARci0EIQ4GVWjTHTzywCNEjN8iVy+gyLquw3EbKrWguwGXoOIIMLgwDm1xnAk/UyWgj4EtatbgqREK03SUrAMjXR2G/13WqGqT1ACp2ESAe0A7eUD8GnUVJKCCer0nGhcHUJVOjzAr3tB7vNYsynIJ2pIOnZPRZeAs5mhL0FHLOv5uoFGu1WPtbugS8rlAc6ReTVdluYA6IWDBsmqSwb6FHEURFdu4AenRwAscaKn4LMxFbzhYfAENgFFbyujWI4CNWkGW1SZEaKK8atfC8Ta8wqhWdChRqoH+ro4brKurJBwtNkn0Qg4iMVt9PGQ1kI2jkX+9p4/0Oq5soVbDVSlafdzJgGJIVALaejAyLHL/q0bfKqAUZr9lGEYdlCU3us2OYTEDZqWhKzfpVUoW4mX2aTxbskj4XLBusHoWKNGCzV9q1XSjWcdxvtmroQ8lqz4yejVJHtVQI41qMI4o9GogF4vECRVU81FLHzUhZWBg8KITq9Y0wKgGVFHV8Y1pWKTLA0XX4GdOCblU6Jgl1LaFAhzagQMT+BlfihxEpjHBB8kRuYAzmR2TVhWckWkm9oGaYREkpF5bBccnMs1TwMmLJS4FVxqUiWmSgkjZMisYHMCZbPVoiRP4t1S0tSdKdUyQEtSTpSdJwQFa11LBxFSgJkAvWIqKa1MkF5ggLQq4PjKrI6oYp0QsscQSSyyxxBJLLLHEEsu/QMiSDon9617nQZZ/kMQkE80aj51CZJyubKdpaZzf5seSmt1mVam9rWSz2W1eGmfRC6fb27wq5bfwnaDzSgW983M+Q3/K2+1uL5b998lik10stglZyqOfgmx/SsM358/m8/n9Bv4o8iYH0sA3OJc1+JOk8hK93Fqu4Jdmjy92eZv4v1HUKfy1X3UmS2X0fvYF/FX0MaI4r0hSegaxq8syfH94Ff5WzBS9anqxXaKfFVFnAT/yGIsEf0SlDf/IkhcwPJjeVqpzAvg+C9NiwO18Gv2oQgw4TNrsPdUAtZpT5xjwVM2h1+mnp3J1qmLAs/G0OsaA5Vl5jN6a/hsCfj7/PYRsS0+n6Oujy4kp7Nng75GNZ5t8Bf0IdHomtZWyjAEvxlpF2kKui6UqLWcSB/j0f10fImfSj//8HvJMAH+yAacXi0UZWfBstpij984DwLn7C3WGAUvZxAIBrmxVtQJ/HIsBXv+v60NkLV2f/R5Cfvay/WnBADt9MHqROAAMTlSmqJNbSLnNFrmI6mw6nUGPzAD/LtX6Kb/l/TOljH8GbeECDH92SW1jwCBWIy4CJoKutw0jDymx/S198G8muRkMtxYJFqalWBQBMSLAuWqVWLCkblMA8D36VZspCIFjwKEyv5i205uqrFZS8GdfK5/Av+3qJp3OX2yk3DQBPUgbss+jgG6eyEtpBf4Uw2KTqkjzquM33GIRiFpOp9tgkFwul1VJRv/Oy0jmUq5choDlMgAKvwMpL2RwGgIGKeQFTvAbyf8B6GfVc95FCn8AAAAASUVORK5CYII=" required>
-                <br>
-                <br>
+      <label for="hospital">image:</label>
+      <input type="text" id="img_src" name="hospital"
+        value="data:image/png;base64,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"
+        required>
+      <br>
+      <br>
 
-                <label for="hospital">Details:</label>
-                <textarea type="text" id="details" name="Instagram" aria-valuetext="SIMS Hospital is a Multi Speciality Hospital in Chennai. As a new-age healthcare provider, SIMS Hospital will continue making a difference in everyone’s life and will take the spirit of healthcare excellence well beyond business metrics." required> </textarea>
-                <br>
-                <br>
+      <label for="hospital">Details:</label>
+      <textarea type="text" id="details" name="Instagram" aria-valuetext="" required>
+                  SIMS Hospital is a Multi Speciality Hospital in Chennai. As a new-age healthcare provider, SIMS Hospital will continue making a difference in everyone’s life and will take the spirit of healthcare excellence well beyond business metrics.
+                </textarea>
+      <br>
+      <br>
 
-                <label for="hospital">hospital_ID:</label>
-                <input type="text" id="hospital_id" value="6" name="linkedin">
-                <br>
-                <br>
+      <label for="hospital">hospital_ID:</label>
+      <input type="text" id="hospital_id" value="6" name="linkedin">
+      <br>
+      <br>
 
-                <label for="hospital">linkedin:</label>
-                <input type="text" id="linkedin" value="" name="linkedin">
-                <br>
-                <br>
+      <label for="hospital">linkedin:</label>
+      <input type="text" id="linkedin" value="" name="linkedin">
+      <br>
+      <br>
 
-                <label for="hospital">Facebook:</label>
-                <input type="text" id="Facebook" value="" name="Facebook">
-                <br>
-                <br>
+      <label for="hospital">Facebook:</label>
+      <input type="text" id="Facebook" value="" name="Facebook">
+      <br>
+      <br>
 
-                <label for="hospital">Twitter:</label>
-                <input type="text" id="Twitter" value="" name="Twitter">
-                <br>
-                <br>
+      <label for="hospital">Twitter:</label>
+      <input type="text" id="Twitter" value="" name="Twitter">
+      <br>
+      <br>
 
-                <label for="hospital">Instagram:</label>
-                <input type="text" id="Instagram" name="Instagram" value="">
-                <br>
-                <br>
+      <label for="hospital">Instagram:</label>
+      <input type="text" id="Instagram" name="Instagram" value="">
+      <br>
+      <br>
 
-                <button type="submit">Save</button>
-            </form>
+      <button type="submit">Save</button>
+    </form>
 
-        </section>
-        <script src="./logout.js"></script>
+  </section>
+  <script src="../assets/js/logout.js"></script>
+  <script src="../assets/js/adminHospitalForm.js"></script>
 
-        <script>
-          const hospitalForm = document.getElementById("hospitalForm");
-        
-          hospitalForm.addEventListener("submit", (e) => {
-            e.preventDefault(); // Prevent form from submitting
-        
-            // Get form values
-            const name = document.getElementById("name").value;
-            const address = document.getElementById("Address").value;
-            const img_src = document.getElementById("img_src").value;
-            const linkedin = document.getElementById("linkedin").value;
-            const facebook = document.getElementById("Facebook").value;
-            const twitter = document.getElementById("Twitter").value;
-            const instagram = document.getElementById("Instagram").value;
-            const details = document.getElementById("details").value;
-            const hospital_id = document.getElementById("hospital_id").value;
-        
-            const id = Date.now();
-        
-            // Create object to store values
-            const hospital = {
-              id,
-              hospital_name: name,
-              address,
-              img_src,
-              linkedin,
-              facebook,
-              twitter,
-              instagram,
-              details,
-              hospital_id,
-            };
-        
-            // Check if hospitals array exists in local storage
-            let hospitals = [];
-            if (localStorage.getItem("hospitals")) {
-              hospitals = JSON.parse(localStorage.getItem("hospitals"));
-            }
-             // Add new hospital to array and save to local storage
-            hospitals.push(hospital);
-            localStorage.setItem("hospitals", JSON.stringify(hospitals));
-          // Clear form inputs
-            hospitalForm.reset();
-            // Display success message to user
-            const successDiv = document.createElement("div");
-            successDiv.innerText = "Hospital added successfully!";
-            document.getElementById("success-message").appendChild(successDiv);
-          });
-        </script>
-    </body>
+</body>
 
 </html>
