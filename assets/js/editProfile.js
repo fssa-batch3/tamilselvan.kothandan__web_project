@@ -23,6 +23,7 @@ document.getElementById("drug").value = user_data.drug;
 document.getElementById("disease").value = user_data.disease;
 document.getElementById("operation_dates").value = user_data.operation_dates;
 document.getElementById("medications").value = user_data.medications;
+document.getElementById("image").value = user_data.image;
 
 function btnSaveClicked() {
   // e.preventDefault()
@@ -42,6 +43,7 @@ function btnSaveClicked() {
   const edit_disease = document.getElementById("disease").value;
   const edit_operation_dates = document.getElementById("operation_dates").value;
   const edit_medications = document.getElementById("medications").value;
+  const edit_image = document.getElementById("image").value;
   const currentDate = new Date();
   const userDate = new Date(edit_date_of_birth);
   const dobRegex = /^[0-9]{4}-[0-9]{2}-[0-9]{2}$/;
@@ -102,6 +104,7 @@ function btnSaveClicked() {
   user_data.disease = edit_disease;
   user_data.operation_dates = edit_operation_dates;
   user_data.medications = edit_medications;
+  user_data.image = edit_image;
 
   localStorage.setItem("formData", JSON.stringify(formData));
   alert("updated successfully");

@@ -1,330 +1,266 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>DOC 4 YOU</title>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOC 4 YOU</title>
 
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../../assets/css/style.css">
 
-    </head>
+</head>
 
-    <body>
+<body>
 
-        <!-- header section starts  -->
+    <!-- header section starts  -->
 
-        <header class="header" id="header">
+    <header class="header" id="header">
 
-        </header>
+    </header>
 
-        <div class="profile__content">
-            <div class="content__section">
-                <div class="section__row">
-                    <div class="section__row__column">
-                        <div class="o-profile-photo">
-                            <p class="profile_name">Profile photo</p>
-                            <div class="o-profile-photo__cont">
+    <div class="profile__content">
+        <div class="content__section">
+            <div class="section__row">
+                <div class="section__row__column">
 
-                                <div class="o-profile-photo__cont__img">
-                                    <img src="../../assets/img/medium_thumbnail.png" alt="profile img">
-                                </div>
-                            </div>
-                            <div class="o-profile-photo__desc">
-                                <div class="o-profile-photo__desc__text">
-                                    Pick a photo from your computer
-                                </div>
-                                <div class="o-profile-photo__desc__actions">
+                </div>
+                <div class="section__row__column">
+                    <div class="c-input c-input--text has-value">
+                        <input id="name" name="name" type="text">
+                        <label for="name">
+                            Name<span>*</span>
+                        </label>
 
-                                    <input type="button" name="add-photo" value="add_Photo" id="add_photo">
-
-                                </div>
-                            </div>
-                        </div>
                     </div>
-                    <div class="section__row__column">
-                        <div class="c-input c-input--text has-value">
-                            <input id="name" name="name" type="text">
-                            <label for="name">
-                                Name<span>*</span>
-                            </label>
+                </div>
+                <div class="section__row__column">
+                    <div class="c-input c-input--text has-value">
+                        <input id="image" name="name" type="text">
+                        <label for="name">
+                            Image<span>*</span>
+                        </label>
 
-                        </div>
                     </div>
                 </div>
             </div>
-            <div class="content__section">
-                <div class="section__row">
-                    <div class="section__row__column">
-                        <div class="c-input c-input--text   ">
-                            <input id="phone_number" name="mobile" type="tel"
-                                 title= "phone_number does not match" required>
-                            <label>Phone number</label>
-
-                        </div>
-                    </div>
-                    <div class="section__row__column">
-                        <div class="c-input c-input--text   ">
-                            <input type="email" id="email">
-                            <label>Email Address</label>
-
-                        </div>
-                    </div>
-                    <div class="section__row__column">
-
-                        <div class="c-input c-input--text   ">
-                            <select id="gender">
-                                <option value="">Select an option&hellip;</option>
-                                <option value="Male">Male</option>
-                                <option value="Female">Female</option>
-                                <option value="Others">Others</option>
-                            </select>
-                            <label>
-                                Gender
-                            </label>
-
-                        </div>
+        </div>
+        <div class="content__section">
+            <div class="section__row">
+                <div class="section__row__column">
+                    <div class="c-input c-input--text   ">
+                        <input id="phone_number" name="mobile" type="tel" title="phone_number does not match" required>
+                        <label>Phone number</label>
 
                     </div>
                 </div>
-                <div class="section__row">
-                    <div class="section__row__column">
-
-                        <div class="c-input c-input--text">
-                            <input id="date_of_birth" name="dob" type="date" value="None" required>
-                            <label>
-                                Date of birth
-                            </label>
-
-                        </div>
+                <div class="section__row__column">
+                    <div class="c-input c-input--text   ">
+                        <input type="email" id="email">
+                        <label>Email Address</label>
 
                     </div>
-                    <div class="section__row__column">
-                        <div class="c-input c-input--text   ">
-                            <select id="blood_group">
-                                <option value="">Select an option&hellip;</option>
-                                <option value="O+">O+</option>
-                                <option value="O-">O-</option>
-                                <option value="AB+">AB+</option>
-                                <option value="AB-">AB-</option>
-                                <option value="B-">B-</option>
-                                <option value="B+">B+</option>
-                                <option value="A+">A+</option>
-                                <option value="A-">A-</option>
-                            </select>
-                            <label>
-                                Blood Group
-                            </label>
+                </div>
+                <div class="section__row__column">
 
-                        </div>
+                    <div class="c-input c-input--text   ">
+                        <select id="gender">
+                            <option value="">Select an option&hellip;</option>
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                            <option value="Others">Others</option>
+                        </select>
+                        <label>
+                            Gender
+                        </label>
 
                     </div>
 
                 </div>
             </div>
-            <div class="ucontent__section">
-                <div class="user-profile__content__section__header">
-                    Address
+            <div class="section__row">
+                <div class="section__row__column">
+
+                    <div class="c-input c-input--text">
+                        <input id="date_of_birth" name="dob" type="date" value="None" required>
+                        <label>
+                            Date of birth
+                        </label>
+
+                    </div>
+
                 </div>
-                <div class="section__row">
-                    <div class="section__row__column">
-
-                        <div class="c-input c-input--text">
-                            <input name="street_address" id="street_name" type="text" value="None" required>
-                            <label for="street_address">
-                                House No./ Street Name/ Area
-                            </label>
-
-                        </div>
-
-                    </div>
-                    <div class="section__row__column">
-
-                        <div class="c-input c-input--text">
-                            <input name="locality" type="text" id="colony" value="None" required>
-                            <label for="locality">
-                                Colony / Street / Locality
-                            </label>
-
-                        </div>
+                <div class="section__row__column">
+                    <div class="c-input c-input--text   ">
+                        <select id="blood_group">
+                            <option value="">Select an option&hellip;</option>
+                            <option value="O+">O+</option>
+                            <option value="O-">O-</option>
+                            <option value="AB+">AB+</option>
+                            <option value="AB-">AB-</option>
+                            <option value="B-">B-</option>
+                            <option value="B+">B+</option>
+                            <option value="A+">A+</option>
+                            <option value="A-">A-</option>
+                        </select>
+                        <label>
+                            Blood Group
+                        </label>
 
                     </div>
-                    <div class="section__row__column">
 
-                        <div class="c-input c-input--text">
-                            <input name="city" type="text" id="city" value="Chennai" required>
-                            <label>
-                                City
-                            </label>
-
-                        </div>
-
-                    </div>
-                    <div class="section__row">
-                        <div class="section__row__column">
-
-                            <div class="c-input c-input--text">
-                                <input type="text" value="Tamil Nadu" id="state" required>
-                                <label>
-                                    State
-                                </label>
-
-                            </div>
-
-                        </div>
-                        <div class="section__row__column">
-
-                            <div class="c-input c-input--text">
-                                <input name="country" type="text" id="country" value="India" required>
-                                <label>
-                                    Country
-                                </label>
-                            </div>
-
-                        </div>
-
-                        <div class="section__row__column">
-
-                            <div class="c-input c-input--text">
-                                <input name="pincode" type="text" id="pincode" value="600081" required>
-                                <label>
-                                    Pincode
-                                </label>
-
-                            </div>
-
-                        </div>
-                    </div>
                 </div>
+
             </div>
+        </div>
+        <div class="ucontent__section">
+            <div class="user-profile__content__section__header">
+                Address
+            </div>
+            <div class="section__row">
+                <div class="section__row__column">
 
-            <div class="content__section">
-                <div class="user-profile__content__section__header">
-                    Medical History
+                    <div class="c-input c-input--text">
+                        <input name="street_address" id="street_name" type="text" value="None" required>
+                        <label for="street_address">
+                            House No./ Street Name/ Area
+                        </label>
+
+                    </div>
+
+                </div>
+                <div class="section__row__column">
+
+                    <div class="c-input c-input--text">
+                        <input name="locality" type="text" id="colony" value="None" required>
+                        <label for="locality">
+                            Colony / Street / Locality
+                        </label>
+
+                    </div>
+
+                </div>
+                <div class="section__row__column">
+
+                    <div class="c-input c-input--text">
+                        <input name="city" type="text" id="city" value="Chennai" required>
+                        <label>
+                            City
+                        </label>
+
+                    </div>
+
                 </div>
                 <div class="section__row">
                     <div class="section__row__column">
+
                         <div class="c-input c-input--text">
-                            <input type="text" id="drug" value="None" required>
+                            <input type="text" value="Tamil Nadu" id="state" required>
                             <label>
-                                list any drug allergies:
+                                State
                             </label>
 
+                        </div>
+
+                    </div>
+                    <div class="section__row__column">
+
+                        <div class="c-input c-input--text">
+                            <input name="country" type="text" id="country" value="India" required>
+                            <label>
+                                Country
+                            </label>
                         </div>
 
                     </div>
 
                     <div class="section__row__column">
+
                         <div class="c-input c-input--text">
-                            <input type="text" id="disease" value="None"required>
+                            <input name="pincode" type="text" id="pincode" value="600081" required>
                             <label>
-                                Have you ever had disease:
+                                Pincode
                             </label>
 
                         </div>
 
-                    </div>
-
-                    <div class="section__row__column">
-                        <div class="c-input c-input--text">
-                            <input type="text" id="operation_dates" value="None" required>
-                            <label>
-                                list of operation dates of each:
-                            </label>
-
-                        </div>
-
-                    </div>
-
-                    <div class="section__row">
-                        <div class="section__row__column">
-
-                            <div class="c-input c-input--text">
-                                <input type="text" id="medications" value="None">
-                                <label>
-                                    list any current Medications:
-                                </label>
-
-                            </div>
-
-                        </div>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div>
-            <button class="btn-1" type="submit" id="btn-save">Save changes</button>
-        </div>
-
-        <!-- footer section starts -->
-
-        <section class="footer">
-
-            <div class="box-container">
-
-                <div class="box">
-                    <h3>quick links</h3>
-                    <a href="../../index.html">
-                        <i class="fas fa-chevron-right"></i> Home 
-                    </a>
-                    <a href="../../index.html">
-                        <i class="fas fa-chevron-right"></i> Services 
-                    </a>
-                    <a href="../products/About page.html">
-                        <i class="fas fa-chevron-right"></i> About 
-                    </a>
-                    <a href="../products/Doctors.html">
-                        <i class="fas fa-chevron-right"></i> Doctors 
-                    </a>
-                    <a href="../products/hospital.html">
-                        <i class="fas fa-chevron-right"></i> hospital 
-                    </a>
-
-                </div>
-
-                <div class="box">
-                    <h3>contact info</h3>
-                    <a href="#">
-                        <i class="fas fa-phone"></i> +91-9445535374 
-                    </a>
-
-                    <a href="#">
-                        <i class="fas fa-envelope"></i> tamilselvan.kothandan@fssa.freshworks.com 
-                    </a>
-                    <a href="#">
-                        <i class="fas fa-map-marker-alt"></i> Chennai-600081 
-                    </a>
-                </div>
-
-                <div class="box">
-                    <h3>follow us</h3>
-                    <a href="#">
-                        <i class="fab fa-facebook-f"></i> facebook 
-                    </a>
-                    <a href="#">
-                        <i class="fab fa-twitter"></i> twitter 
-                    </a>
-
-                    <a href="#">
-                        <i class="fab fa-instagram"></i> instagram 
-                    </a>
-                    <a href="#">
-                        <i class="fab fa-linkedin"></i> linkedin 
-                    </a>
-
-                </div>
-
+        <div class="content__section">
+            <div class="user-profile__content__section__header">
+                Medical History
             </div>
+            <div class="section__row">
+                <div class="section__row__column">
+                    <div class="c-input c-input--text">
+                        <input type="text" id="drug" value="None" required>
+                        <label>
+                            list any drug allergies:
+                        </label>
 
-        </section>
-        <!-- footer section ends -->
-        <script src="../../assets/js/editProfile.js"></script>
-        <script src="../../Components/header.js"></script>
+                    </div>
 
-    </body>
+                </div>
+
+                <div class="section__row__column">
+                    <div class="c-input c-input--text">
+                        <input type="text" id="disease" value="None" required>
+                        <label>
+                            Have you ever had disease:
+                        </label>
+
+                    </div>
+
+                </div>
+
+                <div class="section__row__column">
+                    <div class="c-input c-input--text">
+                        <input type="text" id="operation_dates" value="None" required>
+                        <label>
+                            list of operation dates of each:
+                        </label>
+
+                    </div>
+
+                </div>
+
+                <div class="section__row">
+                    <div class="section__row__column">
+
+                        <div class="c-input c-input--text">
+                            <input type="text" id="medications" value="None">
+                            <label>
+                                list any current Medications:
+                            </label>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <button class="btn-1" type="submit" id="btn-save">Save changes</button>
+    </div>
+
+    <!-- footer section starts -->
+
+    <section class="footer">
+        <div class="box-container" id="box-container"></div>
+
+    </section>
+    <!-- footer section ends -->
+    <script src="../../assets/js/editProfile.js"></script>
+    <script src="../../Components/header.js"></script>
+    <script src="../../Components/footer.js"></script>
+
+</body>
 
 </html>

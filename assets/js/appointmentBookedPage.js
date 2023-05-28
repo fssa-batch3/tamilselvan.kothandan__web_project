@@ -5,7 +5,7 @@ for (let i = 0; i < appointment_details.length; i++) {
   const userName = document.getElementById("patient_name");
   userName.innerText = appointment_details[i].userName;
   const date = document.getElementById("date");
-  date.innerText = appointment_details[i].appointmentBookingDate;
+  date.innerText = appointment_details[i].appointmentDateTime;
   const id = document.getElementById("id");
   id.innerText = appointment_details[i].id;
 }

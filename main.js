@@ -18,6 +18,7 @@ if (!JSON.parse(localStorage.getItem("formData"))) {
       pincode: "",
       state: "",
       street_name: "",
+      image: "",
     },
     {
       blood_group: "",
@@ -37,6 +38,7 @@ if (!JSON.parse(localStorage.getItem("formData"))) {
       pincode: "",
       state: "",
       street_name: "",
+      image: "",
     },
     {
       blood_group: "",
@@ -56,6 +58,7 @@ if (!JSON.parse(localStorage.getItem("formData"))) {
       pincode: "",
       state: "",
       street_name: "",
+      image: "",
     },
     {
       blood_group: "",
@@ -75,6 +78,8 @@ if (!JSON.parse(localStorage.getItem("formData"))) {
       pincode: "",
       state: "",
       street_name: "",
+      image:
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRq3rOzLoeQSbBeJWuXhsg-N90emCTU5AqPLbdzCmplrU77kKzRn-Qm9yb-QuDPsEdqivQ&usqp=CAU",
     },
   ];
   localStorage.setItem("formData", JSON.stringify(formData));

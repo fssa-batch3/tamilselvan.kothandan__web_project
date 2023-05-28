@@ -12,7 +12,7 @@ const image = `${myOrigin}/assets/img/image.png`;
 
 const beforeLogin = `
 <a href="${home}" class="logo">
-  <img src="${image}" alt="logo">
+  <img src="${image}" alt="logo" id="logo_image">
 </a>
 
 
@@ -30,7 +30,7 @@ const beforeLogin = `
 
 const afterLogin = `
 <a href="${home}" class="logo">
-  <img src="${image}" alt="logo">
+  <img src="${image}" alt="logo" id="logo_image">
 </a>
 
 

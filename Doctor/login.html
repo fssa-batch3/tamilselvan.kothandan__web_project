@@ -17,7 +17,7 @@
         <header class="header" id="header"></header>
         <header class="header">
           <a href="../Doctor/index.html" class="logo">
-            <img src="../assets/img/image.png" alt="logo">
+            <img src="../assets/img/image.png" alt="logo" id="logo_image">
           </a>
       
           <nav class="navbar">
@@ -41,7 +41,7 @@
                         <hr>
                         <p>Explore the Medical Service!</p>
                         <label>Id</label>
-                        <input type="text" id="id" value="1681717361383" pattern="[a-zA-Z0-9]+" >
+                        <input type="text" id="id" value="1681717361383" pattern="[a-zA-Z0-9]+">
 
                         <label>Password</label>
                         <span style="color: #0e6453">
@@ -59,34 +59,6 @@
                 </div>
             </div>
         </div>
-        <script>
-function loginHandler(e) {
-  e.preventDefault();
-
-  const id = document.getElementById("id").value;
-  const Password = document.getElementById("Password").value;
-
-  const doctors = JSON.parse(localStorage.getItem("doctors")) || [];
-
-  const exist =
-    doctors.length &&
-    doctors.some((data) => data.id == id && data.Password == Password);
-
-  if (!exist) {
-    alert("Incorrect login credentials");
-  } else {
-    localStorage.setItem("doctor_id", JSON.stringify(id));
-    window.location.href = "./dashboard.html";
-  }
-}
-
-document.addEventListener("DOMContentLoaded", () => {
-  const login = document.getElementById("login");
-  if (login) {
-    login.addEventListener("submit", loginHandler);
-  }
-});
-
- </script>
+<script src="../assets/js/doctorLogin.js"></script>
     </body>
 </html>

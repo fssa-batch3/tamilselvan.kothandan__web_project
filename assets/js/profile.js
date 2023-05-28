@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
   document.getElementById("disease").value = userData.disease;
   document.getElementById("operation_dates").value = userData.operation_dates;
   document.getElementById("medications").value = userData.medications;
-
+  document.getElementById("image").setAttribute("src", userData.image);
   // delete user data from formData and localStorage
   function btnDelete() {
     const indexOfUser = formData.indexOf(userData);

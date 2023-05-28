@@ -86,6 +86,7 @@ function signUpHandler(e) {
       disease: "",
       operation_dates: "",
       medications: "",
+      image: "",
     });
     localStorage.setItem("formData", JSON.stringify(formData));
     const form = document.getElementById("sign-up");
