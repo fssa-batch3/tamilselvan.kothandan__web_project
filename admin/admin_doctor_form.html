@@ -19,7 +19,7 @@
     <header class="header">
 
         <a href="./admin.html" class="logo">
-            <img src="../assets/img/image.png" alt="logo">
+            <img src="../assets/img/image.png" alt="logo" id="logo_image">
         </a>
 
         <nav class="navbar">
@@ -35,78 +35,77 @@
 
         <form id="doctorForm" style="margin-top:20rem ; ">
             <label for="name">Name:</label>
-            <input type="text" id="name" name="name" value="Dr. Neelakandan" required>
+            <input type="text" id="name" name="name" required>
             <br>
             <br>
 
             <label for="specialty">Specialty:</label>
-            <input type="text" id="specialty" name="specialty" value="Urologist, Andrologist, Sexologist, Urological Surgeon" required>
+            <input type="text" id="specialty" name="specialty" required>
             <br>
             <br>
 
             <label for="hospital">image:</label>
-            <input type="text" id="image" name="hospital" value="https://imagesx.practo.com/providers/dr-neelakandan-urologist-chennai-41617290-4970-4ae5-9b98-7353156e6aa2.jpg?i_type=t_100x100-2x" required>
+            <input type="text" id="image" name="hospital" required>
             <br>
             <br>
             <label for="hospital">linkedin:</label>
-            <input type="text" id="linkedin" value="" name="linkedin">
+            <input type="text" id="linkedin" name="linkedin">
             <br>
             <br>
 
             <label for="hospital">Facebook:</label>
-            <input type="text" id="Facebook" value="" name="Facebook">
+            <input type="text" id="Facebook" name="Facebook">
             <br>
             <br>
 
             <label for="hospital">Twitter:</label>
-            <input type="text" id="Twitter" value="" name="Twitter">
+            <input type="text" id="Twitter" name="Twitter">
             <br>
             <br>
 
             <label for="hospital">Instagram:</label>
-            <input type="text" id="Instagram" value="" name="Instagram">
+            <input type="text" id="Instagram" name="Instagram">
             <br>
             <br>
 
             <label for="hospital">Descripition:</label>
-            <textarea type="text" id="Descripition" aria-valuetext="Dr. Neelakandan has completed his MBBS from Madras Medical College and Masters in surgery from AIIMS- All India Institute Of Medical Sciences (Gold Medal)" name="Instagram" required></textarea>
+            <textarea type="text" id="Descripition" aria-valuetext="" name="Instagram" required>
+            </textarea>
             <br>
             <br>
 
             <label for="hospital">experenice:</label>
-            <input type="text" id="experenice" value="16 Years Experience Overall  (8 years as specialist)" name="Instagram" required>
+            <input type="text" id="experenice" name="Instagram" required>
             <br>
             <br>
 
             <label for="hospital">hospital_ID:</label>
-            <input type="text" id="hospital_id" value="6" name="Instagram" required>
+            <input type="text" id="hospital_id" name="Instagram" required>
             <br>
             <br>
 
             <label for="hospital">location:</label>
-            <input type="text" id="location" name="Instagram" value="Vijaya Nagar, Chennai" required>
+            <input type="text" id="location" name="Instagram" required>
             <br>
             <br>
 
             <label for="hospital">clinic:</label>
-            <input type="text" id="clinic" name="Instagram" value="Practo Care Surgeries" required>
+            <input type="text" id="clinic" name="Instagram" required>
             <br>
             <br>
 
             <label for="hospital">Address:</label>
-            <input type="text" id="Address" name="Instagram" value="Block D, Paramount Park, 3, Velachery" required>
+            <input type="text" id="Address" name="Instagram" required>
             <br>
             <br>
 
             <label for="hospital">Timing:</label>
-            <input type="text" id="Timing" name="Instagram" value="Mon - Sat
-
-            06:00 PM - 08:30 PM" required>
+            <input type="text" id="Timing" name="Instagram" required>
             <br>
             <br>
 
             <label for="hospital">Password:</label>
-            <input type="password" id="Password" name="Instagram" value="Durga@1234" required>
+            <input type="password" id="Password" name="Instagram" required>
             <br>
             <br>
 
@@ -114,58 +113,9 @@
         </form>
 
     </section>
-    <script>
-        // Check if doctors array exists in local storage
-        const doctors = JSON.parse(localStorage.getItem("doctors")) || [];
-        const doctorForm = document.getElementById("doctorForm");
-        doctorForm.addEventListener("submit", (e) => {
-            e.preventDefault(); // Prevent form from submitting
-            // Get form values
-            const name = document.getElementById("name").value;
-            const specialty = document.getElementById("specialty").value;
-            const img_src = document.getElementById("image").value;
-            const linkedin = document.getElementById("linkedin").value;
-            const Facebook = document.getElementById("Facebook").value;
-            const Twitter = document.getElementById("Twitter").value;
-            const Instagram = document.getElementById("Instagram").value;
-            const Descripition = document.getElementById("Descripition").value;
-            const experenice = document.getElementById("experenice").value;
-            const location = document.getElementById("location").value;
-            const clinic = document.getElementById("clinic").value;
-            const Address = document.getElementById("Address").value;
-            const Timing = document.getElementById("Timing").value;
-            const hospitals_id = document.getElementById("hospital_id").value;
-            const Password = document.getElementById("Password").value;
 
-            const id = Date.now();
-            // Create object to store values
-            const doctor = {
-                id,
-                doctor_name: name,
-                specialization: specialty,
-                img_src,
-                linkedin,
-                Facebook,
-                Twitter,
-                Instagram,
-                Descripition,
-                experenice,
-                location,
-                clinic,
-                Address,
-                Timing,
-                hospitals_id,
-                Password,
-            };
-            console.log(doctor);
-            doctors.push(doctor);
-            localStorage.setItem("doctors", JSON.stringify(doctors));
-            // Clear form inputs
-            doctorForm.reset();
-            window.location.href = "./admin_doctor_page.html";
-        });
-    </script>
-    <script src="./logout.js"></script>
+    <script src="../assets/js/logout.js"></script>
+    <script src="../assets/js/adminDoctorForm.js"></script>
 </body>
 
 </html>

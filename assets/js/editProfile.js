@@ -2,12 +2,12 @@ const name_id = JSON.parse(localStorage.getItem("name_id"));
 const formData = JSON.parse(localStorage.getItem("formData"));
 
 function check(e) {
-  return e.name == name_id;
+  return e.userName === name_id;
 }
 
 const user_data = formData.find(check);
 
-document.getElementById("name").value = user_data.name;
+document.getElementById("name").value = user_data.userName;
 document.getElementById("email").value = user_data.email;
 document.getElementById("phone_number").value = user_data.phone_number;
 document.getElementById("date_of_birth").value = user_data.date_of_birth;
@@ -23,6 +23,7 @@ document.getElementById("drug").value = user_data.drug;
 document.getElementById("disease").value = user_data.disease;
 document.getElementById("operation_dates").value = user_data.operation_dates;
 document.getElementById("medications").value = user_data.medications;
+document.getElementById("image").value = user_data.image;
 
 function btnSaveClicked() {
   // e.preventDefault()
@@ -42,6 +43,7 @@ function btnSaveClicked() {
   const edit_disease = document.getElementById("disease").value;
   const edit_operation_dates = document.getElementById("operation_dates").value;
   const edit_medications = document.getElementById("medications").value;
+  const edit_image = document.getElementById("image").value;
   const currentDate = new Date();
   const userDate = new Date(edit_date_of_birth);
   const dobRegex = /^[0-9]{4}-[0-9]{2}-[0-9]{2}$/;
@@ -86,7 +88,7 @@ function btnSaveClicked() {
     return;
   }
 
-  user_data.name = edit_name;
+  user_data.userName = edit_name;
   user_data.email = edit_email;
   user_data.phone_number = edit_phone_number;
   user_data.date_of_birth = edit_date_of_birth;
@@ -102,6 +104,7 @@ function btnSaveClicked() {
   user_data.disease = edit_disease;
   user_data.operation_dates = edit_operation_dates;
   user_data.medications = edit_medications;
+  user_data.image = edit_image;
 
   localStorage.setItem("formData", JSON.stringify(formData));
   alert("updated successfully");

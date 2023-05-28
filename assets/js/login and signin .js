@@ -18,23 +18,23 @@ function validatePassword(password, confirmPassword) {
 function signUpHandler(e) {
   e.preventDefault();
 
-  const nameInput = document.getElementById("name");
+  const userNameInput = document.getElementById("userName");
   const emailInput = document.getElementById("email");
   const passwordInput = document.getElementById("password");
   const confirmPasswordInput = document.getElementById("confirm_password");
 
-  const name = nameInput.value.trim();
+  const userName = userNameInput.value.trim();
   const email = emailInput.value.trim();
   const password = passwordInput.value;
   const confirmPassword = confirmPasswordInput.value;
 
-  // Validate name
-  const nameRegex = /^[A-Za-z][A-Za-z]*$/;
-  if (!nameRegex.test(name)) {
-    nameInput.setCustomValidity(
-      "Name must start with a letter and contain only letters"
+  // Validate useruserName
+  const useruserNameRegex = /^[A-Za-z][A-Za-z]*$/;
+  if (!useruserNameRegex.test(userName)) {
+    userNameInput.setCustomValidity(
+      "useruserName must start with a letter and contain only letters"
     );
-    nameInput.reportValidity();
+    userNameInput.reportValidity();
     return;
   }
 
@@ -64,12 +64,12 @@ function signUpHandler(e) {
   const exist =
     formData.length &&
     JSON.parse(localStorage.getItem("formData")).some(
-      (data) => data.name.toLowerCase() == name.toLowerCase()
+      (data) => data.userName.toLowerCase() === userName.toLowerCase()
     );
 
   if (!exist) {
     formData.push({
-      name,
+      userName,
       email,
       password,
       phone_number: "",
@@ -86,6 +86,7 @@ function signUpHandler(e) {
       disease: "",
       operation_dates: "",
       medications: "",
+      image: "",
     });
     localStorage.setItem("formData", JSON.stringify(formData));
     const form = document.getElementById("sign-up");
@@ -101,19 +102,21 @@ function signUpHandler(e) {
 function loginHandler(e) {
   e.preventDefault();
 
-  const name = document.getElementById("name").value;
+  const userName = document.getElementById("userName").value;
   const password = document.getElementById("password").value;
 
   const formData = JSON.parse(localStorage.getItem("formData")) || [];
 
   const exist =
     formData.length &&
-    formData.some((data) => data.name == name && data.password == password);
+    formData.some(
+      (data) => data.userName === userName && data.password === password
+    );
 
   if (!exist) {
     alert(" Incorrect login credentials ");
   } else {
-    localStorage.setItem("name_id", JSON.stringify(name));
+    localStorage.setItem("name_id", JSON.stringify(userName));
     window.location.href = "../products/profile.html";
   }
 }

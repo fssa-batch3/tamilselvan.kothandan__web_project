@@ -30,10 +30,10 @@
                         <div class="o-profile-photo__cont">
 
                             <div class="o-profile-photo__cont__img">
-                                <img src="../../assets/img/medium_thumbnail.png" alt="profile img">
+                                <img src="" id="image" alt="profile img">
                             </div>
                         </div>
-                        <div class="o-profile-photo__desc">
+                        <!-- <div class="o-profile-photo__desc">
                             <div class="o-profile-photo__desc__text">
                                 Pick a photo from your computer
                             </div>
@@ -42,7 +42,7 @@
                                 <input type="file" name="add-photo" value="Add Photo">
 
                             </div>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
                 <div class="section__row__column" id="text">
@@ -247,116 +247,14 @@
     <!-- footer section starts -->
 
     <section class="footer">
-
-        <div class="box-container">
-
-            <div class="box">
-                <h3>quick links</h3>
-                <a href="../../index.html">
-                    <i class="fas fa-chevron-right"></i> Home
-                </a>
-                <a href="../../index.html">
-                    <i class="fas fa-chevron-right"></i> Services
-                </a>
-                <a href="../products/About page.html">
-                    <i class="fas fa-chevron-right"></i> About
-                </a>
-                <a href="../products/Doctors.html">
-                    <i class="fas fa-chevron-right"></i> Doctors
-                </a>
-                <a href="../products/hospital.html">
-                    <i class="fas fa-chevron-right"></i> hospital
-                </a>
-
-            </div>
-
-            <div class="box">
-                <h3>contact info</h3>
-                <a href="#">
-                    <i class="fas fa-phone"></i> +91-9445535374
-                </a>
-
-                <a href="#">
-                    <i class="fas fa-envelope"></i> tamilselvan.kothandan@fssa.freshworks.com
-                </a>
-                <a href="#">
-                    <i class="fas fa-map-marker-alt"></i> Chennai-600081
-                </a>
-            </div>
-
-            <div class="box">
-                <h3>follow us</h3>
-                <a href="#">
-                    <i class="fab fa-facebook-f"></i> facebook
-                </a>
-                <a href="#">
-                    <i class="fab fa-twitter"></i> twitter
-                </a>
-
-                <a href="#">
-                    <i class="fab fa-instagram"></i> instagram
-                </a>
-                <a href="#">
-                    <i class="fab fa-linkedin"></i> linkedin
-                </a>
-
-            </div>
-
-        </div>
+        <div class="box-container" id="box-container"></div>
 
     </section>
     <!-- footer section ends -->
 
-    <script>
-document.addEventListener("DOMContentLoaded", () => {
-  // retrieve user data from localStorage
-  const nameId = JSON.parse(localStorage.getItem("name_id"));
-  const formData = JSON.parse(localStorage.getItem("formData"));
-
-  // find the user data that matches the nameId
-  function check(e) {
-    return e.name == nameId;
-  }
-  const userData = formData.find(check);
-
-  // fill in the input fields with the user data
-  document.getElementById("name").value = userData.name;
-  document.getElementById("email").value = userData.email;
-  document.getElementById("phone_number").value = userData.phone_number;
-  document.getElementById("date_of_birth").value = userData.date_of_birth;
-  document.getElementById("gender").value = userData.gender;
-  document.getElementById("blood_group").value = userData.blood_group;
-  document.getElementById("street_name").value = userData.street_name;
-  document.getElementById("colony").value = userData.colony;
-  document.getElementById("city").value = userData.city;
-  document.getElementById("state").value = userData.state;
-  document.getElementById("country").value = userData.country;
-  document.getElementById("pincode").value = userData.pincode;
-  document.getElementById("drug").value = userData.drug;
-  document.getElementById("disease").value = userData.disease;
-  document.getElementById("operation_dates").value = userData.operation_dates;
-  document.getElementById("medications").value = userData.medications;
-
-  // delete user data from formData and localStorage
-  function btnDelete() {
-    const indexOfUser = formData.indexOf(userData);
-    formData.splice(indexOfUser, 1);
-
-    localStorage.setItem("formData", JSON.stringify(formData));
-    localStorage.removeItem("name_id");
-    alert("account deleted");
-    window.location.href = "../../index.html";
-  }
-  document.getElementById("delete-btn").addEventListener("click", btnDelete);
-
-  // redirect to edit profile page
-  function btnEdit() {
-    window.location.href = "./edit_profile.html";
-  }
-  document.getElementById("edit-btn").addEventListener("click", btnEdit);
-});
-</script>
     <script src="../../Components/header.js"></script>
+    <script src="../../assets/js/profile.js"></script>
+    <script src="../../Components/footer.js"></script>
 
 </body>
 

@@ -1,4 +1,3 @@
-
 const params = new URL(document.location).searchParams;
 const doctor_id = params.get("doctor_id");
 console.log(doctor_id);
@@ -7,18 +6,23 @@ const doctors = JSON.parse(localStorage.getItem("doctors"));
 const name_id = JSON.parse(localStorage.getItem("name_id"));
 const formData = JSON.parse(localStorage.getItem("formData"));
 
-const find_doctor = doctors.find((e) => e.id === doctor_id);
+const find_doctor = doctors.find((e) => e.id === JSON.parse(doctor_id));
 console.log(find_doctor);
 
-function check(e) {
-  return e.name === name_id;
-}
-
-const user_data = formData.find(check);
-document.getElementById("name").value = user_data.name;
-document.getElementById("number").value = user_data.phone_number;
-document.getElementById("gender_").value = user_data.gender;
-document.getElementById("email").value = user_data.email;
+// if (find_doctor) {
+//   const doctorName = find_doctor.doctor_name;
+//   console.log(doctorName);
+// } else {
+//   console.log("Doctor not found");
+// }
+const doctorName = find_doctor.doctor_name;
+console.log(doctorName);
+const user = formData.find((e) => e.userName === name_id);
+console.log(user);
+document.getElementById("name").value = user.userName;
+document.getElementById("number").value = user.phone_number;
+document.getElementById("gender_").value = user.gender;
+document.getElementById("email").value = user.email;
 
 const form = document.querySelector("form");
 form.addEventListener("submit", appointment);
@@ -42,7 +46,7 @@ function appointment(e) {
   const formattedAppointmentDateTime = appointmentDateTime.toLocaleString();
   const str = {
     id: appointmentId,
-    name: document.getElementById("name").value,
+    userName: document.getElementById("name").value,
     email: document.getElementById("email").value,
     number: document.getElementById("number").value,
     gender: document.getElementById("gender_").value,
@@ -50,6 +54,7 @@ function appointment(e) {
     appointmentDateTime: formattedAppointmentDateTime,
     appointmentBookingDate: now.toLocaleString(),
     doctor_id,
+    doctorName,
     status: "Waiting",
   };
 

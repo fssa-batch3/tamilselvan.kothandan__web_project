@@ -21,8 +21,8 @@
 
     <header class="header">
 
-                <a href="./admin.html" class="logo">
-            <img src="../assets/img/image.png" alt="logo">
+        <a href="./admin.html" class="logo">
+            <img src="../assets/img/image.png" alt="logo" id="logo_image">
         </a>
 
         <nav class="navbar" id="navbar">
@@ -48,22 +48,8 @@
         </div>
 
     </section>
-    <script src="./logout.js"></script>
-    <script>
-        // Redirect to the admin doctor page
-        function add_doctor() {
-            window.location.href = "./admin_doctor_page.html";
-        }
-          function add_hospital() {
-            window.location.href = "./admin_hospital.html";
-        }
-
-        const addHospitalBtn = document.getElementById("addHospitalBtn");
-        addHospitalBtn.addEventListener("click", add_hospital);
-
-        const addDoctorBtn = document.getElementById("addDoctorBtn");
-        addDoctorBtn.addEventListener("click", add_doctor);
-</script>
+    <script src="../assets/js/logout.js"></script>
+    <script src="../assets/js/adminPage.js"></script>
 </body>
 
 </html>

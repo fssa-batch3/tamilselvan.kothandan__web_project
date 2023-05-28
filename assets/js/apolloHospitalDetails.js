@@ -1,10 +1,13 @@
 const params = new URLSearchParams(window.location.search);
 const hospital_id = params.get("hospitals_id"); // Corrected query parameter name
+console.log(typeof hospital_id);
 const hospitals = JSON.parse(localStorage.getItem("hospitals"));
 console.log(hospital_id); // Check if hospital_id is not null or undefined
 console.log(hospitals); // Check if hospitals is not null or undefined and has expected data
 
-const find_hospitals = hospitals.find((e) => e.hospitals_id == hospital_id); // Corrected property name
+const find_hospitals = hospitals.find(
+  (e) => e.hospitals_id === parseInt(hospital_id, 10)
+); // Corrected property name
 
 console.log(find_hospitals);
 
