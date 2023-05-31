@@ -11,30 +11,29 @@ function validatePassword(password, confirmPassword) {
     alert("Passwords do not match");
     return false;
   }
-  alert("");
   return true;
 }
 
 function signUpHandler(e) {
   e.preventDefault();
 
-  const userNameInput = document.getElementById("userName");
+  const usernameInput = document.getElementById("userName");
   const emailInput = document.getElementById("email");
   const passwordInput = document.getElementById("password");
   const confirmPasswordInput = document.getElementById("confirm_password");
 
-  const userName = userNameInput.value.trim();
+  const username = usernameInput.value.trim();
   const email = emailInput.value.trim();
   const password = passwordInput.value;
   const confirmPassword = confirmPasswordInput.value;
 
-  // Validate useruserName
-  const useruserNameRegex = /^[A-Za-z][A-Za-z]*$/;
-  if (!useruserNameRegex.test(userName)) {
-    userNameInput.setCustomValidity(
-      "useruserName must start with a letter and contain only letters"
+  // Validate username
+  const usernameRegex = /^[A-Za-z][A-Za-z]*$/;
+  if (!usernameRegex.test(username)) {
+    usernameInput.setCustomValidity(
+      "Username must start with a letter and contain only letters"
     );
-    userNameInput.reportValidity();
+    usernameInput.reportValidity();
     return;
   }
 
@@ -54,6 +53,7 @@ function signUpHandler(e) {
     return;
   }
 
+  // Validate confirm password
   const isValidPassword = validatePassword(password, confirmPassword);
   if (!isValidPassword) {
     return;
@@ -63,20 +63,20 @@ function signUpHandler(e) {
 
   const exist =
     formData.length &&
-    JSON.parse(localStorage.getItem("formData")).some(
-      (data) => data.userName.toLowerCase() === userName.toLowerCase()
+    formData.some(
+      (data) => data.userName.toLowerCase() === username.toLowerCase()
     );
 
   if (!exist) {
     formData.push({
-      userName,
+      userName: username,
       email,
       password,
       phone_number: "",
       gender: "",
       date_of_birth: "1990-01-01",
       blood_group: "",
-      street_name: " ",
+      street_name: "",
       colony: "",
       city: "",
       state: "",
@@ -99,6 +99,38 @@ function signUpHandler(e) {
   }
 }
 
+const passwordToggle = document.getElementById("passwordToggle");
+const toggleIcon = document.getElementById("toggleIcon");
+passwordToggle.addEventListener("click", () => {
+  const passwordInput = document.getElementById("password");
+  const type = passwordInput.getAttribute("type");
+  if (type === "password") {
+    passwordInput.setAttribute("type", "text");
+    toggleIcon.classList.remove("fa-eye");
+    toggleIcon.classList.add("fa-eye-slash");
+  } else {
+    passwordInput.setAttribute("type", "password");
+    toggleIcon.classList.remove("fa-eye-slash");
+    toggleIcon.classList.add("fa-eye");
+  }
+});
+
+const PasswordToggle = document.getElementById("PasswordToggle");
+const ToggleIcon = document.getElementById("ToggleIcon");
+PasswordToggle.addEventListener("click", () => {
+  const passwordInput = document.getElementById("confirm_password");
+  const type = passwordInput.getAttribute("type");
+  if (type === "password") {
+    passwordInput.setAttribute("type", "text");
+    ToggleIcon.classList.remove("fa-eye");
+    ToggleIcon.classList.add("fa-eye-slash");
+  } else {
+    passwordInput.setAttribute("type", "password");
+    ToggleIcon.classList.remove("fa-eye-slash");
+    ToggleIcon.classList.add("fa-eye");
+  }
+});
+
 function loginHandler(e) {
   e.preventDefault();
 
@@ -114,7 +146,7 @@ function loginHandler(e) {
     );
 
   if (!exist) {
-    alert(" Incorrect login credentials ");
+    alert("Incorrect login credentials");
   } else {
     localStorage.setItem("name_id", JSON.stringify(userName));
     window.location.href = "../products/profile.html";

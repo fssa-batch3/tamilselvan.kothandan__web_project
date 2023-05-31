@@ -20,26 +20,10 @@ for (let i = 0; i < doctors.length; i++) {
   heading.innerText = doctors[i].doctor_name;
 
   const span = document.createElement("span");
-  span.innerText = doctors[i].specialization;
+  span.innerText = doctors[i].specialization[0].specialty;
 
   const shareDiv = document.createElement("div");
   shareDiv.classList.add("share");
-
-  const facebookLink = document.createElement("a");
-  facebookLink.setAttribute("href", doctors[i].Facebook);
-  facebookLink.classList.add("fab", "fa-facebook-f");
-
-  const twitterLink = document.createElement("a");
-  twitterLink.setAttribute("href", doctors[i].Twitter);
-  twitterLink.classList.add("fab", "fa-twitter");
-
-  const instagramLink = document.createElement("a");
-  instagramLink.setAttribute("href", doctors[i].Instagram);
-  instagramLink.classList.add("fab", "fa-instagram");
-
-  const linkedinLink = document.createElement("a");
-  linkedinLink.setAttribute("href", doctors[i].linkedin);
-  linkedinLink.classList.add("fab", "fa-linkedin");
 
   const Delete = document.createElement("a");
   Delete.setAttribute("href", "#");
@@ -70,11 +54,6 @@ for (let i = 0; i < doctors.length; i++) {
   parentDiv.appendChild(heading);
   parentDiv.appendChild(span);
   parentDiv.appendChild(shareDiv);
-
-  shareDiv.appendChild(facebookLink);
-  shareDiv.appendChild(twitterLink);
-  shareDiv.appendChild(instagramLink);
-  shareDiv.appendChild(linkedinLink);
   shareDiv.appendChild(Delete);
 
   // select the HTML element where you want to append the parent div

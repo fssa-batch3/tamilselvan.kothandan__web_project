@@ -1,10 +1,12 @@
 const doctorId = JSON.parse(localStorage.getItem("doctor_id"));
+const doctorID = String(doctorId, 10);
+console.log(typeof doctorID);
 const appointmentDetails = JSON.parse(
   localStorage.getItem("appointment_details")
 );
 
 const doctorAppointments = appointmentDetails.filter(
-  (appointment) => appointment.doctor_id === doctorId
+  (appointment) => appointment.doctor_id === doctorID
 );
 console.log(doctorAppointments);
 const appointDetails = document.getElementById("appointDetails");
@@ -138,7 +140,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 const doctorAcceptedList = appointmentDetails.filter(
-  (appointment) => appointment.status === "accept"
+  (appointment) => appointment.status === "Accept"
 );
 
 const appointmentList = document.getElementById("appointmentList");
@@ -160,7 +162,7 @@ if (doctorAcceptedList.length === 0) {
     avatarElement.textContent = String(appointment.userName).charAt(0);
 
     const nameElement = document.createElement("div");
-    nameElement.id = "name";
+    nameElement.id = "names";
     nameElement.textContent = String(appointment.userName);
 
     const timeElement = document.createElement("div");

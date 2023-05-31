@@ -25,3 +25,19 @@ document.addEventListener("DOMContentLoaded", () => {
     login.addEventListener("submit", loginHandler);
   }
 });
+
+const passwordToggle = document.getElementById("passwordToggle");
+const toggleIcon = document.getElementById("toggleIcon");
+passwordToggle.addEventListener("click", () => {
+  const passwordInput = document.getElementById("Password");
+  const type = passwordInput.getAttribute("type");
+  if (type === "password") {
+    passwordInput.setAttribute("type", "text");
+    toggleIcon.classList.remove("fa-eye");
+    toggleIcon.classList.add("fa-eye-slash");
+  } else {
+    passwordInput.setAttribute("type", "password");
+    toggleIcon.classList.remove("fa-eye-slash");
+    toggleIcon.classList.add("fa-eye");
+  }
+});
