@@ -10,14 +10,16 @@ function check(e) {
 const doctorData = doctors.find(check);
 
 document.getElementById("Name").value = doctorData.doctor_name;
-document.getElementById("specialty").value = doctorData.specialization;
+document.getElementById("specialty").value =
+  doctorData.specialization[0].specialty;
 document.getElementById("description").value = doctorData.Descripition;
 document.getElementById("experience").value = doctorData.experenice;
 document.getElementById("location").value = doctorData.location;
 document.getElementById("clinic").value = doctorData.clinic;
 document.getElementById("address").value = doctorData.Address;
-document.getElementById("timing").value = doctorData.Timing;
-
+document.getElementById("startingTime").value =
+  doctorData.working[0].startingTime;
+document.getElementById("endingTime").value = doctorData.working[0].endingTime;
 function btnSaveClicked() {
   const name = document.getElementById("Name").value;
   const specialty = document.getElementById("specialty").value;
@@ -26,16 +28,18 @@ function btnSaveClicked() {
   const location = document.getElementById("location").value;
   const clinic = document.getElementById("clinic").value;
   const address = document.getElementById("address").value;
-  const timing = document.getElementById("timing").value;
+  const startingTime = document.getElementById("startingTime").value;
+  const endingTime = document.getElementById("endingTime").value;
 
   doctorData.doctor_name = name;
-  doctorData.specialization = specialty;
+  doctorData.specialization[0].specialty = specialty;
   doctorData.Descripition = description;
   doctorData.experenice = experience;
   doctorData.location = location;
   doctorData.clinic = clinic;
   doctorData.Address = address;
-  doctorData.Timing = timing;
+  doctorData.working[0].startingTime = startingTime;
+  doctorData.working[0].endingTime = endingTime;
 
   localStorage.setItem("doctors", JSON.stringify(doctors));
   alert("updated successfully");

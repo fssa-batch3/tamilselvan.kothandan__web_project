@@ -23,37 +23,11 @@ for (let i = 0; i < hospitals.length; i++) {
   const span = document.createElement("span");
   span.innerText = hospitals[i].Address;
 
-  const shareDiv = document.createElement("div");
-  shareDiv.classList.add("share");
-
-  const facebookLink = document.createElement("a");
-  facebookLink.setAttribute("href", hospitals[i].Facebook);
-  facebookLink.classList.add("fab", "fa-facebook");
-
-  const twitterLink = document.createElement("a");
-  twitterLink.setAttribute("href", hospitals[i].Twitter);
-  twitterLink.classList.add("fab", "fa-twitter");
-
-  const instagramLink = document.createElement("a");
-  instagramLink.setAttribute("href", hospitals[i].Instagram);
-  instagramLink.classList.add("fab", "fa-instagram");
-
-  const linkedinLink = document.createElement("a");
-  linkedinLink.setAttribute("href", hospitals[i].linkedin);
-  linkedinLink.classList.add("fab", "fa-linkedin");
-
   // append the child elements to the parent div
   imageLink.appendChild(image);
   parentDiv.appendChild(imageLink);
   parentDiv.appendChild(heading);
   parentDiv.appendChild(span);
-  parentDiv.appendChild(shareDiv);
-
-  shareDiv.appendChild(facebookLink);
-  shareDiv.appendChild(twitterLink);
-  shareDiv.appendChild(instagramLink);
-  shareDiv.appendChild(linkedinLink);
-
   // select the HTML element where you want to append the parent div
   const container = document.querySelector(".box-container");
   container.appendChild(parentDiv);

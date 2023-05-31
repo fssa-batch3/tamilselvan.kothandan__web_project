@@ -11,13 +11,17 @@ document.addEventListener("DOMContentLoaded", () => {
   const doctorData = doctors.find(check);
 
   document.getElementById("Name").value = doctorData.doctor_name;
-  document.getElementById("specialty").value = doctorData.specialization;
+  document.getElementById("specialty").value =
+    doctorData.specialization[0].specialty;
   document.getElementById("description").value = doctorData.Descripition;
   document.getElementById("experience").value = doctorData.experenice;
   document.getElementById("location").value = doctorData.location;
   document.getElementById("clinic").value = doctorData.clinic;
   document.getElementById("address").value = doctorData.Address;
-  document.getElementById("timing").value = doctorData.Timing;
+  document.getElementById("endingTime").value =
+    doctorData.working[0].endingTime;
+  document.getElementById("startingTime").value =
+    doctorData.working[0].startingTime;
 
   function btnDelete() {
     const indexOfUser = doctors.indexOf(doctorData);
