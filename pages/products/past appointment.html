@@ -1,161 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>medical service </title>
+    <title>DOC 4 YOU</title>
 
-     
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-     <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/style.css">
 </head>
+
 <body>
-    
-<!-- header section starts  -->
 
-<header class="header">
+    <!-- header section starts  -->
 
-    <a href="../../index.html" class="logo"><i class="fa fa-heart" style="font-size:28px;color:#0e6453"></i>  Medical Service </a>
+    <header class="header" id="header">
 
-    <nav class="navbar">
-        <a href="../../index.html">Home</a>
-        <a href="../../index.html">Services</a>
-        <a href="../products/About page.html">About</a>
-        <a href="../products/Doctors.html">Doctors</a>
-        <a href="../products/hospital.html">Hospital</a>
-        
-        
-    
-        <div class="dropdown">
-            <button class="dropbtn"><i class='fas fa-user-alt' style='font-size:18px;color:#0e6453'></i></button>
-            <div class="dropdown-content">
-              <a href="../products/profile.html">View profile</a>
-              <a href="./past appointment.html">My Appointment</a>
-              <a href="../homepage/index.html">Logout</a>
-            </div>
-        </div>
-    
-    </nav>
+    </header>
+    <section class="home-1">
 
-    <div id="menu-btn" class="fas fa-bars"></div>
-
-</header>
-<section class="home-1" >
-
-    <h1 class="heading"> My <span>Appointment</span> </h1>
+        <h1 class="heading">
+            My <span>Appointment</span>
+        </h1>
     </section>
     <section>
-      <div style="overflow-x: auto;">
-      
-    <table  >
-      <caption></caption>
-      <tr>
-        <th>Doctor Name</th>
-        <th>Speciality</th>
-        <th>Appointment Date</th>
-        <th>Appointment Day</th>
-        <th>Action</th>
-      </tr>
-      <tr>
-        <td>Dr.Ajun</td>
-        <td>Physiotheraphy</td>
-        <td>19-Dec-2022</td>
-        <td>Monday</td>
-        <td>    <a href="./appointment details.html" class="btn" > Details <span class="fas fa-chevron-right"></span> </a></td>
-      </tr>
-      <tr>
-        <td>Dr.Kishore</td>
-        <td>Psychology</td>
-        <td>10-Dec-2022</td>
-        <td>Tuesday</td>
-        
-        <td><a href="./appointment details-1.html" class="btn" > Details <span class="fas fa-chevron-right"></span> </a></td>
-      </tr>
-      <tr>
-        <td>Dr.Sesslyn</td>
-        <td>Cardiologist</td>
-        <td>10-jan-2023</td>
-        <td>Wednesday</td>
-        
-       <td> <a href="./appointment details.html" class="btn" > Details <span class="fas fa-chevron-right"></span> </a></td>
-      </tr>
-      <tr>
-        <td>Dr.Meena</td>
-        <td>Cardiologist</td>
-        <td>10-jan-2023</td>
-        <td>Wednesday</td>
-        
-        <td><a href="./appointment details.html" class="btn" >Details<span class="fas fa-chevron-right"></span> </a></td>
-      </tr>
-      <tr>
-        <td>Dr.Uthra</td>
-        <td>Cardiologist</td>
-        <td>10-jan-2023</td>
-        <td>Wednesday</td>
-        
-       <td> <a href="../../index.html" class="btn" > Details <span class="fas fa-chevron-right"></span> </a></td>
-      </tr>
-      <tr>
-        <td>Dr.PKS</td>
-        <td>Cardiologist</td>
-        <td>10-jan-2023</td>
-        <td>Wednesday</td>
-        
-        <td><a href="../../index.html" class="btn" > Details <span class="fas fa-chevron-right"></span> </a></td>
-      </tr>
-    </table>
-  
-    
-    <a href="../../index.html" class="btn"   style= "margin-left: 55rem; margin-top: 4rem;"  > Home <span class="fas fa-chevron-right"></span> </a>
-  </div>
-</section>
+        <div style="overflow-x: auto;">
+            <table id="appointmentTable">
+                <caption></caption>
+                <thead>
+                    <tr>
+                        <th>Appointment Date</th>
+                        <th>Doctor Name</th>
+                        <th>Status</th>
+                        <th>Name</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Existing table rows -->
+                </tbody>
+            </table>
 
-
-<section class="footer">
-
-    <div class="box-container">
-
-        <div class="box">
-            <h3>quick links</h3>
-            <a href="../../index.html"> <i class="fas fa-chevron-right"></i> Home </a>
-            <a href="../../index.html"> <i class="fas fa-chevron-right"></i> Services </a>
-            <a href="../products/About page.html"> <i class="fas fa-chevron-right"></i> About </a>
-            <a href="../products/Doctors.html"> <i class="fas fa-chevron-right"></i> Doctors </a>
-            <a href="../products/hospital.html"> <i class="fas fa-chevron-right"></i> hospital </a>
-            
-            
+            <a href="../../index.html" class="btn" style="margin-left: 55rem; margin-top: 4rem;">
+                Home <span class="fas fa-chevron-right"></span> 
+</a>
         </div>
+    </section>
 
+    <section class="footer">
+        <div class="box-container" id="box-container"></div>
 
-        <div class="box">
-            <h3>contact info</h3>
-            <a href="#"> <i class="fas fa-phone"></i> +91-9445535374 </a>
-            
-    
-            <a href="#"> <i class="fas fa-envelope"></i> tamilselvan.kothandan@fssa.freshworks.com </a>
-            <a href="#"> <i class="fas fa-map-marker-alt"></i> Chennai-600081 </a>
-        </div>
+    </section>
 
-        <div class="box">
-            <h3>follow us</h3>
-            <a href="#"> <i class="fab fa-facebook-f"></i> facebook </a>
-            <a href="#"> <i class="fab fa-twitter"></i> twitter </a>
-        
-            <a href="#"> <i class="fab fa-instagram"></i> instagram </a>
-            <a href="#"> <i class="fab fa-linkedin"></i> linkedin </a>
-    
-        </div>
+    <!-- footer section ends -->
+    <script src="../../assets/js/script.js"></script>
+    <script src="../../Components/header.js"></script>
+    <script src="../../assets/js/past appointment.js"></script>
+    <script src="../../Components/footer.js"></script>
 
-    </div>
-
-    
-
-</section>
-<!-- footer section ends -->
-<script src="../../assets/js/script.js"></script>
 </body>
+
 </html>
-
-

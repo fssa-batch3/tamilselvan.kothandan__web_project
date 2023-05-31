@@ -1,200 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>medical service </title>
+    <title>DOC 4 YOU</title>
 
-    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="../../assets/css/style.css">
 
 </head>
+
 <body>
-    
-<!-- header section starts  -->
 
-<header class="header">
+    <!-- header section starts  -->
 
-    <a href="../../index.html" class="logo">  Medical Service </a>
+    <header class="header" id="header">
 
-    <nav class="navbar">
-        <a href="../../index.html">Home</a>
-        <a href="../../index.html">Services</a>
-        <a href="./About page.html">About</a>
-        <a href="./Doctors.html">Doctors</a>
-        <a href="./hospital.html">Hospital</a>
+    </header>
 
-        
-        <div class="dropdown">
-            <button class="dropbtn"><i class='fas fa-user-alt' style='font-size:18px;color:#0e6453'></i></button>
-            <div class="dropdown-content">
-              <a href="../products/profile.html">View profile</a>
-              <a href="./past appointment.html">My Appointment</a>
-              <a href="../homepage/index.html">Logout</a>
+    <section class="doctors" id="doctors">
+
+        <h1 class="heading">
+            our <span>doctors</span>
+        </h1>
+
+        <section class="filter">
+            <div class="wrapper">
+                <div id="search-container">
+                    <input type="search" id="search-item" placeholder="search for doctors" onkeyup="search()">
+                    <button id="search">Search</button>
+                </div>
             </div>
-        </div>
-    </nav>
 
-    <div id="menu-btn" class="fas fa-bars"></div>
+        </section>
 
-</header>
+        <div class="box-container" id="doctor-list">
 
-
-
-<section class="doctors" id="doctors">
-
-    <h1 class="heading"> our <span>doctors</span> </h1>
-
-
-    <section class="filter">
-  <div class="wrapper">
-    <div id="search-container">
-      <input type="search" id="search-input" placeholder="search for doctors">
-      <button id="search">Search</button>
-    </div>
-  </div>
-
-  <div  class="wrapper-1" id="button">
-    <button class="button-value">All</button>
-    <button class="button-value">Physiotheraphy</button>
-    <button class="button-value">Cardiologist</button>
-    <button class="button-value">Psychology</button>
-    <button class="button-value">Endrocrindogist</button>
-    <button class="button-value">Gynecologist</button>
-    <button class="button-value">Paediatarica</button>
-    <button class="button-value">Neurologist</button>
-  </div>
-</section>
-
-
-
-    <div class="box-container">
-
-        <div class="box">
-            <a href="./doctor details/doctor details.html"><img src="../../assets/img/ajun.jpeg" alt=""></a>
-            <h3>Dr. Ajun</h3>
-            <span>Physiotheraphy</span>
-            <div class="share">
-                <a href="#" class="fab fa-facebook-f"></a>
-                <a href="#" class="fab fa-twitter"></a>
-                <a href="#" class="fab fa-instagram"></a>
-                <a href="#" class="fab fa-linkedin"></a>
-            </div>
         </div>
 
-        <div class="box">
-           <a href="./doctor details/sesslyn.html"><img src="../../assets/img/sesslyn 2.jpeg" alt=""></a> 
-            <h3>Dr. Sesslyn</h3>
-            <span>Cardiologist</span>
-            <div class="share">
-                <a href="#" class="fab fa-facebook-f"></a>
-                <a href="#" class="fab fa-twitter"></a>
-                <a href="#" class="fab fa-instagram"></a>
-                <a href="#" class="fab fa-linkedin"></a>
-            </div>
-        </div>
+    </section>
 
-        <div class="box">
-           <a href="./doctor details/kishore.html"><img src="../../assets/img/kishore.jpeg" alt=""></a> 
-            <h3>Dr. Kishore</h3>
-            <span>Psychology</span>
-            <div class="share">
-                <a href="#" class="fab fa-facebook-f"></a>
-                <a href="#" class="fab fa-twitter"></a>
-                <a href="#" class="fab fa-instagram"></a>
-                <a href="#" class="fab fa-linkedin"></a>
-            </div>
-        </div>
+    <section class="footer">
+        <div class="box-container" id="box-container"></div>
 
-        <div class="box">
-            <a href="./doctor details/raj.html"><img src="../../assets/img/Raj.jpeg" alt=""></a>
-            <h3>Dr. Raj</h3>
-            <span>Endrocrindogist</span>
-            <div class="share">
-                <a href="#" class="fab fa-facebook-f"></a>
-                <a href="#" class="fab fa-twitter"></a>
-                <a href="#" class="fab fa-instagram"></a>
-                <a href="#" class="fab fa-linkedin"></a>
-            </div>
-        </div>
+    </section>
 
-        <div class="box">
-            <a href="./doctor details/meena.html"><img src="../../assets/img/meena.jpeg" alt=""></a>
-            <h3>Dr. Meena</h3>
-            <span>Gynecologist</span>
-            <div class="share">
-                <a href="#" class="fab fa-facebook-f"></a>
-                <a href="#" class="fab fa-twitter"></a>
-                <a href="#" class="fab fa-instagram"></a>
-                <a href="#" class="fab fa-linkedin"></a>
-            </div>
-        </div>
+    <script src="../../assets/js/doctor.js"></script>
+    <script src="./../../Components/header.js"></script>
+    <script src="../../Components/footer.js"></script>
 
-        <div class="box">
-           <a href="./doctor details/uthra.html"><img src="../../assets/img/uthra.jpeg" alt=""></a> 
-            <h3>Dr. Uthra</h3>
-            <span>Paediatarica</span>
-            <div class="share">
-                <a href="#" class="fab fa-facebook-f"></a>
-                <a href="#" class="fab fa-twitter"></a>
-                <a href="#" class="fab fa-instagram"></a>
-                <a href="#" class="fab fa-linkedin"></a>
-            </div>
-        </div>
-
-        <div class="box">
-           <a href="./doctor details/pks.html"><img src="../../assets/img/pks.jpeg" alt=""></a> 
-            <h3>Dr. PKS</h3>
-            <span>Neurologist</span>
-            <div class="share">
-                <a href="#" class="fab fa-facebook-f"></a>
-                <a href="#" class="fab fa-twitter"></a>
-                <a href="#" class="fab fa-instagram"></a>
-                <a href="#" class="fab fa-linkedin"></a>
-            </div>
-        </div>
-
-    </div>
-
-</section>
-
-<section class="footer">
-
-    <div class="box-container">
-
-        <div class="box">
-            <h3>quick links</h3>
-            <a href="../../index.html"> <i class="fas fa-chevron-right"></i> Home </a>
-            <a href="../../index.html"> <i class="fas fa-chevron-right"></i> Services </a>
-            <a href="./About page.html"> <i class="fas fa-chevron-right"></i> About </a>
-            <a href="./Doctors.html"> <i class="fas fa-chevron-right"></i> Doctors </a>
-            <a href="./hospital.html"> <i class="fas fa-chevron-right"></i> hospital </a>
-            
-            
-        </div>
-
-
-        <div class="box">
-            <h3>contact info</h3>
-            <a href="#"> <i class="fas fa-phone"></i> +91-9445535374 </a>
-            
-    
-            <a href="#"> <i class="fas fa-envelope"></i> tamilselvan.kothandan@fssa.freshworks.com </a>
-            <a href="#"> <i class="fas fa-map-marker-alt"></i> Chennai-600081 </a>
-        </div>
-
-        <div class="box">
-            <h3>follow us</h3>
-            <a href="#"> <i class="fab fa-facebook-f"></i> facebook </a>
-            <a href="#"> <i class="fab fa-twitter"></i> twitter </a>
-        
-            <a href="#"> <i class="fab fa-instagram"></i> instagram </a>
-            <a href="#"> <i class="fab fa-linkedin"></i> linkedin </a>
-    
-        </div>
-
-    </div>
 </body>
+
 </html>

@@ -1,120 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>medical service </title>
+    <title>DOC 4 YOU</title>
 
-    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="../../assets/css/style.css">
 
 </head>
+
 <body>
-    
-<!-- header section starts  -->
 
-<header class="header">
+    <!-- header section starts  -->
 
-    <a href="../../index.html" class="logo">  medical service. </a>
+    <header class="header" id="header">
 
-    <nav class="navbar">
-        <a href="../../index.html">Home</a>
-        <a href="../../index.html">Services</a>
-        <a href="../products/About page.html">About</a>
-        <a href="../products/Doctors.html">Doctors</a>
-        <a href="./hospital.html">Hospital</a>
-        <a href="./login.html">Login</a>
-    </nav>
+    </header>
 
-    <div id="menu-btn" class="fas fa-bars"></div>
+    <section class="book" id="book">
 
-</header>
+        <h1 class="heading">
+            <span>book</span> now
+        </h1>
 
+        <div class="row">
 
-<section class="book" id="book">
+            <div class="image">
+                <img src="../../assets/img/Medical prescription.gif" alt="">
+            </div>
 
-    <h1 class="heading"> <span>book</span> now </h1>    
+            <form role="form" onsubmit="appoinment(event)">
+                <h3>Book Appointment</h3>
+                <input type="text" placeholder="Patient name" class="box" id="name">
+                <input type="tel" placeholder="Phone number" class="box" id="number">
+                <input type="tel" placeholder="Age" class="box" id="age">
+                <input type="email" placeholder="Patient email" class="box" id="email">
+                <input type="text" placeholder="Patient gender" class="box" id="gender_">
+                <input type="datetime-local" class="box" id="date_time">
+                <button class="btn" id="book_now" type="submit">Book Now</button>
+                </a>
 
-    <div class="row">
+            </form>
 
-        <div class="image">
-            <img src="../../assets/img/Medical prescription.gif" alt="">
         </div>
 
-        <form action="">
-            <h3>Book Appointment</h3>
-            <input type="text" placeholder="Patient name" class="box"  id="patient_name">
-            <input type="number" placeholder="Patient number" class="box" id="number">
-            <input type="email" placeholder="Patient email" class="box" id="e_mail">
-            <input type="datetime-local"  class="box"  id="date_time">
-            <button class="btn" onclick="btn()" type="button"></button>
+    </section>
 
-            <!-- <a href="./appointment booked page.html">Book Now</a> -->
-           
-        </form>
+    <section class="footer">
+        <div class="box-container" id="box-container"></div>
 
-    </div>
-
-</section>
-
-<section class="footer">
-
-    <div class="box-container">
-
-        <div class="box">
-            <h3>quick links</h3>
-            <a href="../../index.html"> <i class="fas fa-chevron-right"></i> Home </a>
-            <a href="../../index.html"> <i class="fas fa-chevron-right"></i> Services </a>
-            <a href="./About page.html"> <i class="fas fa-chevron-right"></i> About </a>
-            <a href="./Doctors.html"> <i class="fas fa-chevron-right"></i> Doctors </a>
-            <a href="./hospital.html"> <i class="fas fa-chevron-right"></i> hospital </a>
-            
-            
-        </div>
-
-
-        <div class="box">
-            <h3>contact info</h3>
-            <a href="#"> <i class="fas fa-phone"></i> +91-9445535374 </a>
-            
-    
-            <a href="#"> <i class="fas fa-envelope"></i> tamilselvan.kothandan@fssa.freshworks.com </a>
-            <a href="#"> <i class="fas fa-map-marker-alt"></i> Chennai-600081 </a>
-        </div>
-
-        <div class="box">
-            <h3>follow us</h3>
-            <a href="#"> <i class="fab fa-facebook-f"></i> facebook </a>
-            <a href="#"> <i class="fab fa-twitter"></i> twitter </a>
-        
-            <a href="#"> <i class="fab fa-instagram"></i> instagram </a>
-            <a href="#"> <i class="fab fa-linkedin"></i> linkedin </a>
-    
-        </div>
-
-    </div>
-
-<script>
-    function btn(){
-        const patient_name = document.getElementById("patient_name").value 
-const number = document.getElementById("number").value
-const e_mail = document.getElementById("e_mail").value
-const detetime = document.getElementById("date_time").value
-console.log(patient_name)
-console.log(number)
-console.log(e_mail)
-console.log(date_time)
-
-window.location.href="./appointment booked page.html"
-
-
-
-
-    }
-
-</script>
+    </section>
+    <script src="./../../Components/header.js"></script>
+    <script src="../../assets/js/appointment.js"></script>
+    <script src="../../Components/footer.js"></script>
 
 </body>
+
 </html>

@@ -1,145 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>medical service</title>
+    <title>DOC 4 YOU</title>
 
     <!-- font awesome cdn link  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <!-- Font Awesome Icon Library -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    
     <link rel="stylesheet" href="../../../assets/css/style.css">
 
 </head>
+
 <body>
-    
-<!-- header section starts  -->
 
-<header class="header">
+    <!-- header section starts  -->
 
-  <a href="../../../index.html" class="logo">  Medical service </a>
+    <header class="header" id="header">
 
-  <nav class="navbar">
-      <a href="../../../index.html">Home</a>
-      <a href="../../../index.html">Services</a>
-      <a href="../About page.html">About</a>
-      <a href="../Doctors.html">Doctors</a>
-      <a href="../hospital.html">Hospital</a>
-      
-      <a href="../login.html">Login</a>
-  </nav>
+    </header>
 
-  
-  <div id="menu-btn" class="fas fa-bars"></div>
+    <div class="content-1">
+        <div class="main">
+            <img class="main-img" id="img_src" src="" alt="image-product-1">
 
-</header>
+        </div>
+        <div class="aside">
+            <div class="aside-content">
+                <p class="aside-content-parah">
+                    Doctor Details
+                </p>
+                <h1 id="doctor_name">
 
+                </h1>
+                <h2 class="details" id="specialty"></h2>
+                <p class="exp" id="experenice">
 
-<div class="content-1">
-    <div class="main">
-        <img class="main-img" src="../../../assets/img/ajun.jpeg" alt="image-product-1" />
-          
-    </div>
-    <div class="aside">
-      <div class="aside-content">
-        <p class="aside-content-parah">
-          Doctor Details
-        </p>
-        <h1>
-          Dr. Arul Ajun(Physiotherapist)
-        </h1>
-        <h2 class="details">BpTH/BPT<br>Therapist Physiotherapist</h2>
-        <p class="exp">10years experience overall
+                </p>
+                <p class="about" id="Descripition"></p>
+            </div>
 
-        </p>
-        <p class="about" id="ajun-details">Dr. Arul Ajun says, "I have 10 years of experience in this field and have seen many cases in orthopaedic, cardiology, neurology, and geriatric patients, etc."</p>
-      </div>
+            <a class="btn" id="ajun_details"> Book Appointment </a>
 
-              <a href="../appointment page.html" class="btn" id="ajun_details"> Book Appointment  </a>
-        
-              <section class="footer-1">
+            <section class="footer-1">
 
                 <div class="box-container-1">
-            
+
                     <div class="box">
                         <h3>Info</h3>
-                        <a href="#"> Choolaimedu, Chennai </a>
-                        <a href="#"> <span>Apollo hospital</span> </a>
+                        <a href="#" id="location"> </a>
+                        <a href="#">
+                            <span id="clinic"></span>
+                        </a>
                         <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star"></span>
-                    <span class="fa fa-star"></span>
-                        <a href=""> 155/B, MRJ Flats, Choolaimedu High Road, Zakaria Colony.
-                          <p><u>Get direction</u></p>  </a>
-                        <a href="">  </a>
-                        
-                        
-                        
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star"></span>
+                        <span class="fa fa-star"></span>
+                        <a href="" id="Address">
+                            <p>
+                                <u>Get direction</u>
+                            </p>
+                        </a>
+
                     </div>
-            
-            
+
                     <div class="box">
                         <h3>Timing</h3>
-                        <a href="#"> Mon-Sat<br>11.00AM-02.00PM </a>
-                        
-                
-                        <a href="#"> Sun<br>10.00AM-12.00PM</a>
-                        
+                        <a href="" id="day"></a>
+                        <a href="#" id="Timing">
+</a>
+
                     </div>
-            
-                    
-            
+
                 </div>
-      </div>
+            </section>
+        </div>
     </div>
-  </div>
-</div>
 
-       
-<section class="footer">
+    <section class="footer">
+        <div class="box-container" id="box-container"></div>
 
-  <div class="box-container">
+    </section>
 
-      <div class="box">
-          <h3>quick links</h3>
-          <a href="../../../index.html"> <i class="fas fa-chevron-right"></i> Home </a>
-          <a href="../../../index.html"> <i class="fas fa-chevron-right"></i> Services </a>
-          <a href="./About page.html"> <i class="fas fa-chevron-right"></i> About </a>
-          <a href="./Doctors.html"> <i class="fas fa-chevron-right"></i> Doctors </a>
-          <a href="./hospital.html"> <i class="fas fa-chevron-right"></i> hospital </a>
-          
-          
-      </div>
+    <script src="../../../assets/js/doctorDetails.js"> </script>
+    <script src="../../../Components/header.js"></script>
+    <script src="../../../Components/footer.js"></script>
 
-
-      <div class="box">
-          <h3>contact info</h3>
-          <a href="#"> <i class="fas fa-phone"></i> +91-9445535374 </a>
-          
-  
-          <a href="#"> <i class="fas fa-envelope"></i> tamilselvan.kothandan@fssa.freshworks.com </a>
-          <a href="#"> <i class="fas fa-map-marker-alt"></i> Chennai-600081 </a>
-      </div>
-
-      <div class="box">
-          <h3>follow us</h3>
-          <a href="#"> <i class="fab fa-facebook-f"></i> facebook </a>
-          <a href="#"> <i class="fab fa-twitter"></i> twitter </a>
-      
-          <a href="#"> <i class="fab fa-instagram"></i> instagram </a>
-          <a href="#"> <i class="fab fa-linkedin"></i> linkedin </a>
-  
-      </div>
-
-  </div>
-        
-
-  <script src="../../../assets/js/script.js"></script>
-      
 </body>
+
 </html>
